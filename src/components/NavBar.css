@@ -1,0 +1,103 @@
+.NavBar {
+  align-items: center;
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  width: 100%;
+}
+
+.NavBar-nav {
+  display: flex;
+  flex-shrink: 1;
+  padding: 1rem 0;
+}
+
+.NavBar-button {
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  margin-left: 1rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.NavBar-button-icon {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  height: 38px;
+  justify-content: center;
+  margin-right: 0.5rem;
+  width: 38px;
+}
+
+.NavBar-button span {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.NavBar a {
+  color: white;
+  text-decoration: none;
+}
+
+.ToTop {
+  background-color: var(--sonic-fur-light);
+  color: white;
+}
+
+.Search {
+  background-color: var(--sonic-eyes);
+  color: var(--sonic-yellow);
+}
+
+.Play {
+  background-color: var(--sonic-shoes);
+  color: var(--sonic-yellow);
+}
+
+.ToTop:hover, .Search:hover, .Play:hover {
+  filter: brightness(120%);
+}
+
+@media screen and ( max-width : 672px ) {
+
+  .NavBar {
+    padding: 0.3rem 1rem;
+  }
+
+  .NavBar-nav {
+    justify-content: center;
+  }
+
+  .NavBar-button {
+    flex-grow: 1;
+  }
+
+  .ToTop {
+    margin-left: 0;
+  }
+}
+
+@media screen and ( max-width : 435px ) {
+
+  .NavBar-nav {
+    width: 100%;
+  }
+
+  .NavBar-button {
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+
+  .NavBar-button-icon {
+    margin-right: 0;
+  }
+
+  .NavBar-button span {
+    display: none;
+  }
+
+  .ToTop {
+    margin-left: 0;
+  }
+}

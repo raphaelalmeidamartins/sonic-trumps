@@ -1,0 +1,86 @@
+.DuelContainer {
+  background-color: var(--blue-black);
+  border-radius: 2rem;
+  display: grid;
+  filter: drop-shadow(0 0 15px gray);
+  grid-gap: 1rem 2rem;
+  grid-template: 'cardPlayer cardCpu' 1fr
+    'footer footer';
+  justify-content: space-between;
+  padding: 2rem 2.5rem;
+  position: fixed;
+  transition: 400ms;
+  z-index: 10;
+}
+
+.DuelContainer-display {
+  top: 110px;
+}
+
+.DuelContainer-hidden {
+  top: -1000px;
+}
+
+.DuelContainer .Card {
+  margin: 1rem 0;
+}
+
+.DuelContainer-PlayerCard {
+  grid-area: cardPlayer;
+}
+
+.DuelContainer-CpuCard {
+  grid-area: cardCpu;
+}
+
+.DuelContainer-PlayerText {
+  color: white;
+  grid-area: textPlayer;
+  text-align: center;
+}
+
+.DuelContainer-CpuText {
+  color: white;
+  grid-area: TextCpu;
+  text-align: center;
+}
+
+.win {
+  color: var(--sonic-eyes);
+}
+
+.lose {
+  color: var(--sonic-shoes);
+}
+
+.DuelContainer footer {
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+}
+
+.DuelContainer-text {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.DuelContainer-text span {
+  margin-right: 0.4rem;
+}
+
+.DuelContainer-next-button {
+  background-color: var(--sonic-eyes);
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+.DuelContainer-next-button:hover {
+  filter: brightness(120%);
+}

@@ -1,0 +1,144 @@
+.Game {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 83vh;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.Game-end {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.Game-end p {
+  color: var(--sonic-fur);
+  font-size: 2rem;
+}
+
+.Game-end-icon {
+  align-items: center;
+  color: var(--sonic-fur);
+  display: flex;
+  font-size: 4rem;
+  height: 100px;
+  justify-content: center;
+  width: 100px;
+}
+
+.Game-quit-icon {
+  align-items: center;
+  border-radius: 50%;
+  color: var(--sonic-light-blue);
+  cursor: pointer;
+  display: flex;
+  font-size: 2.5rem;
+  height: 50px;
+  justify-content: center;
+  left: 1rem;
+  opacity: 0.7;
+  position: absolute;
+  top: -5.2rem;
+  width: 50px;
+  z-index: 10;
+}
+
+.Game-quit-icon:hover {
+  opacity: 1;
+}
+
+.Game-header {
+  color: var(--sonic-fur);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.Game-header-wins-container {
+  align-items: flex-end;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.Game-panel {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  justify-content: center;
+}
+
+.Game-current-round, .Game-turn {
+  margin-bottom: 2rem;
+}
+
+.Game-select-attr, .Game-attr {
+  margin-bottom: 3rem;
+}
+
+.Game-current-round {
+  color: var(--sonic-fur);
+}
+
+.Game-select-attr {
+  background-color: var(--sonic-light-blue);
+  border: 1px solid var(--sonic-fur);
+  border-radius: 0.3rem;
+  font-family: Lato , sans-serif;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+.Game-attr {
+  align-items: center;
+  background-color: var(--sonic-fur);
+  border-radius: 0.3rem;
+  display: flex;
+  margin-top: 1rem;
+  padding: 0.4rem;
+  padding-left: 3.8rem;
+  padding-right: 0.8rem;
+  position: relative;
+  transform: skew(-10deg);
+}
+
+.Game-attr-icon {
+  align-items: center;
+  background-color: white;
+  border: 5px solid var(--sonic-fur);
+  border-radius: 0.5rem;
+  color: var(--sonic-shoes);
+  display: flex;
+  font-size: 2rem;
+  height: 50px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  width: 50px;
+}
+
+.Game-attr-text {
+  color: var(--sonic-yellow);
+  font-size: 1.3rem;
+}
+
+.Game-button {
+  background-color: var(--sonic-fur);
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+.Game-button:hover {
+  filter: brightness(120%);
+}
