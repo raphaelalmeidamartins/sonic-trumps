@@ -25,13 +25,11 @@ class Game extends Component {
     const playerHand = this.shuffleCards(deck);
     const cpuHand = this.shuffleCards(deck);
 
-    const numberOfAttr = 3;
-
     this.state = {
       currRound: 1,
       didPlayerWinRound: false,
       draw: false,
-      currAttr: `cardAttr${Math.round(Math.random() * (numberOfAttr - 1) + 1)}`,
+      currAttr: 'cardAttr1',
       wins: 0,
       cpuWins: 0,
       playerHand,
