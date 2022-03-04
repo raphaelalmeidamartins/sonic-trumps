@@ -7,7 +7,7 @@
 
 React project developed by [Raphael Martins](https://www.linkedin.com/in/raphaelameidamartins/) at the end of Unit 11 ([Front-end Development Module](https://github.com/raphaelalmeidamartins/trybe_exercicios/tree/main/2_Desenvolvimento-Front-end)) of Trybe's Web Development course. I was approved with 100% of the mandatory and optional requirements met.
 
-We have to develop a _Top Trumps_ style card game application by manipulating the components' states and props.
+We have to develop a _Top Trumps_-style card game application by manipulating the components' states and props.
 
 Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allowed me to use his 3D artwork in the cards.
 
@@ -21,7 +21,7 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 ## :memo: Methodologies
 
 * Mobile First
-* Test Driven Development (TDD) - However, the unit tests were implemented by Trybe, not me. That why they are not in this repository
+* Test Driven Development (TDD) - However, the unit tests were implemented by Trybe, not me. That's why they are not in this repository
 
 ## :hammer_and_wrench: Tools
 
@@ -42,4 +42,4 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 
 ### :copyright: Copyright disclaimer
 
-The Sonic the Hedgehog franchise and characters belongs to Sega, all rights reserved. I developed this project for learning purposes, it's not related to the company. Most of the 3D renders artwork in the cards were designed by [Nibroc-Rock](https://www.deviantart.com/nibroc-rock), some of them are official artwork from the games.
+The Sonic the Hedgehog franchise and characters belong to Sega, all rights reserved. I developed this project for learning purposes, it's not related to the company. Most of the 3D renders artwork in the cards were designed by [Nibroc-Rock](https://www.deviantart.com/nibroc-rock), some of them are official artwork from the games, though.
