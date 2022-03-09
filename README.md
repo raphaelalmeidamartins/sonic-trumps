@@ -15,7 +15,6 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 
 ### Under development
 
-- [ ] Fixing responsiveness in the Game tab (DualContainer component)
 - [ ] Adding English translation (the project is currently only available in Brazilian Portuguese)
 - [ ] I still need to implement how the Top Trump/Super Trunfo attribute influences the game.
 
