@@ -6,7 +6,7 @@
   filter: drop-shadow(0 0 15px gray);
   flex-flow: column nowrap;
   left: 50%;
-  padding: 0.8rem 1.1rem;
+  padding: 1rem;
   position: fixed;
   transform: translate(-50%);
   transition: 400ms;
@@ -32,7 +32,7 @@
 }
 
 .PlayerHand .CardMini {
-  margin: 0.3rem;
+  margin: 0.5rem;
 }
 
 .PlayerHand-hidden {
@@ -113,7 +113,6 @@
 @media screen and ( min-width : 680px ) {
 
   .PlayerHand-cards-container {
-    grid-gap: 0.8rem;
     grid-template: 'a b c d e f' 1fr;
     justify-content: center;
   }

@@ -3,14 +3,16 @@
   border-radius: 2rem;
   display: grid;
   filter: drop-shadow(0 0 15px gray);
-  grid-gap: 1rem 2rem;
+  grid-gap: 2rem;
   grid-template: 'cardPlayer cardCpu' 1fr
     'footer footer';
   justify-content: space-between;
+  left: 50%;
   padding: 2rem 2.5rem;
   position: fixed;
+  transform: translate(-50%);
   transition: 400ms;
-  z-index: 10;
+  z-index: 20;
 }
 
 .DuelContainer-display {
@@ -83,4 +85,121 @@
 
 .DuelContainer-next-button:hover {
   filter: brightness(120%);
+}
+
+@media screen and ( max-height : 930px ) {
+
+  .DuelContainer .Card {
+    height: fit-content;
+  }
+
+  .DuelContainer .Card .Card-img {
+    margin-top: 2rem;
+  }
+
+  .DuelContainer .Card .Card-desc-container {
+    display: none;
+  }
+}
+
+@media screen and ( max-height : 830px ) {
+
+  .DuelContainer .Card .Card-img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .DuelContainer .Card .Card-logo {
+    height: 45px;
+    object-fit: contain;
+  }
+}
+
+@media screen and ( max-height : 750px ) {
+
+  .DuelContainer .Card {
+    border: 0;
+    width: 100%;
+  }
+
+  .DuelContainer .Card .Card-img {
+    border: 0;
+    height: 200px;
+    margin: 0;
+    width: 200px;
+  }
+
+  .DuelContainer .Card .Card-attr {
+    display: none;
+  }
+
+  .DuelContainer .Card .Card-logo {
+    display: none;
+  }
+
+  .DuelContainer .Card .Card-header {
+    display: none;
+  }
+}
+
+@media screen and ( max-width : 750px ) {
+
+  .DuelContainer .Card {
+    border: 0;
+    width: 100%;
+  }
+
+  .DuelContainer .Card .Card-img {
+    border: 0;
+    height: 200px;
+    margin: 0;
+    width: 200px;
+  }
+
+  .DuelContainer .Card .Card-attr {
+    display: none;
+  }
+
+  .DuelContainer .Card .Card-logo {
+    display: none;
+  }
+
+  .DuelContainer .Card .Card-header {
+    display: none;
+  }
+}
+
+@media screen and ( max-width : 590px ) {
+
+  .DuelContainer {
+    grid-gap: 1.5rem;
+    padding: 1.8rem;
+  }
+
+  .DuelContainer .Card {
+    border-radius: 0;
+    width: 140px;
+  }
+
+  .DuelContainer .Card .Card-img {
+    border: 0;
+    margin: 0;
+    width: 150px;
+  }
+
+  .DuelContainer .Card .Card-attr {
+    display: none;
+  }
+
+  .DuelContainer .Card .Card-logo {
+    display: none;
+  }
+
+  .DuelContainer .Card .Card-header {
+    display: none;
+  }
+
+  .win, .lose {
+    font-size: 1.2rem;
+  }
 }

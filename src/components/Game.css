@@ -21,6 +21,7 @@
 .Game-end p {
   color: var(--sonic-fur);
   font-size: 2rem;
+  text-align: center;
 }
 
 .Game-end-icon {
@@ -139,6 +140,10 @@
   padding: 1rem;
 }
 
-.Game-button:hover {
+.Game-button:disabled {
+  background-color: var(--sonic-light-blue);
+}
+
+.Game-button:hover:not( :disabled ) {
   filter: brightness(120%);
 }
