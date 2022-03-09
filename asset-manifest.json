@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sonic-trumps/static/css/main.a8e8f7d7.css",
-    "main.js": "/sonic-trumps/static/js/main.12285f64.js",
+    "main.css": "/sonic-trumps/static/css/main.d72ea46e.css",
+    "main.js": "/sonic-trumps/static/js/main.7f6c5c55.js",
     "static/media/sir-gawain.png": "/sonic-trumps/static/media/sir-gawain.7f5d6743a747f38bb48e.png",
     "static/media/background.jpg": "/sonic-trumps/static/media/background.e317e87321a126d5b9ce.jpg",
     "static/media/black-doom.png": "/sonic-trumps/static/media/black-doom.b88364c87258d55cb55d.png",
@@ -118,11 +118,11 @@
     "static/media/maria-robotinik.png": "/sonic-trumps/static/media/maria-robotinik.3a622c8383f3008a2040.png",
     "static/media/pink-spikes.png": "/sonic-trumps/static/media/pink-spikes.bbbc7ad033e01272a22f.png",
     "index.html": "/sonic-trumps/index.html",
-    "main.a8e8f7d7.css.map": "/sonic-trumps/static/css/main.a8e8f7d7.css.map",
-    "main.12285f64.js.map": "/sonic-trumps/static/js/main.12285f64.js.map"
+    "main.d72ea46e.css.map": "/sonic-trumps/static/css/main.d72ea46e.css.map",
+    "main.7f6c5c55.js.map": "/sonic-trumps/static/js/main.7f6c5c55.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8e8f7d7.css",
-    "static/js/main.12285f64.js"
+    "static/css/main.d72ea46e.css",
+    "static/js/main.7f6c5c55.js"
   ]
 }
