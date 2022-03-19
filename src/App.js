@@ -74,7 +74,7 @@ class App extends React.Component {
     if (name.match(/cardAttr[1-3]/)) {
       const min = 0;
       const max = 90;
-      if (+currValue < min) currValue = min;
+      if (+currValue <= min) currValue = min;
       if (+currValue > max) currValue = max;
       currValue = String(currValue);
     }
