@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sonic-trumps/static/css/main.104671e2.css",
-    "main.js": "/sonic-trumps/static/js/main.02bce3c3.js",
+    "main.js": "/sonic-trumps/static/js/main.29f1092e.js",
     "static/media/game-over.mp3": "/sonic-trumps/static/media/game-over.e65e28ace04dcb11b95e.mp3",
     "static/media/victory.mp3": "/sonic-trumps/static/media/victory.d751a457f79f1dc80c19.mp3",
     "static/media/sir-gawain.png": "/sonic-trumps/static/media/sir-gawain.7f5d6743a747f38bb48e.png",
@@ -127,10 +127,10 @@
     "static/media/sonic_checkpoint_sound-effect.mp3": "/sonic-trumps/static/media/sonic_checkpoint_sound-effect.62c97e56b101e9d39f49.mp3",
     "index.html": "/sonic-trumps/index.html",
     "main.104671e2.css.map": "/sonic-trumps/static/css/main.104671e2.css.map",
-    "main.02bce3c3.js.map": "/sonic-trumps/static/js/main.02bce3c3.js.map"
+    "main.29f1092e.js.map": "/sonic-trumps/static/js/main.29f1092e.js.map"
   },
   "entrypoints": [
     "static/css/main.104671e2.css",
-    "static/js/main.02bce3c3.js"
+    "static/js/main.29f1092e.js"
   ]
 }
