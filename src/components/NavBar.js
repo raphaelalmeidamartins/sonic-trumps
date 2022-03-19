@@ -50,7 +50,7 @@ class NavBar extends Component {
             <div className="NavBar-button-icon">
               <GiCardPick />
             </div>
-            <span>Search</span>
+            <span>Pesquisar</span>
           </button>
           <button
             type="button"
@@ -60,7 +60,7 @@ class NavBar extends Component {
             <div className="NavBar-button-icon">
               <GiCardRandom />
             </div>
-            <span>Play</span>
+            <span>Jogar</span>
           </button>
         </div>
         <SearchBar

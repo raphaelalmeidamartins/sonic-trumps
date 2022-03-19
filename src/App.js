@@ -22,6 +22,9 @@ class App extends React.Component {
     this.closeGame = this.closeGame.bind(this);
     this.returnFullDeck = this.returnFullDeck.bind(this);
 
+    let savedCustomCards = JSON.parse(localStorage.getItem('Custom Cards'));
+    if (!savedCustomCards) savedCustomCards = [];
+
     this.state = {
       cardName: '',
       cardDescription: '',
@@ -33,7 +36,7 @@ class App extends React.Component {
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
-      customCards: [],
+      customCards: savedCustomCards,
       cardsFilter: {
         regExp: '',
         rarity: '',
@@ -54,15 +57,17 @@ class App extends React.Component {
     };
   }
 
-  // Lais Namatela - 19A me ajudou a simplificar a lógica dessa função
-  // inserindo o campo name nos inputs previamente
+  componentDidUpdate() {
+    const { customCards } = this.state;
+    localStorage.setItem('Custom Cards', JSON.stringify(customCards));
+  }
+
   handleInputChange({ target }) {
     const { name, value, checked } = target;
     let currValue = target.type === 'checkbox' ? checked : value;
     if (name.match(/cardAttr[1-3]/)) {
       const min = 0;
       const max = 90;
-
       if (+currValue < min) currValue = min;
       if (+currValue > max) currValue = max;
       currValue = String(currValue);
@@ -79,7 +84,6 @@ class App extends React.Component {
     delete newCard.cardsFilter;
     delete newCard.initialState;
     delete newCard.playing;
-    console.log(newCard);
 
     const { customCards, initialState } = this.state;
 
