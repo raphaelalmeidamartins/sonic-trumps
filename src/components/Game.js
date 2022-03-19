@@ -219,7 +219,7 @@ class Game extends Component {
               className="Game-button Game-select-card"
               type="button"
               onClick={ () => this.setState({ displayHand: true }) }
-              disabled={ displayDuel }
+              disabled={ Boolean(displayDuel || displayHand) }
             >
               Selecionar Carta
             </button>
