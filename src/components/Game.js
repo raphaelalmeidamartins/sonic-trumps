@@ -152,7 +152,6 @@ class Game extends Component {
 
   renderFinalMessage(wins, cpuWins) {
     if (wins === cpuWins) {
-      if (currRound === finalRound && !displayDuel);
       return (
         <section className="Game-end">
           <img src={ drawGif } alt="draw" />
