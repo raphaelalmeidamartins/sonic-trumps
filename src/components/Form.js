@@ -34,7 +34,7 @@ class Form extends Component {
     const checkpointSound = new Audio(checkpoint);
 
     return (
-      <form id="Form" className="Form">
+      <form id="Form" className="Form" method="POST">
         { this.renderInputs(hasTrunfo) }
         <button
           type="submit"
