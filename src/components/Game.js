@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { BiLeftArrowAlt } from 'react-icons/bi';
@@ -7,6 +8,7 @@ import gameOver from '../assets/gifs/game-over.gif';
 import victory from '../assets/gifs/victory.gif';
 import gameOverSound from '../assets/sound-effects/game-over.mp3';
 import victorySound from '../assets/sound-effects/victory.mp3';
+import roundWinSound from '../assets/sound-effects/round-win.mp3';
 import DuelContainer from './DuelContainer';
 import './Game.css';
 import PlayerHand from './PlayerHand';
@@ -37,14 +39,21 @@ class Game extends Component {
     };
   }
 
-  componentDidUpdate() {
-    const { currRound, displayDuel, wins, cpuWins } = this.state;
+  componentDidUpdate(prevProp, prevState) {
+    const { currRound, didPlayerWinRound, displayDuel, wins, cpuWins } = this.state;
 
     const finalRound = 7;
     const didPlayerWin = wins > cpuWins;
     const victorySoundEffect = new Audio(victorySound);
     const gameOverSoundEffect = new Audio(gameOverSound);
+    const roundWinSoundEffect = new Audio(roundWinSound);
 
+    if (
+      (currRound > prevState.currRound)
+      && (currRound !== finalRound)
+      && didPlayerWinRound) {
+      roundWinSoundEffect.play();
+    }
     if (didPlayerWin && currRound === finalRound && !displayDuel) {
       victorySoundEffect.play();
     }
@@ -194,8 +203,8 @@ class Game extends Component {
             <span className="Game-header-wins">{ `Derrotas: ${cpuWins}`}</span>
           </div>
         </header>
-        {currRound === finalRound && this.renderFinalMessage(wins, cpuWins)}
-        {currRound < finalRound && (
+        { currRound === finalRound && this.renderFinalMessage(wins, cpuWins) }
+        { currRound < finalRound && (
           <section className="Game-panel">
             <h1 className="Game-current-round">{ `Rodada ${currRound}` }</h1>
             <p
@@ -223,7 +232,7 @@ class Game extends Component {
             >
               Selecionar Carta
             </button>
-          </section>)}
+          </section>) }
         <PlayerHand
           playerHand={ playerHand }
           selectCard={ this.selectCard }
