@@ -18,20 +18,16 @@
   width: 100%;
 }
 
+.Game-end img {
+  height: 200px;
+  object-fit: contain;
+  width: 200px;
+}
+
 .Game-end p {
   color: var(--sonic-fur);
   font-size: 2rem;
   text-align: center;
-}
-
-.Game-end-icon {
-  align-items: center;
-  color: var(--sonic-fur);
-  display: flex;
-  font-size: 4rem;
-  height: 100px;
-  justify-content: center;
-  width: 100px;
 }
 
 .Game-quit-icon {

@@ -1,19 +1,15 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  GiSonicShoes,
-  GiFoxTail,
-  GiBoxingGlove,
-} from 'react-icons/gi';
-import {
-  RiEmotionHappyFill,
-  RiEmotionUnhappyFill,
-  RiEmotionNormalFill,
-} from 'react-icons/ri';
+import React, { Component } from 'react';
 import { BiLeftArrowAlt } from 'react-icons/bi';
-import PlayerHand from './PlayerHand';
+import { GiBoxingGlove, GiFoxTail, GiSonicShoes } from 'react-icons/gi';
+import drawGif from '../assets/gifs/draw.gif';
+import gameOver from '../assets/gifs/game-over.gif';
+import victory from '../assets/gifs/victory.gif';
+import gameOverSound from '../assets/sound-effects/game-over.mp3';
+import victorySound from '../assets/sound-effects/victory.mp3';
 import DuelContainer from './DuelContainer';
 import './Game.css';
+import PlayerHand from './PlayerHand';
 
 class Game extends Component {
   constructor(props) {
@@ -39,6 +35,22 @@ class Game extends Component {
       displayHand: false,
       displayDuel: false,
     };
+  }
+
+  componentDidUpdate() {
+    const { currRound, displayDuel, wins, cpuWins } = this.state;
+
+    const finalRound = 7;
+    const didPlayerWin = wins > cpuWins;
+    const victorySoundEffect = new Audio(victorySound);
+    const gameOverSoundEffect = new Audio(gameOverSound);
+
+    if (didPlayerWin && currRound === finalRound && !displayDuel) {
+      victorySoundEffect.play();
+    }
+    if (!didPlayerWin && currRound === finalRound && !displayDuel) {
+      gameOverSoundEffect.play();
+    }
   }
 
   shuffleCards(deck) {
@@ -131,30 +143,25 @@ class Game extends Component {
 
   renderFinalMessage(wins, cpuWins) {
     if (wins === cpuWins) {
+      if (currRound === finalRound && !displayDuel);
       return (
         <section className="Game-end">
+          <img src={ drawGif } alt="draw" />
           <p>Empate!</p>
-          <div className="Game-end-icon">
-            <RiEmotionNormalFill />
-          </div>
         </section>
       );
     }
     return wins > cpuWins
       ? (
         <section className="Game-end">
+          <img src={ victory } alt="victory pose" />
           <p>Parabéns, você ganhou!</p>
-          <div className="Game-end-icon">
-            <RiEmotionHappyFill />
-          </div>
         </section>
       )
       : (
         <section className="Game-end">
+          <img src={ gameOver } alt="game over" />
           <p>Que pena, você perdeu!</p>
-          <div className="Game-end-icon">
-            <RiEmotionUnhappyFill />
-          </div>
         </section>
       );
   }
@@ -162,17 +169,10 @@ class Game extends Component {
   render() {
     const { quitGame } = this.props;
     const {
-      currRound,
-      didPlayerWinRound,
-      draw,
-      currAttr,
-      wins,
-      cpuWins,
-      playerHand,
-      playerCard,
-      cpuCard,
-      displayHand,
-      displayDuel,
+      currRound, didPlayerWinRound,
+      draw, currAttr, wins, cpuWins,
+      playerHand, playerCard, cpuCard,
+      displayHand, displayDuel,
     } = this.state;
     const playerTurn = Boolean(currRound % 2 !== 0);
     const finalRound = 7;
