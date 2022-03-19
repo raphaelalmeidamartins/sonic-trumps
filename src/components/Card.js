@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { GiSonicShoes, GiFoxTail, GiBoxingGlove, GiEmerald } from 'react-icons/gi';
 import './Card.css';
 import logo from '../assets/logo.png';
+import checkpoint from '../assets/sound-effects/sonic_checkpoint_sound-effect.mp3';
 
 class Card extends Component {
   constructor() {
@@ -13,6 +14,7 @@ class Card extends Component {
 
   renderDeleteCardButton() {
     const { preview, cardTrunfo, removeCard, index } = this.props;
+    const checkpointSound = new Audio(checkpoint);
 
     if (!preview) {
       return (
@@ -20,7 +22,10 @@ class Card extends Component {
           className="Card-delete-btn"
           data-testid="delete-button"
           type="button"
-          onClick={ () => removeCard(index, cardTrunfo) }
+          onClick={ () => {
+            checkpointSound.play();
+            removeCard(index, cardTrunfo);
+          } }
         >
           Excluir
         </button>

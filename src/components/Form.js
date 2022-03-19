@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Input from './Input';
 import inputsDataArray from '../data/inputs-data';
 import './Form.css';
+import checkpoint from '../assets/sound-effects/sonic_checkpoint_sound-effect.mp3';
 
 class Form extends Component {
   constructor() {
@@ -30,6 +31,7 @@ class Form extends Component {
 
   render() {
     const { hasTrunfo, isSaveButtonDisabled, onSaveButtonClick } = this.props;
+    const checkpointSound = new Audio(checkpoint);
 
     return (
       <form id="Form" className="Form">
@@ -39,7 +41,10 @@ class Form extends Component {
           className="save-button"
           data-testid="save-button"
           disabled={ isSaveButtonDisabled }
-          onClick={ onSaveButtonClick }
+          onClick={ (event) => {
+            checkpointSound.play();
+            onSaveButtonClick(event);
+          } }
         >
           Salvar
         </button>

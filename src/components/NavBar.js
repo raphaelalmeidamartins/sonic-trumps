@@ -4,6 +4,7 @@ import { GiCardPick, GiCardRandom } from 'react-icons/gi';
 import { BiArrowToTop } from 'react-icons/bi';
 import SearchBar from './SearchBar';
 import './NavBar.css';
+import ringSoundEffect from '../assets/sound-effects/sonic_ring_sound_effect.mp3';
 
 const hidden = 'SearchBar SearchBar-hidden';
 
@@ -32,6 +33,7 @@ class NavBar extends Component {
   render() {
     const { onInputChange, startGame } = this.props;
     const { hideOrDisplay } = this.state;
+    const ringSound = new Audio(ringSoundEffect);
 
     return (
       <nav className="NavBar">
@@ -55,7 +57,10 @@ class NavBar extends Component {
           <button
             type="button"
             className="NavBar-button Play"
-            onClick={ startGame }
+            onClick={ () => {
+              ringSound.play();
+              startGame();
+            } }
           >
             <div className="NavBar-button-icon">
               <GiCardRandom />
