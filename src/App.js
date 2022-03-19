@@ -34,7 +34,7 @@ class App extends React.Component {
       cardImage: '',
       cardRare: 'normal',
       cardTrunfo: false,
-      hasTrunfo: false,
+      hasTrunfo: savedCustomCards.some((card) => card.cardTrunfo),
       isSaveButtonDisabled: true,
       customCards: savedCustomCards,
       cardsFilter: {
