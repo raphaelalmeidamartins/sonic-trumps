@@ -3,36 +3,6 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import App from '../App';
 
-describe('Check if the form inputs are in the document', () => {
-  beforeEach(() => render(<App />));
-
-  it('The name input should be in the document', () => {
-    expect(screen.getByLabelText(/nome/i)).toBeInTheDocument();
-  });
-
-  it('The description input should be in the document', () => {
-    expect(screen.getByPlaceholderText(/insira descrição/i)).toBeInTheDocument();
-  });
-
-  it('The attribute inputs should be in the document', () => {
-    expect(screen.getByLabelText(/speed/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/skill/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/power/i)).toBeInTheDocument();
-  });
-
-  it('The image input should be in the document', () => {
-    expect(screen.getByLabelText(/imagem/i)).toBeInTheDocument();
-  });
-
-  it('The rarity select input should be in the document', () => {
-    expect(screen.getByLabelText(/raridade/i)).toBeInTheDocument();
-  });
-
-  it('The top trumps checkbox should be in the document', () => {
-    expect(screen.getByTestId(/trunfo-input/i)).toBeInTheDocument();
-  });
-});
-
 describe('Check the input name\'s behavior', () => {
   beforeEach(() => render(<App />));
 
@@ -192,6 +162,40 @@ describe('There should be an element displaying how many points are left', () =>
     userEvent.type(powerInput(), '90');
     expect(pointsLeft().textContent).toMatch('-20');
   });
+});
+
+describe('Check the image input\'s behavior', () => {
+  beforeEach(() => render(<App />));
+
+  it(
+    'The link inserted by the user should be the src of the img in the card preview',
+    () => {
+      const spark = 'https://cdn2.steamgriddb.com/file/sgdb-cdn/icon/9df2afabcdd08dbe0db7a49e509403c9/32/256x256.png';
+      userEvent.type(screen.getByLabelText(/imagem/i), spark);
+      expect(screen.getByTestId(/image-card-preview/i).src).toBe(spark);
+    },
+  );
+});
+
+describe('Check the rarity input select\'s behavior', () => {
+  beforeEach(() => render(<App />));
+
+  it(
+    'The rarity selected by the user should appear in the preview card',
+    () => {
+      const raritySelect = screen.getByLabelText(/raridade/i);
+
+      userEvent.selectOptions(raritySelect, raritySelect.options[1]);
+      expect(screen.getByTestId(/rare-card-preview/i).textContent).toBe('raro');
+
+      userEvent
+        .selectOptions(raritySelect, raritySelect.options[0]);
+      expect(screen.getByTestId(/rare-card-preview/i).textContent).toBe('normal');
+
+      userEvent.selectOptions(raritySelect, raritySelect.options[2]);
+      expect(screen.getByTestId(/rare-card-preview/i).textContent).toBe('muito raro');
+    },
+  );
 });
 
 describe('Check the top trumps\' checkbox behavior', () => {
