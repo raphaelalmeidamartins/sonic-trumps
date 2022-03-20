@@ -60,7 +60,7 @@ class Input extends Component {
           <div className={ `${labelClassName}-icon` }>
             <GiEmerald />
           </div>
-          {labelText}
+          { labelText }
           <input
             id={ id }
             name={ name }
@@ -79,7 +79,7 @@ class Input extends Component {
         <div>
           <label className={ labelClassName } htmlFor={ id }>
             { this.returnAttrIcon(name) }
-            {labelText}
+            { labelText }
             <div className={ name === 'cardImage' ? 'image-input-container' : null }>
               { name === 'cardImage'
                 ? <div className="image-link-icon"><BiLink /></div>
@@ -107,7 +107,7 @@ class Input extends Component {
     if (type === 'textarea' || type === 'number') {
       return (
         <label className={ labelClassName } htmlFor={ id }>
-          {labelText}
+          { labelText }
           <textarea
             id={ id }
             name={ name }
@@ -125,7 +125,7 @@ class Input extends Component {
     if (type === 'select') {
       return (
         <label className={ labelClassName } htmlFor={ id }>
-          {labelText}
+          { labelText }
           <select
             id={ id }
             name={ name }

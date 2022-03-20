@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { GiSonicShoes, GiFoxTail, GiBoxingGlove, GiEmerald } from 'react-icons/gi';
-import './Card.css';
+import React, { Component } from 'react';
+import {
+  GiBoxingGlove,
+  GiEmerald,
+  GiFoxTail,
+  GiSonicShoes,
+} from 'react-icons/gi';
 import logo from '../assets/logo.png';
 import checkpoint from '../assets/sound-effects/sonic_checkpoint_sound-effect.mp3';
+import './Card.css';
 
 class Card extends Component {
   constructor() {
@@ -43,6 +48,7 @@ class Card extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
+      preview,
     } = this.props;
 
     const maxAttr = 90;
@@ -51,9 +57,9 @@ class Card extends Component {
       <section className="Card">
         <img className="Card-logo" src={ logo } alt="Sonic Trunfo" />
         <header className="Card-header">
-          <h2 data-testid="name-card">{cardName}</h2>
+          <h2 data-testid="name-card">{ cardName }</h2>
           <p className="Card-rarity" data-testid="rare-card">
-            {cardRare}
+            { cardRare }
           </p>
         </header>
         <img
@@ -64,7 +70,7 @@ class Card extends Component {
         />
         <div className="Card-desc-container">
           <p className="Card-desc" data-testid="description-card">
-            {cardDescription}
+            { cardDescription }
           </p>
         </div>
         <ul className="Card-attr">
@@ -79,7 +85,7 @@ class Card extends Component {
                 style={ { width: `${(cardAttr1 / maxAttr) * 100}%` } }
               />
             </div>
-            <div className="Card-attr-value">{cardAttr1}</div>
+            <div className="Card-attr-value">{ cardAttr1 }</div>
           </li>
           <li data-testid="attr2-card">
             <div className="Card-attr-icon">
@@ -92,7 +98,7 @@ class Card extends Component {
                 style={ { width: `${(cardAttr2 / maxAttr) * 100}%` } }
               />
             </div>
-            <div className="Card-attr-value">{cardAttr2}</div>
+            <div className="Card-attr-value">{ cardAttr2 }</div>
           </li>
           <li data-testid="attr3-card">
             <div className="Card-attr-icon">
@@ -105,16 +111,19 @@ class Card extends Component {
                 style={ { width: `${(cardAttr3 / maxAttr) * 100}%` } }
               />
             </div>
-            <div className="Card-attr-value">{cardAttr3}</div>
+            <div className="Card-attr-value">{ cardAttr3 }</div>
           </li>
-          {cardTrunfo && (
-            <div className="Card-trunfo" data-testid="trunfo-card">
+          { cardTrunfo && (
+            <div
+              className="Card-trunfo"
+              data-testid={ preview ? 'trunfo-card-preview' : 'trunfo-card' }
+            >
               <p className="Card-trunfo-icon">
                 <GiEmerald />
               </p>
               <p className="Card-trunfo-text">Super Trunfo</p>
             </div>
-          )}
+          ) }
         </ul>
         {this.renderDeleteCardButton()}
       </section>

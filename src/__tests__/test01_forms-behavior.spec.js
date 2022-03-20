@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import App from '../App';
 
-describe('Verify if the form inputs are in the document', () => {
+describe('Check if the form inputs are in the document', () => {
   beforeEach(() => render(<App />));
 
   it('The name input should be in the document', () => {
@@ -33,7 +33,7 @@ describe('Verify if the form inputs are in the document', () => {
   });
 });
 
-describe('Verify the input name\'s behavior', () => {
+describe('Check the input name\'s behavior', () => {
   beforeEach(() => render(<App />));
 
   const nameInput = () => screen.getByLabelText(/nome/i);
@@ -51,7 +51,7 @@ describe('Verify the input name\'s behavior', () => {
   });
 });
 
-describe('Verify the description input\'s behavior', () => {
+describe('Check the description input\'s behavior', () => {
   beforeEach(() => render(<App />));
 
   const descInput = () => screen.getByPlaceholderText(/insira descrição/i);
@@ -75,7 +75,7 @@ describe('Verify the description input\'s behavior', () => {
   });
 });
 
-describe('Verify the attribute inputs\' behavior ', () => {
+describe('Check the attribute inputs\' behavior ', () => {
   beforeEach(() => render(<App />));
 
   const speedInput = () => screen.getByLabelText(/speed/i);
@@ -83,30 +83,101 @@ describe('Verify the attribute inputs\' behavior ', () => {
   const powerInput = () => screen.getByLabelText(/power/i);
 
   it('The user should not be able to input negative attribute numbers', () => {
-    const randomNegativeNum = () => `${Math.round(Math.random() * (100 - 1) + 1)}`;
-
     // speed input tests
-    userEvent.type(speedInput(), randomNegativeNum());
+    userEvent.type(speedInput(), '-');
     expect(speedInput().value).toBe('0');
-    userEvent.type(speedInput(), randomNegativeNum());
+    userEvent.type(speedInput(), '-80');
     expect(speedInput().value).toBe('0');
-    userEvent.type(speedInput(), randomNegativeNum());
+    userEvent.type(speedInput(), '-2');
     expect(speedInput().value).toBe('0');
 
     // skill input tests
-    userEvent.type(skillInput(), randomNegativeNum());
+    userEvent.type(skillInput(), '-');
     expect(speedInput().value).toBe('0');
-    userEvent.type(skillInput(), randomNegativeNum());
+    userEvent.type(skillInput(), '-7');
     expect(speedInput().value).toBe('0');
-    userEvent.type(skillInput(), randomNegativeNum());
+    userEvent.type(skillInput(), '-90');
     expect(speedInput().value).toBe('0');
 
     // power input tests
-    userEvent.type(powerInput(), randomNegativeNum());
+    userEvent.type(powerInput(), '-');
     expect(powerInput().value).toBe('0');
-    userEvent.type(powerInput(), randomNegativeNum());
+    userEvent.type(powerInput(), '-15');
     expect(powerInput().value).toBe('0');
-    userEvent.type(powerInput(), randomNegativeNum());
+    userEvent.type(powerInput(), '-30');
     expect(powerInput().value).toBe('0');
+  });
+
+  it('The user should not be able to input numbers higher than 90', () => {
+    // speed input tests
+    userEvent.type(speedInput(), '95');
+    expect(speedInput().value).toBe('90');
+    userEvent.type(speedInput(), '800');
+    expect(speedInput().value).toBe('90');
+    userEvent.type(speedInput(), '97');
+    expect(speedInput().value).toBe('90');
+
+    // skill input tests
+    userEvent.type(skillInput(), '957');
+    expect(speedInput().value).toBe('90');
+    userEvent.type(skillInput(), '98');
+    expect(speedInput().value).toBe('90');
+    userEvent.type(skillInput(), '110');
+    expect(speedInput().value).toBe('90');
+
+    // power input tests
+    userEvent.type(powerInput(), '97');
+    expect(powerInput().value).toBe('90');
+    userEvent.type(powerInput(), '99');
+    expect(powerInput().value).toBe('90');
+    userEvent.type(powerInput(), '700');
+    expect(powerInput().value).toBe('90');
+  });
+});
+
+describe('There should be an element displaying how many points are left', () => {
+  beforeEach(() => render(<App />));
+
+  const pointsLeft = () => screen.getByTestId(/attr-total-left/i);
+
+  const speedInput = () => screen.getByLabelText(/speed/i);
+  const skillInput = () => screen.getByLabelText(/skill/i);
+  const powerInput = () => screen.getByLabelText(/power/i);
+
+  it('It should start by displaying 210 points left', () => {
+    expect(pointsLeft()).toBeInTheDocument();
+    expect(pointsLeft().textContent).toBe('210');
+  });
+
+  it('It decreases the number of points left when the user adds attribute points', () => {
+    userEvent.type(speedInput(), '90');
+    expect(pointsLeft().textContent).toBe('120');
+
+    userEvent.type(skillInput(), '50');
+    expect(pointsLeft().textContent).toBe('70');
+
+    userEvent.type(powerInput(), '70');
+    expect(pointsLeft().textContent).toMatch('0');
+
+    userEvent.type(powerInput(), '90');
+    expect(pointsLeft().textContent).toMatch('-20');
+  });
+});
+
+describe('Check the top trumps\' checkbox behavior', () => {
+  beforeEach(() => render(<App />));
+
+  const topTrumpCheckbox = () => screen.getByTestId(/trunfo-input/i);
+
+  it(
+    'Top trumps shouldn\'t be in the preview card, if the checkbox isn\'t checked',
+    () => {
+      expect(screen.queryByTestId(/trunfo-card-preview/i)).not.toBeInTheDocument();
+    },
+  );
+
+  it('Top trumps should be in the preview card, if the checkbox is checked', () => {
+    userEvent.click(topTrumpCheckbox());
+    expect(screen.getByTestId(/trunfo-card-preview/i)).toBeInTheDocument();
   });
 });
