@@ -54,7 +54,10 @@ class Card extends Component {
     const maxAttr = 90;
 
     return (
-      <section className="Card">
+      <section
+        className="Card"
+        data-testid="custom-card"
+      >
         <img className="Card-logo" src={ logo } alt="Sonic Trunfo" />
         <header className="Card-header">
           <h2
@@ -122,7 +125,7 @@ class Card extends Component {
               />
             </div>
             <div
-              className={ preview ? 'Card-attr-value-preview' : 'Card-attr-value' }
+              className="Card-attr-value"
             >
               { cardAttr3 }
             </div>
