@@ -57,24 +57,34 @@ class Card extends Component {
       <section className="Card">
         <img className="Card-logo" src={ logo } alt="Sonic Trunfo" />
         <header className="Card-header">
-          <h2 data-testid="name-card">{ cardName }</h2>
-          <p className="Card-rarity" data-testid="rare-card">
+          <h2
+            data-testid={ preview ? 'name-card-preview' : 'name-card' }
+          >
+            { cardName }
+          </h2>
+          <p
+            className="Card-rarity"
+            data-testid={ preview ? 'rare-card-preview' : 'rare-card' }
+          >
             { cardRare }
           </p>
         </header>
         <img
           className="Card-img"
-          data-testid="image-card"
+          data-testid={ preview ? 'image-card-preview' : 'image-card' }
           src={ cardImage }
           alt={ cardName }
         />
         <div className="Card-desc-container">
-          <p className="Card-desc" data-testid="description-card">
+          <p
+            className="Card-desc"
+            data-testid={ preview ? 'description-card-preview' : 'description-card' }
+          >
             { cardDescription }
           </p>
         </div>
         <ul className="Card-attr">
-          <li data-testid="attr1-card">
+          <li data-testid={ preview ? 'attr1-card-preview' : 'attr1-card' }>
             <div className="Card-attr-icon">
               <GiSonicShoes />
             </div>
@@ -87,7 +97,7 @@ class Card extends Component {
             </div>
             <div className="Card-attr-value">{ cardAttr1 }</div>
           </li>
-          <li data-testid="attr2-card">
+          <li data-testid={ preview ? 'attr2-card-preview' : 'attr2-card' }>
             <div className="Card-attr-icon">
               <GiFoxTail />
             </div>
@@ -100,7 +110,7 @@ class Card extends Component {
             </div>
             <div className="Card-attr-value">{ cardAttr2 }</div>
           </li>
-          <li data-testid="attr3-card">
+          <li data-testid={ preview ? 'attr3-card-preview' : 'attr3-card' }>
             <div className="Card-attr-icon">
               <GiBoxingGlove />
             </div>
@@ -111,7 +121,11 @@ class Card extends Component {
                 style={ { width: `${(cardAttr3 / maxAttr) * 100}%` } }
               />
             </div>
-            <div className="Card-attr-value">{ cardAttr3 }</div>
+            <div
+              className={ preview ? 'Card-attr-value-preview' : 'Card-attr-value' }
+            >
+              { cardAttr3 }
+            </div>
           </li>
           { cardTrunfo && (
             <div
@@ -125,7 +139,7 @@ class Card extends Component {
             </div>
           ) }
         </ul>
-        {this.renderDeleteCardButton()}
+        { this.renderDeleteCardButton() }
       </section>
     );
   }
