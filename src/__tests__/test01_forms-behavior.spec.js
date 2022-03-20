@@ -93,11 +93,11 @@ describe('Check the attribute inputs\' behavior ', () => {
 
     // skill input tests
     userEvent.type(skillInput(), '-');
-    expect(speedInput().value).toBe('0');
+    expect(skillInput().value).toBe('0');
     userEvent.type(skillInput(), '-7');
-    expect(speedInput().value).toBe('0');
+    expect(skillInput().value).toBe('0');
     userEvent.type(skillInput(), '-90');
-    expect(speedInput().value).toBe('0');
+    expect(skillInput().value).toBe('0');
 
     // power input tests
     userEvent.type(powerInput(), '-');
@@ -118,20 +118,50 @@ describe('Check the attribute inputs\' behavior ', () => {
     expect(speedInput().value).toBe('90');
 
     // skill input tests
-    userEvent.type(skillInput(), '957');
-    expect(speedInput().value).toBe('90');
-    userEvent.type(skillInput(), '98');
-    expect(speedInput().value).toBe('90');
-    userEvent.type(skillInput(), '110');
-    expect(speedInput().value).toBe('90');
+    userEvent.type(skillInput(), '95');
+    expect(skillInput().value).toBe('90');
+    userEvent.type(skillInput(), '800');
+    expect(skillInput().value).toBe('90');
+    userEvent.type(skillInput(), '97');
+    expect(skillInput().value).toBe('90');
 
     // power input tests
-    userEvent.type(powerInput(), '97');
+    userEvent.type(powerInput(), '95');
     expect(powerInput().value).toBe('90');
-    userEvent.type(powerInput(), '99');
+    userEvent.type(powerInput(), '800');
     expect(powerInput().value).toBe('90');
-    userEvent.type(powerInput(), '700');
+    userEvent.type(speedInput(), '97');
     expect(powerInput().value).toBe('90');
+  });
+
+  const speedPreview = () => screen.getByTestId('attr1-card-preview');
+  const skillPreview = () => screen.getByTestId('attr2-card-preview');
+  const powerPreview = () => screen.getByTestId('attr3-card-preview');
+
+  it('The points inserted by the user should appear in the preview card', () => {
+    // speed input tests
+    userEvent.type(speedInput(), '90');
+    expect(speedPreview().textContent).toMatch(/.*90$/);
+    userEvent.type(speedInput(), '{backspace}{backspace}70');
+    expect(speedPreview().textContent).toMatch(/.*70$/);
+    userEvent.type(speedInput(), '{backspace}{backspace}40');
+    expect(speedPreview().textContent).toMatch(/.*40$/);
+
+    // skill input tests
+    userEvent.type(skillInput(), '90');
+    expect(skillPreview().textContent).toMatch(/.*90$/);
+    userEvent.type(skillInput(), '{backspace}{backspace}80');
+    expect(skillPreview().textContent).toMatch(/.*80$/);
+    userEvent.type(skillInput(), '{backspace}{backspace}50');
+    expect(skillPreview().textContent).toMatch(/.*50$/);
+
+    // power input tests
+    userEvent.type(powerInput(), '90');
+    expect(powerPreview().textContent).toMatch(/.*90$/);
+    userEvent.type(powerInput(), '{backspace}{backspace}80');
+    expect(powerPreview().textContent).toMatch(/.*80$/);
+    userEvent.type(powerInput(), '{backspace}{backspace}50');
+    expect(powerPreview().textContent).toMatch(/.*50$/);
   });
 });
 
