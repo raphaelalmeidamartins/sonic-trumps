@@ -38,4 +38,8 @@ describe('Check if the form inputs are in the document', () => {
   it('The top trumps checkbox should be in the document', () => {
     expect(screen.getByTestId(/trunfo-input/i)).toBeInTheDocument();
   });
+
+  it('The save button should be in the document', () => {
+    expect(screen.getByRole('button', { name: /salvar/i })).toBeInTheDocument();
+  });
 });
