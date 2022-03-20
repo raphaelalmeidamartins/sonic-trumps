@@ -74,8 +74,11 @@ class App extends React.Component {
     if (name.match(/cardAttr[1-3]/)) {
       const min = 0;
       const max = 90;
-      if (+currValue <= min) currValue = min;
+      if (+currValue < min) currValue = min;
       if (+currValue > max) currValue = max;
+      const radix = 10;
+      currValue = parseInt(currValue, radix);
+      if (Number.isNaN(currValue)) currValue = 0;
       currValue = String(currValue);
     }
     this.setState({ [name]: currValue }, this.validateForm);
@@ -93,10 +96,7 @@ class App extends React.Component {
     const { customCards, initialState } = this.state;
 
     this.setState(
-      {
-        ...initialState,
-        customCards: [...customCards, newCard],
-      },
+      { ...initialState, customCards: [...customCards, newCard] },
       () => {
         if (newCard.cardTrunfo) this.setState({ hasTrunfo: true });
       },

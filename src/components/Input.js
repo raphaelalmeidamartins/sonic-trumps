@@ -33,7 +33,7 @@ class Input extends Component {
       return (
         <p className="attr-total-left">
           Restantes
-          <span>{ totalLeft }</span>
+          <span data-testid="attr-total-left">{ totalLeft }</span>
         </p>
       );
     }
