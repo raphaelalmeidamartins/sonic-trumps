@@ -15,13 +15,13 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 
 ### Under development
 
+- [ ] Implementing integration tests with React Testing Library
 - [ ] Adding English translation (the project is currently only available in Brazilian Portuguese)
 - [ ] I still need to implement how the Top Trump/Super Trunfo attribute influences the game.
 
 ## :memo: Methodologies
 
 * Mobile First
-* Test Driven Development (TDD) - However, the unit tests were implemented by Trybe, not me. That's why they are not in this repository
 
 ## :hammer_and_wrench: Tools
 
@@ -29,6 +29,7 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 * CSS3
 * JavaScript ES6+
 * React.js
+* React Testing Library (RTL)
 * React Icons (icon library)
 * GitHub Pages
 
