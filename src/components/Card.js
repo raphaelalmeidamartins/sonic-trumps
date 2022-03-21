@@ -56,7 +56,7 @@ class Card extends Component {
     return (
       <section
         className="Card"
-        data-testid="custom-card"
+        data-testid={ preview ? 'custom-card-preview' : 'custom-card' }
       >
         <img className="Card-logo" src={ logo } alt="Sonic Trunfo" />
         <header className="Card-header">
