@@ -120,7 +120,7 @@ const deleteCards = (cardsArray) => {
 };
 
 describe(
-  'The custom card should be added to deck once the user clicks the save button',
+  'The custom card should be added to the deck once the user clicks the save button',
   () => {
     beforeEach(() => render(<App />));
     afterEach(() => deleteCards(customCards()));
