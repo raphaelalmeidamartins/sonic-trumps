@@ -23,7 +23,7 @@ class CardDeck extends Component {
       <section className="Card">
         <img className="Card-logo" src={ logo } alt="Sonic Trunfo" />
         <header className="Card-header">
-          <h2>{cardName}</h2>
+          <h2>{ cardName }</h2>
           <p className="Card-rarity">
             {cardRare}
           </p>
@@ -35,7 +35,7 @@ class CardDeck extends Component {
         />
         <div className="Card-desc-container">
           <p className="Card-desc">
-            {cardDescription}
+            { cardDescription }
           </p>
         </div>
         <ul className="Card-attr">
@@ -78,14 +78,14 @@ class CardDeck extends Component {
             </div>
             <div className="Card-attr-value">{cardAttr3}</div>
           </li>
-          {cardTrunfo && (
+          { cardTrunfo && (
             <div className="Card-trunfo">
               <p className="Card-trunfo-icon">
                 <GiEmerald />
               </p>
               <p className="Card-trunfo-text">Super Trunfo</p>
             </div>
-          )}
+          ) }
         </ul>
       </section>
     );

@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { GiSonicShoes, GiFoxTail, GiBoxingGlove, GiEmerald } from 'react-icons/gi';
-import './Card.css';
+import React, { Component } from 'react';
+import {
+  GiBoxingGlove,
+  GiEmerald,
+  GiFoxTail,
+  GiSonicShoes,
+} from 'react-icons/gi';
 import logo from '../assets/logo.png';
 import checkpoint from '../assets/sound-effects/sonic_checkpoint_sound-effect.mp3';
+import './Card.css';
 
 class Card extends Component {
   constructor() {
@@ -43,32 +48,46 @@ class Card extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
+      preview,
     } = this.props;
 
     const maxAttr = 90;
 
     return (
-      <section className="Card">
+      <section
+        className="Card"
+        data-testid={ preview ? 'custom-card-preview' : 'custom-card' }
+      >
         <img className="Card-logo" src={ logo } alt="Sonic Trunfo" />
         <header className="Card-header">
-          <h2 data-testid="name-card">{cardName}</h2>
-          <p className="Card-rarity" data-testid="rare-card">
-            {cardRare}
+          <h2
+            data-testid={ preview ? 'name-card-preview' : 'name-card' }
+          >
+            { cardName }
+          </h2>
+          <p
+            className="Card-rarity"
+            data-testid={ preview ? 'rare-card-preview' : 'rare-card' }
+          >
+            { cardRare }
           </p>
         </header>
         <img
           className="Card-img"
-          data-testid="image-card"
+          data-testid={ preview ? 'image-card-preview' : 'image-card' }
           src={ cardImage }
           alt={ cardName }
         />
         <div className="Card-desc-container">
-          <p className="Card-desc" data-testid="description-card">
-            {cardDescription}
+          <p
+            className="Card-desc"
+            data-testid={ preview ? 'description-card-preview' : 'description-card' }
+          >
+            { cardDescription }
           </p>
         </div>
         <ul className="Card-attr">
-          <li data-testid="attr1-card">
+          <li data-testid={ preview ? 'attr1-card-preview' : 'attr1-card' }>
             <div className="Card-attr-icon">
               <GiSonicShoes />
             </div>
@@ -79,9 +98,9 @@ class Card extends Component {
                 style={ { width: `${(cardAttr1 / maxAttr) * 100}%` } }
               />
             </div>
-            <div className="Card-attr-value">{cardAttr1}</div>
+            <div className="Card-attr-value">{ cardAttr1 }</div>
           </li>
-          <li data-testid="attr2-card">
+          <li data-testid={ preview ? 'attr2-card-preview' : 'attr2-card' }>
             <div className="Card-attr-icon">
               <GiFoxTail />
             </div>
@@ -92,9 +111,9 @@ class Card extends Component {
                 style={ { width: `${(cardAttr2 / maxAttr) * 100}%` } }
               />
             </div>
-            <div className="Card-attr-value">{cardAttr2}</div>
+            <div className="Card-attr-value">{ cardAttr2 }</div>
           </li>
-          <li data-testid="attr3-card">
+          <li data-testid={ preview ? 'attr3-card-preview' : 'attr3-card' }>
             <div className="Card-attr-icon">
               <GiBoxingGlove />
             </div>
@@ -105,18 +124,25 @@ class Card extends Component {
                 style={ { width: `${(cardAttr3 / maxAttr) * 100}%` } }
               />
             </div>
-            <div className="Card-attr-value">{cardAttr3}</div>
+            <div
+              className="Card-attr-value"
+            >
+              { cardAttr3 }
+            </div>
           </li>
-          {cardTrunfo && (
-            <div className="Card-trunfo" data-testid="trunfo-card">
+          { cardTrunfo && (
+            <div
+              className="Card-trunfo"
+              data-testid={ preview ? 'trunfo-card-preview' : 'trunfo-card' }
+            >
               <p className="Card-trunfo-icon">
                 <GiEmerald />
               </p>
               <p className="Card-trunfo-text">Super Trunfo</p>
             </div>
-          )}
+          ) }
         </ul>
-        {this.renderDeleteCardButton()}
+        { this.renderDeleteCardButton() }
       </section>
     );
   }

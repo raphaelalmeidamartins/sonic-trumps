@@ -64,12 +64,21 @@ class App extends React.Component {
 
   handleInputChange({ target }) {
     const { name, value, checked } = target;
+
     let currValue = target.type === 'checkbox' ? checked : value;
+    const maxLengthName = 36;
+    const maxLengthDescription = 81;
+    if (name === 'cardName') currValue = currValue.slice(0 - maxLengthName);
+    if (name === 'cardDescription') currValue = currValue.slice(0 - maxLengthDescription);
+
     if (name.match(/cardAttr[1-3]/)) {
       const min = 0;
       const max = 90;
       if (+currValue < min) currValue = min;
       if (+currValue > max) currValue = max;
+      const radix = 10;
+      currValue = parseInt(currValue, radix);
+      if (Number.isNaN(currValue)) currValue = 0;
       currValue = String(currValue);
     }
     this.setState({ [name]: currValue }, this.validateForm);
@@ -77,7 +86,6 @@ class App extends React.Component {
 
   handleSaveButtonClick(event) {
     event.preventDefault();
-
     const newCard = { ...this.state };
     delete newCard.isSaveButtonDisabled;
     delete newCard.customCards;
@@ -88,10 +96,7 @@ class App extends React.Component {
     const { customCards, initialState } = this.state;
 
     this.setState(
-      {
-        ...initialState,
-        customCards: [...customCards, newCard],
-      },
+      { ...initialState, customCards: [...customCards, newCard] },
       () => {
         if (newCard.cardTrunfo) this.setState({ hasTrunfo: true });
       },
@@ -102,7 +107,6 @@ class App extends React.Component {
     const { customCards } = this.state;
     const newcustomCards = [...customCards];
     newcustomCards.splice(index, 1);
-
     if (!cardTrunfo) this.setState({ customCards: newcustomCards });
     else this.setState({ customCards: newcustomCards, hasTrunfo: !cardTrunfo });
   }
@@ -133,7 +137,6 @@ class App extends React.Component {
 
     let filteredCards = arrayCards
       .filter((card) => card.cardName.match(cardsFilter.regExp));
-
     if (cardsFilter.rarity) {
       filteredCards = filteredCards
         .filter((card) => card.cardRare === cardsFilter.rarity);
@@ -149,26 +152,22 @@ class App extends React.Component {
     const { cardAttr1, cardAttr2, cardAttr3 } = this.state;
 
     let isFormInvalid = false;
-
     const areInputsEmpty = [
       cardName,
       cardDescription,
       cardImage,
       cardRare,
     ].some((inputValue) => !inputValue);
-
     const areAttrInvalid = [cardAttr1, cardAttr2, cardAttr3]
       .some((attr) => {
         const min = 0;
         const max = 90;
         return attr < min || attr > max;
       });
-
     const minTotal = 0;
     const maxTotal = 210;
     const totalAttr = [cardAttr1, cardAttr2, cardAttr3]
       .reduce((acc, curr) => acc + +curr, 0);
-
     if (
       areInputsEmpty
       || areAttrInvalid
