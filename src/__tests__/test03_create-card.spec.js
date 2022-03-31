@@ -142,8 +142,6 @@ describe(
         expect(imageInput().value).toBe('');
         expect(raritySelect().value).toBe('normal');
         expect(topTrumpCheckbox()).not.toBeChecked();
-
-        userEvent.click(deleteButtons()[0]);
       });
     });
 
