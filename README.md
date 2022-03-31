@@ -13,9 +13,14 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 
 [Click here](https://raphaelalmeidamartins.github.io/sonic-trumps) to check out the final version of the project on your browser.
 
-### Under development
+### Note
+
+This project is still under development, I'm working on it in my free time. The mobile version isn't as optimized as the desktop and tablet versions yet. It doesn't work properly on devices with smaller screens.
+
+### In progress
 
 - [ ] Implementing integration tests with React Testing Library
+- [ ] Improving the mobile version
 - [ ] Adding English translation (the project is currently only available in Brazilian Portuguese)
 - [ ] I still need to implement how the Top Trump/Super Trunfo attribute influences the game.
 
