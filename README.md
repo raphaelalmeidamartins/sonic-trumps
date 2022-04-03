@@ -24,6 +24,12 @@ This project is still under development, I'm working on it in my free time. The 
 - [ ] Adding English translation (the project is currently only available in Brazilian Portuguese)
 - [ ] I still need to implement how the Top Trump/Super Trunfo attribute influences the game.
 
+## :man_technologist: Developed Skills
+
+* Develop a React application
+* Create and reuse React components
+* React to user interactions by manipulating the components' states and props according to user events
+
 ## :memo: Methodologies
 
 * Mobile First
