@@ -1,0 +1,16 @@
+.DeleteCardButton {
+  align-self: flex-end;
+  background-color: red;
+  border-radius: 1rem;
+  bottom: 1rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  position: absolute;
+  right: 1rem;
+
+  &:hover {
+    filter: brightness(70%);
+  }
+}

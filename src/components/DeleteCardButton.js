@@ -1,12 +1,13 @@
 import React from 'react';
 import checkpoint from '../assets/sound-effects/sonic_checkpoint_sound-effect.mp3';
+import '../sass/components/DeleteCardButton.css';
 
 function DeleteCardButton() {
   const checkpointSound = new Audio(checkpoint);
 
   return (
     <button
-      className="Card-delete-btn"
+      className="DeleteCardButton"
       data-testid="delete-button"
       type="button"
       onClick={ () => {
