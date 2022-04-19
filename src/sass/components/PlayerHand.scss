@@ -6,6 +6,7 @@
   filter: drop-shadow(0 0 15px gray);
   flex-flow: column nowrap;
   left: 50%;
+  max-width: 730px;
   padding: 1rem;
   position: fixed;
   transform: translate(-50%);
@@ -35,7 +36,7 @@
   } 
 }
 .PlayerHand-hidden {
-  bottom: -550px;
+  bottom: -100vh;
 }
 
 .PlayerHand-display {

@@ -1,0 +1,44 @@
+.CpuAttribute {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--sonic-fur);
+  border-radius: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+  padding: 0.4rem;
+  padding-left: 3.8rem;
+  padding-right: 0.8rem;
+  position: relative;
+  -webkit-transform: skew(-10deg);
+          transform: skew(-10deg);
+}
+
+.CpuAttribute .CpuAttribute-icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border: 5px solid var(--sonic-fur);
+  border-radius: 0.5rem;
+  color: var(--sonic-shoes);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  position: absolute;
+  width: 50px;
+}
+
+.CpuAttribute .CpuAttribute-text {
+  color: var(--sonic-yellow);
+  font-size: 1.3rem;
+}
+/*# sourceMappingURL=CpuAttribute.css.map */

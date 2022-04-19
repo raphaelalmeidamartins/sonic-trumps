@@ -1,12 +1,17 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { actionSelectAttribute } from '../redux/actions';
+import { actionSelectAttribute, actionDisplayPlayerHand } from '../redux/actions';
+import '../sass/components/SelectAttribute.css';
+import CpuAttribute from './CpuAttribute';
 
 function SelectAttribute() {
   const attributes = useSelector((state) => state.game.attributes);
+  const attributeNames = useSelector((state) => state.game.attributeNames);
   const currAttr = useSelector((state) => state.game.currAttr);
   const currRound = useSelector((state) => state.game.currRound);
   const cpuTurn = useSelector((state) => state.game.cpuTurn);
+  const displayHand = useSelector((state) => state.game.displayHand);
+  const displayDuel = useSelector((state) => state.game.displayHand);
 
   const dispatch = useDispatch();
 
@@ -23,28 +28,37 @@ function SelectAttribute() {
   }, [cpuTurn, attributes, dispatch]);
 
   return (
-    <div>
+    <section className="SelectAttribute">
+      <h1>{ `Rodada ${currRound}` }</h1>
       {currRound % 2 === 0 && (
-        <p>
-          <span>Attribute:</span>
-          <span>{currAttr}</span>
-        </p>
+        <>
+          <p>Vez da CPU!</p>
+          <CpuAttribute />
+        </>
       )}
       {currRound % 2 !== 0 && (
-        <label htmlFor="attribute">
-          <span>Select an attribute:</span>
+        <>
+          <p>Sua vez! Escolha um atributo:</p>
           <select
             name="currAttr"
             value={ currAttr }
             onChange={ handleChange }
           >
             {attributes.map((attr) => (
-              <option key={ attr }>{attr}</option>
+              <option key={ attr }>{attributeNames[attr]}</option>
             ))}
           </select>
-        </label>
+        </>
       )}
-    </div>
+      <button
+        className="Game-button Game-select-card"
+        type="button"
+        onClick={ () => dispatch(actionDisplayPlayerHand()) }
+        disabled={ Boolean(displayDuel || displayHand) }
+      >
+        Selecionar Carta
+      </button>
+    </section>
   );
 }
 

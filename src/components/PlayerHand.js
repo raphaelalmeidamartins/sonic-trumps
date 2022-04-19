@@ -7,7 +7,7 @@ import '../sass/components/PlayerHand.css';
 
 function PlayerHand() {
   const playerHand = useSelector((state) => state.deck.playerHand);
-  const { displayHand } = useSelector((state) => state.game.displayHand);
+  const displayHand = useSelector((state) => state.game.displayHand);
 
   const display = 'PlayerHand PlayerHand-display';
   const hide = 'PlayerHand PlayerHand-hidden';

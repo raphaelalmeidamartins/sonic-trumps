@@ -1,12 +1,19 @@
-import { RESET_GAME, SELECT_ATTRIBUTE, SELECT_CARD, HIDE_PLAYER_HAND } from '../actions';
+import { RESET_GAME, SELECT_ATTRIBUTE, SELECT_CARD, HIDE_PLAYER_HAND, DISPLAY_PLAYER_HAND } from '../actions';
 
-const attributes = ['DA', 'TB', 'MT', 'Alexa', 'IX'];
+const attributes = ['currAttr1', 'currAttr2', 'currAttr3'];
+
+const attributeNames = {
+  currAttr1: 'SPEED',
+  currAttr2: 'SKILL',
+  currAttr3: 'POWER',
+};
 
 const INITIAL_STATE = {
   currRound: 1,
   cpuTurn: false,
   rounds: 6,
   attributes,
+  attributeNames,
   currAttr: attributes[0],
   playerCard: null,
   wins: 0,
@@ -43,6 +50,11 @@ const game = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       displayHand: false,
+    };
+  case DISPLAY_PLAYER_HAND:
+    return {
+      ...state,
+      displayHand: true,
     };
   default:
     return state;

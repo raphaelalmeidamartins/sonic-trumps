@@ -14,6 +14,7 @@
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   left: 50%;
+  max-width: 730px;
   padding: 1rem;
   position: fixed;
   -webkit-transform: translate(-50%);
@@ -53,7 +54,7 @@
 }
 
 .PlayerHand-hidden {
-  bottom: -550px;
+  bottom: -100vh;
 }
 
 .PlayerHand-display {
