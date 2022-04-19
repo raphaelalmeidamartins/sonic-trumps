@@ -1,13 +1,16 @@
 import React from 'react';
-import websites from '../data/deck-data';
+import deckArray from '../data/deck-data';
 import Card from './Card';
+import '../sass/components/Deck.css';
 
 function Deck() {
   return (
-    <main>
-      {websites.map((card) => (
-        <Card key={ card.cardName } { ...card } />
-      ))}
+    <main className="Deck">
+      <div className="Deck-container">
+        {deckArray.map((card) => (
+          <Card key={ card.cardName } { ...card } />
+        ))}
+      </div>
     </main>
   );
 }

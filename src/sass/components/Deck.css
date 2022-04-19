@@ -1,0 +1,38 @@
+.Deck {
+  background-attachment: fixed;
+  background-image: url("../../assets/background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  padding-bottom: 6rem;
+  width: 100%;
+}
+
+.Deck-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.Deck .Card {
+  -webkit-filter: drop-shadow(0 0 15px #2e4f75);
+          filter: drop-shadow(0 0 15px #2e4f75);
+  margin: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  .Deck .Card {
+    margin: 2rem 0;
+  }
+}
+/*# sourceMappingURL=Deck.css.map */

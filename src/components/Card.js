@@ -7,7 +7,7 @@ import {
   GiSonicShoes,
 } from 'react-icons/gi';
 import logo from '../assets/logo.png';
-import checkpoint from '../assets/sound-effects/sonic_checkpoint_sound-effect.mp3';
+import DeleteCardButton from './DeleteCardButton';
 import '../sass/components/Card.css';
 
 function Card(props) {
@@ -21,28 +21,12 @@ function Card(props) {
     cardRare,
     cardTrunfo,
     preview,
-    removeCard,
-    index,
+    custom,
   } = props;
 
-  const renderDeleteCardButton = () => {
-    const checkpointSound = new Audio(checkpoint);
-
-    if (!preview) {
-      return (
-        <button
-          className="Card-delete-btn"
-          data-testid="delete-button"
-          type="button"
-          onClick={ () => {
-            checkpointSound.play();
-            removeCard(index, cardTrunfo);
-          } }
-        >
-          Excluir
-        </button>
-      );
-    }
+  const returnTestId = (id) => {
+    if (custom) return preview ? `${id}-preview` : id;
+    return '';
   };
 
   const maxAttr = 90;
@@ -50,37 +34,37 @@ function Card(props) {
   return (
     <section
       className="Card"
-      data-testid={ preview ? 'custom-card-preview' : 'custom-card' }
+      data-testid={ returnTestId('custom-card') }
     >
       <img className="Card-logo" src={ logo } alt="Sonic Trunfo" />
       <header>
         <h2
-          data-testid={ preview ? 'name-card-preview' : 'name-card' }
+          data-testid={ returnTestId('name-card') }
         >
           { cardName }
         </h2>
         <p
           className="Card-rarity"
-          data-testid={ preview ? 'rare-card-preview' : 'rare-card' }
+          data-testid={ returnTestId('rare-card') }
         >
           { cardRare }
         </p>
       </header>
       <img
         className="Card-img"
-        data-testid={ preview ? 'image-card-preview' : 'image-card' }
+        data-testid={ returnTestId('image-card') }
         src={ cardImage }
         alt={ cardName }
       />
       <div className="Card-desc-container">
         <p
-          data-testid={ preview ? 'description-card-preview' : 'description-card' }
+          data-testid={ returnTestId('description-card') }
         >
           { cardDescription }
         </p>
       </div>
       <ul>
-        <li data-testid={ preview ? 'attr1-card-preview' : 'attr1-card' }>
+        <li data-testid={ returnTestId('attr1-card') }>
           <div className="Card-attr-icon">
             <GiSonicShoes />
           </div>
@@ -93,7 +77,7 @@ function Card(props) {
           </div>
           <div className="Card-attr-value">{ cardAttr1 }</div>
         </li>
-        <li data-testid={ preview ? 'attr2-card-preview' : 'attr2-card' }>
+        <li data-testid={ returnTestId('attr2-card') }>
           <div className="Card-attr-icon">
             <GiFoxTail />
           </div>
@@ -106,7 +90,7 @@ function Card(props) {
           </div>
           <div className="Card-attr-value">{ cardAttr2 }</div>
         </li>
-        <li data-testid={ preview ? 'attr3-card-preview' : 'attr3-card' }>
+        <li data-testid={ returnTestId('attr3-card') }>
           <div className="Card-attr-icon">
             <GiBoxingGlove />
           </div>
@@ -126,7 +110,7 @@ function Card(props) {
         { cardTrunfo && (
           <div
             className="Card-trunfo"
-            data-testid={ preview ? 'trunfo-card-preview' : 'trunfo-card' }
+            data-testid={ returnTestId('trunfo-card') }
           >
             <p className="Card-trunfo-icon">
               <GiEmerald />
@@ -135,7 +119,7 @@ function Card(props) {
           </div>
         ) }
       </ul>
-      { renderDeleteCardButton() }
+      { (custom && !preview) && <DeleteCardButton /> }
     </section>
   );
 }
@@ -150,8 +134,7 @@ Card.defaultProps = {
   cardRare: '',
   cardTrunfo: false,
   preview: false,
-  removeCard: () => {},
-  index: undefined,
+  custom: false,
 };
 
 Card.propTypes = {
@@ -164,8 +147,7 @@ Card.propTypes = {
   cardRare: PropTypes.string,
   cardTrunfo: PropTypes.bool,
   preview: PropTypes.bool,
-  removeCard: PropTypes.func,
-  index: PropTypes.number,
+  custom: PropTypes.bool,
 };
 
 export default Card;
