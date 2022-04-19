@@ -1,16 +1,16 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import '../sass/components/GamePanel.css';
+import '../sass/components/GameHeader.css';
 
-function GamePanel() {
+function GameHeader() {
   const wins = useSelector((state) => state.game.wins);
   const cpuWins = useSelector((state) => state.game.cpuWins);
   const currRound = useSelector((state) => state.game.currRound);
 
   return (
-    <header className="GamePanel">
-      <span className="GamePanel-rounds">{ `Rodadas: ${currRound - 1}/6` }</span>
-      <div className="GamePanel-wins-container">
+    <header className="GameHeader">
+      <span className="GameHeader-rounds">{ `Rodadas: ${currRound - 1}/6` }</span>
+      <div className="GameHeader-wins-container">
         <span>{ `Vitórias: ${wins}`}</span>
         <span>{ `Derrotas: ${cpuWins}`}</span>
       </div>
@@ -18,4 +18,4 @@ function GamePanel() {
   );
 }
 
-export default GamePanel;
+export default GameHeader;

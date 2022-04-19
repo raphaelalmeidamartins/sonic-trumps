@@ -8,4 +8,12 @@
   max-width: 800px;
   padding: 1.5rem;
   position: relative;
+
+  .GamePage-panel {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    justify-content: center;
+  }
 }

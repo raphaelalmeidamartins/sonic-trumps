@@ -1,4 +1,4 @@
-.GamePanel {
+.GameHeader {
   color: var(--sonic-fur);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,11 +6,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
   width: 100%;
 }
 
-.GamePanel .GamePanel-wins-container {
+.GameHeader .GameHeader-wins-container {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -23,7 +23,7 @@
           flex-flow: column nowrap;
 }
 
-.GamePanel .GamePanel-round {
+.GameHeader .GameHeader-round {
   margin-bottom: 2rem;
 }
-/*# sourceMappingURL=GamePanel.css.map */
+/*# sourceMappingURL=GameHeader.css.map */

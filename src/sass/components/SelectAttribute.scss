@@ -1,4 +1,7 @@
 .SelectAttribute {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
   text-align: center;
 
   select {
@@ -10,12 +13,28 @@
     padding: 0.5rem;
   }
 
-  p {
-    margin-bottom: 2rem;
-  }
-
   h1 {
     color: var(--sonic-fur);
-    margin-bottom: 2rem;
+  }
+
+  select, p, h1 {
+    margin-bottom: 2rem;    
+  }
+
+  .Game-button {
+    background-color: var(--sonic-fur);
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+  
+  .Game-button:disabled {
+    background-color: var(--sonic-light-blue);
+  }
+  
+  .Game-button:hover:not( :disabled ) {
+    filter: brightness(120%);
   }
 }

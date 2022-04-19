@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Duel from '../components/Duel';
-import GamePanel from '../components/GamePanel';
+import GameHeader from '../components/GameHeader';
 import Header from '../components/Header';
 import PlayerHand from '../components/PlayerHand';
 import ResultsMessage from '../components/ResultsMessage';
@@ -27,17 +27,19 @@ function GamePage() {
     <>
       <Header />
       <main className="GamePage">
-        <GamePanel />
-        { currRound > rounds && (
-          <ResultsMessage />
-        ) }
-        { currRound <= rounds && (
-          <>
-            <Duel />
-            <SelectAttribute />
-            <PlayerHand />
-          </>
-        ) }
+        <GameHeader />
+        <div className="GamePage-panel">
+          { currRound > rounds && (
+            <ResultsMessage />
+          ) }
+          { currRound <= rounds && (
+            <>
+              <Duel />
+              <SelectAttribute />
+              <PlayerHand />
+            </>
+          ) }
+        </div>
       </main>
     </>
   );

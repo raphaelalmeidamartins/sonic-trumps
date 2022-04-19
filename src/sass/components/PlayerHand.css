@@ -82,12 +82,12 @@
       -ms-flex-pack: center;
           justify-content: center;
   max-height: 362px;
-  overflow-x: scroll;
 }
 
 @media screen and (max-height: 600px) {
   .PlayerHand-cards-container {
     max-height: 250px;
+    overflow-y: scroll;
   }
 }
 /*# sourceMappingURL=PlayerHand.css.map */
