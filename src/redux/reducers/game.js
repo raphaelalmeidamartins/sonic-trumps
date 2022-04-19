@@ -1,4 +1,9 @@
-import { RESET_GAME, SELECT_ATTRIBUTE, SELECT_CARD, HIDE_PLAYER_HAND, DISPLAY_PLAYER_HAND } from '../actions';
+import {
+  DISPLAY_PLAYER_HAND,
+  HIDE_PLAYER_HAND, RESET_GAME,
+  SELECT_ATTRIBUTE,
+  SELECT_CARD,
+} from '../actions';
 
 const attributes = ['currAttr1', 'currAttr2', 'currAttr3'];
 
