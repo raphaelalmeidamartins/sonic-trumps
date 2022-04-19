@@ -34,19 +34,16 @@ const actionSelectAttribute = (value) => ({
   value,
 });
 
-const actionSelectCard = (playerCard, cpuCard, currAttr) => {
-  console.log(playerCard, cpuCard);
-  return {
-    type: SELECT_CARD,
-    playerCard,
-    cpuCard,
-    currAttr,
-    wins:
+const actionSelectCard = (playerCard, cpuCard, currAttr) => ({
+  type: SELECT_CARD,
+  playerCard,
+  cpuCard,
+  currAttr,
+  wins:
       playerCard[currAttr] > cpuCard[currAttr] ? 1 : 0,
-    cpuWins:
+  cpuWins:
       playerCard[currAttr] < cpuCard[currAttr] ? 1 : 0,
-  };
-};
+});
 
 const actionHidePlayerHand = () => ({
   type: HIDE_PLAYER_HAND,
