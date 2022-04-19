@@ -3,8 +3,8 @@ import { BiArrowToTop } from 'react-icons/bi';
 import { GiCardPick, GiCardRandom } from 'react-icons/gi';
 import { useNavigate } from 'react-router-dom';
 import alrightSoundEffect from '../assets/sound-effects/alright.mp3';
-import '../sass/components/NavBar.css';
 import SearchBar from './SearchBar';
+import '../sass/components/NavBar.css';
 
 function NavBar() {
   const ringSound = new Audio(alrightSoundEffect);

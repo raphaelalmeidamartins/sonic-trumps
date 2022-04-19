@@ -1,0 +1,31 @@
+.ResultsMessage {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.ResultsMessage img {
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 200px;
+}
+
+.ResultsMessage p {
+  color: var(--sonic-fur);
+  font-size: 2rem;
+  text-align: center;
+}
+/*# sourceMappingURL=ResultsMessage.css.map */

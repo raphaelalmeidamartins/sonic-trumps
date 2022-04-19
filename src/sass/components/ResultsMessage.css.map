@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACd,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;EACxB,MAAM,EAAE,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,KAAK,EAAE,IAAI;CAaZ;;AAnBD,AAQE,eARa,CAQb,GAAG,CAAC;EACF,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,OAAO;EACnB,KAAK,EAAE,KAAK;CACb;;AAZH,AAcE,eAda,CAcb,CAAC,CAAC;EACA,KAAK,EAAE,gBAAgB;EACvB,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,MAAM;CACnB",
+    "sources": [
+        "ResultsMessage.scss"
+    ],
+    "names": [],
+    "file": "ResultsMessage.css"
+}
