@@ -1,26 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GiSonicShoes, GiFoxTail, GiBoxingGlove, GiEmerald } from 'react-icons/gi';
+import useSelectCard from '../hooks/useSelectCard';
 import '../sass/components/CardMini.css';
 
 function CardMini(props) {
   const {
-    index,
-    cardPosition,
     cardName,
     cardImage,
     cardAttr1,
     cardAttr2,
     cardAttr3,
     cardTrunfo,
-    selectCard,
   } = props;
+
+  const selectCard = useSelectCard(props);
 
   return (
     <button
       type="button"
-      className={ `CardMini ${cardPosition}` }
-      onClick={ () => selectCard(index) }
+      className="CardMini"
+      onClick={ selectCard }
     >
       {cardTrunfo && (
         <div className="CardMini-trunfo-icon">
@@ -53,15 +53,12 @@ function CardMini(props) {
 }
 
 CardMini.propTypes = {
-  index: PropTypes.number.isRequired,
-  cardPosition: PropTypes.string.isRequired,
   cardName: PropTypes.string.isRequired,
   cardAttr1: PropTypes.string.isRequired,
   cardAttr2: PropTypes.string.isRequired,
   cardAttr3: PropTypes.string.isRequired,
   cardImage: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
-  selectCard: PropTypes.func.isRequired,
 };
 
 export default CardMini;

@@ -1,4 +1,4 @@
-import { RESET_GAME, SELECT_ATTRIBUTE, SELECT_CARD } from '../actions';
+import { RESET_GAME, SELECT_ATTRIBUTE, SELECT_CARD, HIDE_PLAYER_HAND } from '../actions';
 
 const attributes = ['DA', 'TB', 'MT', 'Alexa', 'IX'];
 
@@ -38,6 +38,11 @@ const game = (state = INITIAL_STATE, action) => {
       cpuWins: state.cpuWins + action.cpuWins,
       didPlayerWinRound: Boolean(action.wins),
       draw: action.wins === action.cpuWins,
+    };
+  case HIDE_PLAYER_HAND:
+    return {
+      ...state,
+      displayHand: false,
     };
   default:
     return state;

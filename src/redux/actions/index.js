@@ -5,6 +5,8 @@ const SHUFFLE_CARDS = 'SHUFFLE_CARDS';
 const RESET_GAME = 'RESET_GAME';
 const SELECT_ATTRIBUTE = 'SELECT_ATTRIBUTE';
 const SELECT_CARD = 'SELECT_CARD';
+const HIDE_PLAYER_HAND = 'HIDE_PLAYER_HAND';
+const DISPLAY_PLAYER_HAND = 'DISPLAY_PLAYER_HAND';
 
 const actionUpdatePlayerData = (name, value) => ({
   type: UPDATE_PLAYER_DATA,
@@ -41,6 +43,14 @@ const actionSelectCard = (playerCard, cpuCard, currAttr) => ({
     playerCard.attributes[currAttr] < cpuCard.attributes[currAttr] ? 1 : 0,
 });
 
+const actionHidePlayerHand = () => ({
+  type: HIDE_PLAYER_HAND,
+});
+
+const actionDisplayPlayerHand = () => ({
+  type: DISPLAY_PLAYER_HAND,
+});
+
 export {
   UPDATE_PLAYER_DATA,
   actionUpdatePlayerData,
@@ -54,4 +64,8 @@ export {
   actionSelectAttribute,
   SELECT_CARD,
   actionSelectCard,
+  HIDE_PLAYER_HAND,
+  actionHidePlayerHand,
+  DISPLAY_PLAYER_HAND,
+  actionDisplayPlayerHand,
 };

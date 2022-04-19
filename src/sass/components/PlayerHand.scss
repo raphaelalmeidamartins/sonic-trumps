@@ -1,0 +1,58 @@
+.PlayerHand {
+  align-items: center;
+  background-color: var(--sonic-fur-light);
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  filter: drop-shadow(0 0 15px gray);
+  flex-flow: column nowrap;
+  left: 50%;
+  padding: 1rem;
+  position: fixed;
+  transform: translate(-50%);
+  transition: 400ms;
+}
+
+.PlayerHand-close-button {
+  align-items: center;
+  background-color: transparent;
+  color: var(--sonic-fur);
+  cursor: pointer;
+  display: flex;
+  font-size: 3rem;
+  height: 50px;
+  justify-content: center;
+  position: absolute;
+  right: 1rem;
+  top: -3.5rem;
+  width: 50px;
+
+  &:hover {
+    filter: brightness(150%);
+  }
+
+  .CardMini {
+    margin: 0.5rem;
+  } 
+}
+.PlayerHand-hidden {
+  bottom: -550px;
+}
+
+.PlayerHand-display {
+  bottom: 0;
+}
+
+.PlayerHand-header {
+  p {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }  
+}
+
+.PlayerHand-cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}

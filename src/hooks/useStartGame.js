@@ -7,7 +7,7 @@ function useStartGame() {
   return function startGame() {
     dispatch(actionShuffleCards());
     dispatch(actionResetGame());
-  }
+  };
 }
 
 export default useStartGame;
