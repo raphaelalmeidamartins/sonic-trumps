@@ -1,0 +1,97 @@
+.CardMini {
+  background-color: var(--sonic-light-red);
+  border: 8px solid var(--sonic-shoes);
+  border-radius: 1rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 165px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  width: 100px;
+}
+
+.CardMini:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.CardMini .CardMini-trunfo-icon {
+  color: var(--sonic-eyes);
+  position: absolute;
+  right: 0.3rem;
+  top: 0.3rem;
+}
+
+.CardMini .CardMini-img {
+  height: 84px;
+  margin-bottom: 0.8rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  width: 84px;
+}
+
+.CardMini .CardMini-attr-container {
+  background-color: var(--sonic-fur);
+  border-radius: 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.CardMini .CardMini-attr {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 40px;
+  padding-bottom: 0.2rem;
+  padding-top: 1.4rem;
+  position: relative;
+  width: 28px;
+}
+
+.CardMini .CardMini-attr-icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border: 2.5px solid var(--sonic-fur);
+  border-radius: 0.3rem;
+  color: var(--sonic-shoes);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.2rem;
+  height: 27px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: -7px;
+  -webkit-transform: skew(-10deg);
+          transform: skew(-10deg);
+  width: 28px;
+}
+
+.CardMini .CardMini-attr-value {
+  color: var(--sonic-yellow);
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=CardMini.css.map */

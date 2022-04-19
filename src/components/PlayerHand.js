@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Card from './Card';
+import CardMini from './CardMini';
 
 function PlayerHand() {
   const playerHand = useSelector((state) => state.deck.playerHand);
@@ -8,7 +8,7 @@ function PlayerHand() {
   return (
     <div>
       {playerHand.map((card) => (
-        <Card key={ card.id } { ...card } hand />
+        <CardMini key={ card.id } { ...card } hand />
       ))}
     </div>
   );
