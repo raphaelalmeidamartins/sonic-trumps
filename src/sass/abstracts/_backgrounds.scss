@@ -1,0 +1,25 @@
+/* shadows */
+
+$box-shaddow: 0px 15px 25px -4px rgba(30,30,60,0.25);
+
+@mixin inner-shadow {
+  box-shadow: inset 0px -6px 12px 3px #0C6291;
+  -webkit-box-shadow: inset 0px -6px 12px 3px #0C6291;
+  -moz-box-shadow: inset 0px -6px 12px 3px #0C6291;
+  -o-box-shadow: inset 0px -6px 12px 3px #0C6291;
+}
+
+/* backgrounds */
+
+@mixin pattern {
+  background-color: #0C6291;
+  opacity: 1;
+  background-image:  radial-gradient(#4dade1 2px, transparent 2px), radial-gradient(#4dade1 2px, #0C6291 2px);
+  background-size: 80px 80px;
+  background-position: 0 0,40px 40px;
+}
+
+@mixin button-background {
+  background: rgb(21,132,191);
+  background: linear-gradient(180deg, rgba(21,132,191,1) 30%, rgba(31,130,184,1) 70%, rgba(12,98,145,1) 100%);
+}

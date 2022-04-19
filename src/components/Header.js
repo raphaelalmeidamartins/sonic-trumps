@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import logo from '../assets/logo.png';
-import './Header.css';
+import React from 'react';
+import GameStatus from './GameStatus';
+import PlayerAvatar from './PlayerAvatar';
 
-class Header extends Component {
-  render() {
-    return (
-      <header className="Header">
-        <img className="Header-logo" src={ logo } alt="Sonic Trunfo" />
-      </header>
-    );
-  }
+function Header() {
+  return (
+    <header>
+      <GameStatus />
+      <PlayerAvatar />
+    </header>
+  );
 }
 
 export default Header;
