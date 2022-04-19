@@ -19,7 +19,7 @@ function SearchBar({ hideOrDisplay }) {
             type="text"
             data-testid="name-filter"
             placeholder="Nome da carta"
-            onChange={ ({ target }) => onInputChange(target.value, 'name') }
+            onChange={ () => {} }
           />
         </div>
         <select
@@ -27,7 +27,7 @@ function SearchBar({ hideOrDisplay }) {
           name="raritySearch"
           className="SearchBar-rarity"
           data-testid="rare-filter"
-          onChange={ ({ target }) => onInputChange(target.value, 'rarity') }
+          onChange={ () => {} }
           defaultValue="todas"
         >
           <option value="todas">todas</option>
@@ -46,7 +46,7 @@ function SearchBar({ hideOrDisplay }) {
             className="SearchBar-trunfo"
             type="checkbox"
             data-testid="trunfo-filter"
-            onChange={ ({ target }) => onInputChange(target.checked, 'trunfo') }
+            onChange={ () => {} }
           />
         </label>
       </section>
@@ -55,7 +55,6 @@ function SearchBar({ hideOrDisplay }) {
 }
 
 SearchBar.propTypes = {
-  onInputChange: PropTypes.func.isRequired,
   hideOrDisplay: PropTypes.string.isRequired,
 };
 

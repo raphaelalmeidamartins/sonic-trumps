@@ -1,7 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { GiSonicShoes, GiFoxTail, GiBoxingGlove, GiEmerald } from 'react-icons/gi';
+import React from 'react';
+import { GiBoxingGlove, GiEmerald, GiFoxTail, GiSonicShoes } from 'react-icons/gi';
+import { useDispatch } from 'react-redux';
 import useSelectCard from '../hooks/useSelectCard';
+import { actionDisplayDuel } from '../redux/actions';
 import '../sass/components/CardMini.css';
 
 function CardMini(props) {
@@ -16,11 +18,18 @@ function CardMini(props) {
 
   const selectCard = useSelectCard(props);
 
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    selectCard();
+    dispatch(actionDisplayDuel());
+  };
+
   return (
     <button
       type="button"
       className="CardMini"
-      onClick={ selectCard }
+      onClick={ handleClick }
     >
       {cardTrunfo && (
         <div className="CardMini-trunfo-icon">

@@ -3,14 +3,16 @@ import {
   HIDE_PLAYER_HAND, RESET_GAME,
   SELECT_ATTRIBUTE,
   SELECT_CARD,
+  DISPLAY_DUEL,
+  NEXT_ROUND,
 } from '../actions';
 
-const attributes = ['currAttr1', 'currAttr2', 'currAttr3'];
+const attributes = ['cardAttr1', 'cardAttr2', 'cardAttr3'];
 
 const attributeNames = {
-  currAttr1: 'SPEED',
-  currAttr2: 'SKILL',
-  currAttr3: 'POWER',
+  cardAttr1: 'SPEED',
+  cardAttr2: 'SKILL',
+  cardAttr3: 'POWER',
 };
 
 const INITIAL_STATE = {
@@ -51,6 +53,11 @@ const game = (state = INITIAL_STATE, action) => {
       didPlayerWinRound: Boolean(action.wins),
       draw: action.wins === action.cpuWins,
     };
+  case NEXT_ROUND:
+    return {
+      ...state,
+      displayDuel: false,
+    };
   case HIDE_PLAYER_HAND:
     return {
       ...state,
@@ -60,6 +67,11 @@ const game = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       displayHand: true,
+    };
+  case DISPLAY_DUEL:
+    return {
+      ...state,
+      displayDuel: true,
     };
   default:
     return state;

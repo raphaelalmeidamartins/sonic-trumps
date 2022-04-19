@@ -7,6 +7,8 @@ const SELECT_ATTRIBUTE = 'SELECT_ATTRIBUTE';
 const SELECT_CARD = 'SELECT_CARD';
 const HIDE_PLAYER_HAND = 'HIDE_PLAYER_HAND';
 const DISPLAY_PLAYER_HAND = 'DISPLAY_PLAYER_HAND';
+const DISPLAY_DUEL = 'DISPLAY_DUEL';
+const NEXT_ROUND = 'NEXT_ROUND';
 
 const actionUpdatePlayerData = (name, value) => ({
   type: UPDATE_PLAYER_DATA,
@@ -32,16 +34,19 @@ const actionSelectAttribute = (value) => ({
   value,
 });
 
-const actionSelectCard = (playerCard, cpuCard, currAttr) => ({
-  type: SELECT_CARD,
-  playerCard,
-  cpuCard,
-  currAttr,
-  wins:
-    playerCard[currAttr] > cpuCard[currAttr] ? 1 : 0,
-  cpuWins:
-    playerCard[currAttr] < cpuCard[currAttr] ? 1 : 0,
-});
+const actionSelectCard = (playerCard, cpuCard, currAttr) => {
+  console.log(playerCard, cpuCard);
+  return {
+    type: SELECT_CARD,
+    playerCard,
+    cpuCard,
+    currAttr,
+    wins:
+      playerCard[currAttr] > cpuCard[currAttr] ? 1 : 0,
+    cpuWins:
+      playerCard[currAttr] < cpuCard[currAttr] ? 1 : 0,
+  };
+};
 
 const actionHidePlayerHand = () => ({
   type: HIDE_PLAYER_HAND,
@@ -49,6 +54,14 @@ const actionHidePlayerHand = () => ({
 
 const actionDisplayPlayerHand = () => ({
   type: DISPLAY_PLAYER_HAND,
+});
+
+const actionDisplayDuel = () => ({
+  type: DISPLAY_DUEL,
+});
+
+const actionNextRound = () => ({
+  type: NEXT_ROUND,
 });
 
 export {
@@ -68,4 +81,8 @@ export {
   actionHidePlayerHand,
   DISPLAY_PLAYER_HAND,
   actionDisplayPlayerHand,
+  DISPLAY_DUEL,
+  actionDisplayDuel,
+  NEXT_ROUND,
+  actionNextRound,
 };

@@ -1,8 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Card from './Card';
 import WinOrLoseMessage from './WinOrLoseMessage';
 import '../sass/components/Duel.css';
+import { actionNextRound } from '../redux/actions';
 
 function Duel() {
   const playerCard = useSelector((state) => state.game.playerCard);
@@ -10,6 +11,8 @@ function Duel() {
   const didPlayerWinRound = useSelector((state) => state.game.didPlayerWinRound);
   const draw = useSelector((state) => state.game.draw);
   const displayDuel = useSelector((state) => state.game.displayDuel);
+
+  const dispatch = useDispatch();
 
   const display = 'Duel Duel-display';
   const hide = 'Duel Duel-hidden';
@@ -30,7 +33,7 @@ function Duel() {
         <button
           className="Duel-next-button"
           type="button"
-          onClick={ () => {} }
+          onClick={ () => dispatch(actionNextRound()) }
         >
           Próxima Rodada
         </button>
