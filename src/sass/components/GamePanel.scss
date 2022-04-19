@@ -1,0 +1,17 @@
+.GamePanel {
+  color: var(--sonic-fur);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  width: 100%;
+
+  .GamePanel-wins-container {
+    align-items: flex-end;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  
+  .GamePanel-round {
+    margin-bottom: 2rem;
+  }
+}

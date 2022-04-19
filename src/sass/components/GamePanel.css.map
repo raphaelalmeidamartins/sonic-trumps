@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,gBAAgB;EACvB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,aAAa,EAAE,IAAI;EACnB,KAAK,EAAE,IAAI;CAWZ;;AAhBD,AAOE,UAPQ,CAOR,yBAAyB,CAAC;EACxB,WAAW,EAAE,QAAQ;EACrB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;CACzB;;AAXH,AAaE,UAbQ,CAaR,gBAAgB,CAAC;EACf,aAAa,EAAE,IAAI;CACpB",
+    "sources": [
+        "GamePanel.scss"
+    ],
+    "names": [],
+    "file": "GamePanel.css"
+}

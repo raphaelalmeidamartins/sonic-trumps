@@ -21,6 +21,8 @@
           transform: translate(-50%);
   -webkit-transition: 400ms;
   transition: 400ms;
+  width: 100vw;
+  z-index: 8;
 }
 
 .PlayerHand-close-button {
@@ -54,7 +56,7 @@
 }
 
 .PlayerHand-hidden {
-  bottom: -100vh;
+  bottom: -150vh;
 }
 
 .PlayerHand-display {
@@ -79,5 +81,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-height: 362px;
+  overflow-x: scroll;
+}
+
+@media screen and (max-height: 600px) {
+  .PlayerHand-cards-container {
+    max-height: 250px;
+  }
 }
 /*# sourceMappingURL=PlayerHand.css.map */

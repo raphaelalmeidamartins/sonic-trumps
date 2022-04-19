@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Duel from '../components/Duel';
+import GamePanel from '../components/GamePanel';
 import Header from '../components/Header';
 import PlayerHand from '../components/PlayerHand';
 import ResultsMessage from '../components/ResultsMessage';
@@ -8,6 +9,7 @@ import SelectAttribute from '../components/SelectAttribute';
 import useReturnToLogin from '../hooks/useReturnToLogin';
 import useSessionStorage from '../hooks/useSessionStorage';
 import useStartGame from '../hooks/useStartGame';
+import '../sass/pages/GamePage.css';
 
 function GamePage() {
   useSessionStorage('player profile');
@@ -24,16 +26,19 @@ function GamePage() {
   return (
     <>
       <Header />
-      { currRound > rounds && (
-        <ResultsMessage />
-      ) }
-      { currRound <= rounds && (
-        <main>
-          <Duel />
-          <SelectAttribute />
-          <PlayerHand />
-        </main>
-      ) }
+      <main className="GamePage">
+        <GamePanel />
+        { currRound > rounds && (
+          <ResultsMessage />
+        ) }
+        { currRound <= rounds && (
+          <>
+            <Duel />
+            <SelectAttribute />
+            <PlayerHand />
+          </>
+        ) }
+      </main>
     </>
   );
 }

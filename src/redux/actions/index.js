@@ -38,9 +38,9 @@ const actionSelectCard = (playerCard, cpuCard, currAttr) => ({
   cpuCard,
   currAttr,
   wins:
-    playerCard.attributes[currAttr] > cpuCard.attributes[currAttr] ? 1 : 0,
+    playerCard[currAttr] > cpuCard[currAttr] ? 1 : 0,
   cpuWins:
-    playerCard.attributes[currAttr] < cpuCard.attributes[currAttr] ? 1 : 0,
+    playerCard[currAttr] < cpuCard[currAttr] ? 1 : 0,
 });
 
 const actionHidePlayerHand = () => ({

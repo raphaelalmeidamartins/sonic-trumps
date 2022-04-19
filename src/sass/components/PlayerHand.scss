@@ -11,6 +11,8 @@
   position: fixed;
   transform: translate(-50%);
   transition: 400ms;
+  width: 100vw;
+  z-index: 8;
 }
 
 .PlayerHand-close-button {
@@ -36,7 +38,7 @@
   } 
 }
 .PlayerHand-hidden {
-  bottom: -100vh;
+  bottom: -150vh;
 }
 
 .PlayerHand-display {
@@ -56,4 +58,12 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  max-height: 362px;
+  overflow-x: scroll;
+}
+
+@media screen and (max-height : 600px) {
+  .PlayerHand-cards-container {
+    max-height: 250px;
+  }
 }

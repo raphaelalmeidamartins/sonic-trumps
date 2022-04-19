@@ -1,3 +1,7 @@
+.SelectAttribute {
+  text-align: center;
+}
+
 .SelectAttribute select {
   background-color: var(--sonic-light-blue);
   border: 1px solid var(--sonic-fur);

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionSelectAttribute, actionDisplayPlayerHand } from '../redux/actions';
-import '../sass/components/SelectAttribute.css';
 import CpuAttribute from './CpuAttribute';
+import '../sass/components/SelectAttribute.css';
 
 function SelectAttribute() {
   const attributes = useSelector((state) => state.game.attributes);

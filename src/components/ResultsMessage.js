@@ -20,6 +20,7 @@ function ResultsMessage() {
       </section>
     );
   }
+
   return wins > cpuWins
     ? (
       <section className="ResultsMessage">

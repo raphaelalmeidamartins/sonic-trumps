@@ -21,7 +21,7 @@ const removeSelectedCard = (selectedCard, hand) => {
   let selectedCardIndex;
 
   hand.forEach((card, index) => {
-    if (card.id === selectedCard.id) {
+    if (card.cardName === selectedCard.cardName) {
       selectedCardIndex = index;
     }
   });

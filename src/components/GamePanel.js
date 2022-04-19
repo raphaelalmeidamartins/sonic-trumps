@@ -1,35 +1,20 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import '../sass/components/GamePanel.css';
 
 function GamePanel() {
+  const wins = useSelector((state) => state.game.wins);
+  const cpuWins = useSelector((state) => state.game.cpuWins);
+  const currRound = useSelector((state) => state.game.currRound);
+
   return (
-    // <section className="Game-panel">
-    //   <h1 className="Game-current-round">{ `Rodada ${currRound}` }</h1>
-    //   <p
-    //     className="Game-turn"
-    //   >
-    //     { (currRound % 2 === 0) ? 'Vez da CPU!' : 'Sua vez! Escolha um atributo:' }
-    //   </p>
-    //   { !playerTurn && this.returnRandomAttr(currAttr) }
-    //   { playerTurn && (
-    //     <select
-    //       name="playerAttrSelect"
-    //       className="Game-select-attr"
-    //       onChange={ ({ target }) => this.setState({ currAttr: target.value }) }
-    //     >
-    //       <option value="cardAttr1">Speed</option>
-    //       <option value="cardAttr2">Skill</option>
-    //       <option value="cardAttr3">Power</option>
-    //     </select>
-    //   ) }
-    //   <button
-    //     className="Game-button Game-select-card"
-    //     type="button"
-    //     onClick={ () => this.setState({ displayHand: true }) }
-    //     disabled={ Boolean(displayDuel || displayHand) }
-    //   >
-    //     Selecionar Carta
-    //   </button>
-    // </section>
+    <header className="GamePanel">
+      <span className="GamePanel-rounds">{ `Rodadas: ${currRound - 1}/6` }</span>
+      <div className="GamePanel-wins-container">
+        <span>{ `Vitórias: ${wins}`}</span>
+        <span>{ `Derrotas: ${cpuWins}`}</span>
+      </div>
+    </header>
   );
 }
 
