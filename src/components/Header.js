@@ -1,12 +1,11 @@
 import React from 'react';
-import GameStatus from './GameStatus';
-import PlayerAvatar from './PlayerAvatar';
+import logo from '../assets/logo.png';
+import '../sass/components/Header.css';
 
 function Header() {
   return (
-    <header>
-      <GameStatus />
-      <PlayerAvatar />
+    <header className="Header">
+      <img src={ logo } alt="Sonic Trunfo" />
     </header>
   );
 }

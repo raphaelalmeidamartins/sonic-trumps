@@ -1,0 +1,26 @@
+.Header {
+  background-color: var(--sonic-eyes);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--sonic-fur)), to(var(--sonic-fur-light)));
+  background-image: linear-gradient(to bottom, var(--sonic-fur), var(--sonic-fur-light));
+  border-bottom: 2px solid var(--sonic-fur);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-filter: drop-shadow(0 0 5px #2e4f75);
+          filter: drop-shadow(0 0 5px #2e4f75);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 7;
+}
+
+.Header img {
+  -webkit-filter: drop-shadow(0 0 15px #1f135a);
+          filter: drop-shadow(0 0 15px #1f135a);
+  width: 150px;
+}
+/*# sourceMappingURL=Header.css.map */

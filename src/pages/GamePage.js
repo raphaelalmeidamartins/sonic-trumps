@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Duel from '../components/Duel';
 import Header from '../components/Header';
-import NavBar from '../components/NavBar';
 import PlayerHand from '../components/PlayerHand';
 import ResultsMessage from '../components/ResultsMessage';
 import SelectAttribute from '../components/SelectAttribute';
@@ -25,7 +24,6 @@ function GamePage() {
   return (
     <>
       <Header />
-      <NavBar />
       { currRound > rounds && (
         <ResultsMessage />
       ) }

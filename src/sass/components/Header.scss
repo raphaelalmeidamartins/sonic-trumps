@@ -1,0 +1,17 @@
+.Header {
+  background-color: var(--sonic-eyes);
+  background-image: linear-gradient(to bottom, var(--sonic-fur), var(--sonic-fur-light));
+  border-bottom: 2px solid var(--sonic-fur);
+  display: flex;
+  filter: drop-shadow(0 0 5px rgb(46, 79, 117));
+  justify-content: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 7;
+
+  img {
+    filter: drop-shadow(0 0 15px rgb(31, 19, 90));
+    width: 150px;
+  }
+}
