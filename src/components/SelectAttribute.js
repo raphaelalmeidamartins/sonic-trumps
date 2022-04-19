@@ -11,7 +11,7 @@ function SelectAttribute() {
   const currRound = useSelector((state) => state.game.currRound);
   const cpuTurn = useSelector((state) => state.game.cpuTurn);
   const displayHand = useSelector((state) => state.game.displayHand);
-  const displayDuel = useSelector((state) => state.game.displayHand);
+  const displayDuel = useSelector((state) => state.game.displayDuel);
 
   const dispatch = useDispatch();
 
@@ -45,7 +45,7 @@ function SelectAttribute() {
             onChange={ handleChange }
           >
             {attributes.map((attr) => (
-              <option key={ attr }>{attributeNames[attr]}</option>
+              <option key={ attr } value={ attr }>{attributeNames[attr]}</option>
             ))}
           </select>
         </>

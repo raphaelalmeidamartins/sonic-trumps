@@ -1,0 +1,203 @@
+.Duel {
+  background-color: var(--blue-black);
+  border-radius: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-filter: drop-shadow(0 0 15px gray);
+          filter: drop-shadow(0 0 15px gray);
+  grid-gap: 2rem;
+  grid-template: 'cardPlayer cardCpu' 1fr 'footer footer';
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  left: 50%;
+  padding: 2rem 2.5rem;
+  position: fixed;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  z-index: 20;
+}
+
+.Duel .Card {
+  margin: 1rem 0;
+}
+
+.Duel footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-area: footer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Duel .Duel-PlayerCard {
+  grid-area: cardPlayer;
+}
+
+.Duel .Duel-CpuCard {
+  grid-area: cardCpu;
+}
+
+.Duel .Duel-PlayerText {
+  color: white;
+  grid-area: textPlayer;
+  text-align: center;
+}
+
+.Duel .Duel-CpuText {
+  color: white;
+  grid-area: TextCpu;
+  text-align: center;
+}
+
+.Duel .win {
+  color: var(--sonic-eyes);
+}
+
+.Duel .lose {
+  color: var(--sonic-shoes);
+}
+
+.Duel .Duel-text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.Duel .Duel-text span {
+  margin-right: 0.4rem;
+}
+
+.Duel .Duel-next-button {
+  background-color: var(--sonic-eyes);
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+.Duel .Duel-next-button:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.Duel-display {
+  top: 110px;
+}
+
+.Duel-hidden {
+  top: -150vh;
+}
+
+@media screen and (max-height: 930px) {
+  .Duel .Card {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .Duel .Card .Card-img {
+    margin-top: 2rem;
+  }
+  .Duel .Card .Card-desc-container {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 830px) {
+  .Duel .Card .Card-img {
+    height: 150px;
+    width: 150px;
+  }
+  .Duel .Card .Card-logo {
+    height: 45px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .Duel .Card {
+    border: 0;
+    width: 100%;
+  }
+  .Duel .Card ul {
+    display: none;
+  }
+  .Duel .Card .Card-img {
+    border: 0;
+    height: 200px;
+    margin: 0;
+    width: 200px;
+  }
+  .Duel .Card .Card-logo {
+    display: none;
+  }
+  .Duel .Card header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Duel .Card {
+    border: 0;
+    width: 100%;
+  }
+  .Duel .Card .Card-img {
+    border: 0;
+    height: 200px;
+    margin: 0;
+    width: 200px;
+  }
+  .Duel .Card ul {
+    display: none;
+  }
+  .Duel .Card .Card-logo {
+    display: none;
+  }
+  .Duel .Card header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .Duel {
+    grid-gap: 1.5rem;
+    padding: 1.8rem;
+  }
+  .Duel .Card {
+    border-radius: 0;
+    width: 140px;
+  }
+  .Duel .Card-img {
+    border: 0;
+    margin: 0;
+    width: 150px;
+  }
+  .Duel ul {
+    display: none;
+  }
+  .Duel .Card-logo {
+    display: none;
+  }
+  .Duel header {
+    display: none;
+  }
+  .Duel .win, .Duel .lose {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=Duel.css.map */

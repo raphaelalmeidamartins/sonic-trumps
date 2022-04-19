@@ -8,7 +8,7 @@ function useSelectCard(playerCard) {
 
   return function handleSelectCard() {
     const cpuCard = [...cpuHand]
-      .sort((prev, curr) => curr[currAttr] - prev[currAttr])[0];
+      .sort((prev, curr) => +curr[currAttr] - +prev[currAttr])[0];
 
     dispatch(actionSelectCard(playerCard, cpuCard, currAttr));
   };
