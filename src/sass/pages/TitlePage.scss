@@ -28,17 +28,21 @@
   button {
     align-items: center;
     background-color: var(--sonic-fur);
-    border-radius: 0.5rem;
+    border-radius: 0;
+    box-shadow: 8px 8px 0 var(--sonic-shoes);
     color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
     padding: 0.8rem 1.5rem;
+    transform: skewX(-12deg);
+    transition: 400ms;
     width: 150px;
 
     &:hover {
-      filter: brightness(120%);
+      transform: scale(0.9) skewX(-12deg);
+      width: 140px;
     }
 
     span {

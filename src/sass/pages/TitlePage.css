@@ -47,7 +47,9 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: var(--sonic-fur);
-  border-radius: 0.5rem;
+  border-radius: 0;
+  -webkit-box-shadow: 8px 8px 0 var(--sonic-shoes);
+          box-shadow: 8px 8px 0 var(--sonic-shoes);
   color: white;
   cursor: pointer;
   display: -webkit-box;
@@ -58,12 +60,17 @@
           justify-content: center;
   margin-bottom: 1rem;
   padding: 0.8rem 1.5rem;
+  -webkit-transform: skewX(-12deg);
+          transform: skewX(-12deg);
+  -webkit-transition: 400ms;
+  transition: 400ms;
   width: 150px;
 }
 
 .TitlePage button:hover {
-  -webkit-filter: brightness(120%);
-          filter: brightness(120%);
+  -webkit-transform: scale(0.9) skewX(-12deg);
+          transform: scale(0.9) skewX(-12deg);
+  width: 140px;
 }
 
 .TitlePage button span {
