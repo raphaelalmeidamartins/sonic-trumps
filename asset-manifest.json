@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sonic-trumps/static/css/main.0d7694a2.css",
+    "main.css": "/sonic-trumps/static/css/main.aeb3b898.css",
     "main.js": "/sonic-trumps/static/js/main.992a2e57.js",
     "static/js/787.653d6fb2.chunk.js": "/sonic-trumps/static/js/787.653d6fb2.chunk.js",
     "static/media/game-over.mp3": "/sonic-trumps/static/media/game-over.e65e28ace04dcb11b95e.mp3",
@@ -131,14 +131,14 @@
     "static/media/ring.mp3": "/sonic-trumps/static/media/ring.ac0c09fc38abb392a284.mp3",
     "static/media/sonic_checkpoint_sound-effect.mp3": "/sonic-trumps/static/media/sonic_checkpoint_sound-effect.62c97e56b101e9d39f49.mp3",
     "static/media/wintery-sunburst.svg": "/sonic-trumps/static/media/wintery-sunburst.6336ae2dc30f57d0213b.svg",
-    "static/media/rose-petals.svg": "/sonic-trumps/static/media/rose-petals.ef34d6da52d01914853a.svg",
+    "static/media/rose-petals.svg": "/sonic-trumps/static/media/rose-petals.4acc884bb80255f92b82.svg",
     "index.html": "/sonic-trumps/index.html",
-    "main.0d7694a2.css.map": "/sonic-trumps/static/css/main.0d7694a2.css.map",
+    "main.aeb3b898.css.map": "/sonic-trumps/static/css/main.aeb3b898.css.map",
     "main.992a2e57.js.map": "/sonic-trumps/static/js/main.992a2e57.js.map",
     "787.653d6fb2.chunk.js.map": "/sonic-trumps/static/js/787.653d6fb2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d7694a2.css",
+    "static/css/main.aeb3b898.css",
     "static/js/main.992a2e57.js"
   ]
 }
