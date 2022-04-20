@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { GiCardPick, GiCardRandom } from 'react-icons/gi';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo-title.png';
 import alrightSoundEffect from '../assets/sound-effects/alright.mp3';
