@@ -1,7 +1,6 @@
 # :black_joker: Sonic Trumps (_Trunfo_ in Portuguese) :black_joker:
 
-![Desktop preview](./imgs/screenshot-desktop1.png)
-![Desktop preview](./imgs/screenshot-desktop2.png)
+![Title Screen](./imgs/title-screen.png)
 
 ## :page_with_curl: About
 
@@ -15,12 +14,11 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 
 ### Note
 
-This project is still under development, I'm working on it in my free time. The mobile version isn't as optimized as the desktop and tablet versions yet. It doesn't work properly on devices with smaller screens.
+This project is still under development, I'm implementing integration tests.
 
 ### In progress
 
 - [ ] Implementing integration tests with React Testing Library
-- [ ] Improving the mobile version
 - [ ] Adding English translation (the project is currently only available in Brazilian Portuguese)
 - [ ] I still need to implement how the Top Trump/Super Trunfo attribute influences the game.
 
@@ -29,6 +27,8 @@ This project is still under development, I'm working on it in my free time. The 
 * Develop a React application
 * Create and reuse React components
 * React to user interactions by manipulating the components' states and props according to user events
+* Use the React Router library to handle page navigation
+* Use the Redux library for state management
 
 ## :memo: Methodologies
 
@@ -40,13 +40,21 @@ This project is still under development, I'm working on it in my free time. The 
 * CSS3
 * JavaScript ES6+
 * React.js
+* React Router v6
+* Redux.js
 * React Testing Library (RTL)
 * React Icons (icon library)
+* Sass
 * GitHub Pages
 
 ## :iphone: Mobile version
 
 ![Mobile](./imgs/Mobile-preview.png)
+
+## :camera: Screenshots
+
+![Desktop preview](./imgs/screenshot-desktop1.png)
+![Desktop preview](./imgs/screenshot-desktop2.png)
 
 ## :trophy: Grade
 
