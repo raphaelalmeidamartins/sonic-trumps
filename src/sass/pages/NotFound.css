@@ -44,8 +44,6 @@
 }
 
 .NotFound img {
-  -webkit-filter: drop-shadow(0 0 30px rgba(31, 19, 90, 0.687));
-          filter: drop-shadow(0 0 30px rgba(31, 19, 90, 0.687));
   width: 400px;
   margin-bottom: 1rem;
   max-width: 80vw;
