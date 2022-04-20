@@ -1,6 +1,10 @@
 .Header {
   background-color: var(--sonic-eyes);
-  background-image: linear-gradient(to bottom, var(--sonic-fur), var(--sonic-fur-light));
+  background-image: linear-gradient(
+    to bottom,
+    var(--sonic-fur),
+    var(--sonic-fur-light)
+  );
   border-bottom: 2px solid var(--sonic-fur);
   display: flex;
   filter: drop-shadow(0 0 5px rgb(46, 79, 117));

@@ -35,7 +35,7 @@
 
   .CardMini {
     margin: 0.5rem;
-  } 
+  }
 }
 .PlayerHand-hidden {
   bottom: -150vh;
@@ -51,7 +51,7 @@
     font-size: 1.4rem;
     font-weight: 500;
     margin-bottom: 1rem;
-  }  
+  }
 }
 
 .PlayerHand-cards-container {
@@ -61,7 +61,7 @@
   max-height: 362px;
 }
 
-@media screen and (max-height : 600px) {
+@media screen and (max-height: 600px) {
   .PlayerHand-cards-container {
     max-height: 250px;
     overflow-y: scroll;

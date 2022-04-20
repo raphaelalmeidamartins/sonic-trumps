@@ -92,7 +92,9 @@
   color: var(--sonic-yellow);
 }
 
-.NavBar-container .NavBar .ToTop:hover, .NavBar-container .NavBar .Search:hover, .NavBar-container .NavBar .Play:hover {
+.NavBar-container .NavBar .ToTop:hover,
+.NavBar-container .NavBar .Search:hover,
+.NavBar-container .NavBar .Play:hover {
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
 }

@@ -1,6 +1,6 @@
 .Deck {
   background-attachment: fixed;
-  background-image: url('../../assets/background.jpg');
+  background-image: url("../../assets/background.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,8 +24,7 @@
   }
 }
 
-@media screen and ( max-width : 400px ) {
-
+@media screen and (max-width: 400px) {
   .Deck {
     .Card {
       margin: 2rem 0;

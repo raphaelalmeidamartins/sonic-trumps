@@ -6,7 +6,7 @@
   -webkit-filter: drop-shadow(0 0 15px gray);
           filter: drop-shadow(0 0 15px gray);
   grid-gap: 2rem;
-  grid-template: 'cardPlayer cardCpu' 1fr 'footer footer';
+  grid-template: "cardPlayer cardCpu" 1fr "footer footer";
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -196,7 +196,8 @@
   .Duel header {
     display: none;
   }
-  .Duel .win, .Duel .lose {
+  .Duel .win,
+  .Duel .lose {
     font-size: 1.2rem;
   }
 }
