@@ -1,0 +1,17 @@
+.GameHeader {
+  color: var(--sonic-fur);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  width: 100%;
+
+  .GameHeader-wins-container {
+    align-items: flex-end;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .GameHeader-round {
+    margin-bottom: 2rem;
+  }
+}

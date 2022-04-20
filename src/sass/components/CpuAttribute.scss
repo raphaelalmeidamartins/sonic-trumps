@@ -1,0 +1,33 @@
+.CpuAttribute {
+  align-items: center;
+  background-color: var(--sonic-fur);
+  border-radius: 0.3rem;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.4rem;
+  padding-left: 3.8rem;
+  padding-right: 0.8rem;
+  position: relative;
+  transform: skew(-10deg);
+
+  .CpuAttribute-icon {
+    align-items: center;
+    background-color: white;
+    border: 5px solid var(--sonic-fur);
+    border-radius: 0.5rem;
+    color: var(--sonic-shoes);
+    display: flex;
+    font-size: 2rem;
+    height: 50px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    width: 50px;
+  }
+
+  .CpuAttribute-text {
+    color: var(--sonic-yellow);
+    font-size: 1.3rem;
+  }
+}

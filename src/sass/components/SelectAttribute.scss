@@ -1,0 +1,42 @@
+.SelectAttribute {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+
+  select {
+    background-color: var(--sonic-light-blue);
+    border: 1px solid var(--sonic-fur);
+    border-radius: 0.3rem;
+    font-family: Lato, sans-serif;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  h1 {
+    color: var(--sonic-fur);
+  }
+
+  select,
+  p,
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  .Game-button {
+    background-color: var(--sonic-fur);
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 1rem;
+
+    &:disabled {
+      background-color: var(--sonic-light-blue);
+    }
+
+    &:hover:not(:disabled) {
+      filter: brightness(120%);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap");
+
+:root {
+  --sonic-fur: rgb(41, 51, 150);
+  --sonic-fur-light: rgb(88, 163, 197);
+  --sonic-light-blue: rgb(156, 214, 241);
+  --sonic-skin: rgb(246, 200, 131);
+  --sonic-shoes: rgb(186, 38, 39);
+  --sonic-light-red: rgb(243, 180, 180);
+  --sonic-eyes: rgb(0, 165, 71);
+  --sonic-yellow: rgb(248, 221, 9);
+  --blue-black: rgb(31, 32, 65);
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Lato, sans-serif;
+  font-size: 1.1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

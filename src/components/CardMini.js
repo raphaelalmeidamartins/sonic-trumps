@@ -1,69 +1,73 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { GiSonicShoes, GiFoxTail, GiBoxingGlove, GiEmerald } from 'react-icons/gi';
-import './CardMini.css';
+import React from 'react';
+import { GiBoxingGlove, GiEmerald, GiFoxTail, GiSonicShoes } from 'react-icons/gi';
+import { useDispatch } from 'react-redux';
+import useSelectCard from '../hooks/useSelectCard';
+import { actionDisplayDuel } from '../redux/actions';
+import '../sass/components/CardMini.css';
 
-class CardMini extends Component {
-  render() {
-    const {
-      index,
-      cardPosition,
-      cardName,
-      cardImage,
-      cardAttr1,
-      cardAttr2,
-      cardAttr3,
-      cardTrunfo,
-      selectCard,
-    } = this.props;
+function CardMini(props) {
+  const {
+    cardName,
+    cardImage,
+    cardAttr1,
+    cardAttr2,
+    cardAttr3,
+    cardTrunfo,
+  } = props;
 
-    return (
-      <button
-        type="button"
-        className={ `CardMini ${cardPosition}` }
-        onClick={ () => selectCard(index) }
-      >
-        {cardTrunfo && (
-          <div className="CardMini-trunfo-icon">
-            <GiEmerald />
+  const selectCard = useSelectCard(props);
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    selectCard();
+    dispatch(actionDisplayDuel());
+  };
+
+  return (
+    <button
+      type="button"
+      className="CardMini"
+      onClick={ handleClick }
+    >
+      {cardTrunfo && (
+        <div className="CardMini-trunfo-icon">
+          <GiEmerald />
+        </div>
+      )}
+      <img className="CardMini-img" src={ cardImage } alt={ cardName } />
+      <ul className="CardMini-attr-container">
+        <li className="CardMini-attr">
+          <div className="CardMini-attr-icon">
+            <GiSonicShoes />
           </div>
-        )}
-        <img className="CardMini-img" src={ cardImage } alt={ cardName } />
-        <ul className="CardMini-attr-container">
-          <li className="CardMini-attr">
-            <div className="CardMini-attr-icon">
-              <GiSonicShoes />
-            </div>
-            <div className="CardMini-attr-value">{ cardAttr1 }</div>
-          </li>
-          <li className="CardMini-attr">
-            <div className="CardMini-attr-icon">
-              <GiFoxTail />
-            </div>
-            <div className="CardMini-attr-value">{ cardAttr2 }</div>
-          </li>
-          <li className="CardMini-attr">
-            <div className="CardMini-attr-icon">
-              <GiBoxingGlove />
-            </div>
-            <div className="CardMini-attr-value">{ cardAttr3 }</div>
-          </li>
-        </ul>
-      </button>
-    );
-  }
+          <div className="CardMini-attr-value">{ cardAttr1 }</div>
+        </li>
+        <li className="CardMini-attr">
+          <div className="CardMini-attr-icon">
+            <GiFoxTail />
+          </div>
+          <div className="CardMini-attr-value">{ cardAttr2 }</div>
+        </li>
+        <li className="CardMini-attr">
+          <div className="CardMini-attr-icon">
+            <GiBoxingGlove />
+          </div>
+          <div className="CardMini-attr-value">{ cardAttr3 }</div>
+        </li>
+      </ul>
+    </button>
+  );
 }
 
 CardMini.propTypes = {
-  index: PropTypes.number.isRequired,
-  cardPosition: PropTypes.string.isRequired,
   cardName: PropTypes.string.isRequired,
   cardAttr1: PropTypes.string.isRequired,
   cardAttr2: PropTypes.string.isRequired,
   cardAttr3: PropTypes.string.isRequired,
   cardImage: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
-  selectCard: PropTypes.func.isRequired,
 };
 
 export default CardMini;

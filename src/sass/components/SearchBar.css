@@ -1,0 +1,179 @@
+.SearchBar {
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 800px;
+  overflow: hidden;
+  padding: 1rem;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  -webkit-transition-property: padding;
+  transition-property: padding;
+}
+
+.SearchBar input,
+.SearchBar select {
+  border: 1px solid var(--sonic-fur);
+  border-radius: 0.3rem;
+  font-family: Lato, sans-serif;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+
+.SearchBar select {
+  background-color: var(--sonic-light-blue);
+  min-width: 120px;
+}
+
+.SearchBar label {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.SearchBar .SearchBar-name-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.SearchBar .SearchBar-name-container input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 300px;
+}
+
+.SearchBar .SearchBar-name-container .SearchBar-filter-icon {
+  color: var(--sonic-light-blue);
+  font-size: 2rem;
+}
+
+.SearchBar .SearchBar-trunfo-label {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse nowrap;
+          flex-direction: row-reverse nowrap;
+  margin-left: 1rem;
+  width: 180px;
+}
+
+.SearchBar .SearchBar-trunfo-label .SearchBar-trunfo-icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--sonic-eyes);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  height: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0.8rem;
+  width: 30px;
+}
+
+.SearchBar-hidden {
+  height: 0;
+  padding: 0 1rem;
+}
+
+.SearchBar-hidden * {
+  display: none;
+}
+
+@media screen and (max-width: 672px) {
+  .SearchBar {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 0;
+    width: 100%;
+  }
+  .SearchBar input,
+  .SearchBar select {
+    margin-left: 0;
+  }
+  .SearchBar-filter-icon {
+    margin-right: 0.8rem;
+  }
+  .SearchBar-name-container,
+  .SearchBar-rarity {
+    margin-bottom: 0.8rem;
+    -webkit-transition: 400ms;
+    transition: 400ms;
+    -webkit-transition-property: height;
+    transition-property: height;
+  }
+  .SearchBar-name-container input,
+  .SearchBar-rarity {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .SearchBar-trunfo-label {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 0.8rem;
+    margin-left: 0;
+    padding: 0 1.8rem;
+    -webkit-transition: 400ms;
+    transition: 400ms;
+    -webkit-transition-property: height;
+    transition-property: height;
+    width: 300px;
+  }
+  .SearchBar-trunfo-label .SearchBar-trunfo-icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .SearchBar {
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=SearchBar.css.map */

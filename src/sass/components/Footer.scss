@@ -1,0 +1,33 @@
+.Footer {
+  align-items: center;
+  background-color: var(--blue-black);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2rem;
+  padding-bottom: 8rem;
+  padding-top: 3rem;
+  width: 100%;
+
+  p {
+    color: white;
+    font-weight: 300;
+    line-height: 2rem;
+    max-width: 800px;
+    width: 90%;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  a {
+    color: var(--sonic-yellow);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

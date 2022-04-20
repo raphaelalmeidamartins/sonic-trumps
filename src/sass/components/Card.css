@@ -1,0 +1,240 @@
+.Card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--sonic-light-red);
+  border: 15px solid var(--sonic-shoes);
+  border-radius: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 600px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1.3rem;
+  position: relative;
+  width: 337px;
+}
+
+.Card header {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 1rem;
+  width: 95%;
+}
+
+.Card header h2 {
+  background-color: var(--sonic-fur);
+  color: white;
+  font-size: 1rem;
+  overflow-wrap: break-word;
+  padding: 0.5rem 1rem 0.5rem 8rem;
+  text-transform: uppercase;
+  top: 1rem;
+  width: 100%;
+}
+
+.Card header h2:before {
+  border-bottom: 28px solid transparent;
+  border-left: 5px solid var(--sonic-light-red);
+  border-right: 5px solid transparent;
+  border-top: 28px solid var(--sonic-light-red);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.Card header p {
+  background-color: var(--sonic-yellow);
+  padding: 0 1rem;
+  position: relative;
+  width: 160px;
+}
+
+.Card header p:before {
+  border-bottom: 11px solid var(--sonic-light-red);
+  border-left: 5px solid var(--sonic-light-red);
+  border-right: 5px solid transparent;
+  border-top: 11px solid transparent;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.Card-logo {
+  -webkit-filter: drop-shadow(0 0 3px #1f135a);
+          filter: drop-shadow(0 0 3px #1f135a);
+  left: 1.2rem;
+  position: absolute;
+  top: 0.5rem;
+  width: 115px;
+  z-index: 2;
+}
+
+.Card-img {
+  height: 240px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  width: 240px;
+  z-index: 4;
+}
+
+.Card-desc-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--sonic-shoes);
+  border-radius: 1rem;
+  color: var(--sonic-light-red);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 72px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0.8rem 0;
+  padding: 0.4rem;
+  width: 100%;
+}
+
+.Card-desc-container p {
+  font-size: 0.85rem;
+  max-height: 100%;
+  overflow-wrap: break-word;
+  text-align: center;
+  width: 100%;
+}
+
+.Card ul {
+  list-style-type: none;
+  padding-bottom: 40px;
+  position: relative;
+  width: 94%;
+}
+
+.Card ul li {
+  background-color: var(--sonic-fur);
+  border-radius: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.3rem 0;
+  position: relative;
+  -webkit-transform: skew(-15deg);
+          transform: skew(-15deg);
+  width: 100%;
+}
+
+.Card ul li:not(:first-child) {
+  margin-top: 0.8rem;
+}
+
+.Card ul .Card-attr-icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border: 3px solid var(--sonic-fur);
+  border-radius: 0.3rem;
+  color: var(--sonic-shoes);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.7rem;
+  height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.Card ul .Card-attr-text {
+  color: white;
+  padding-left: 3rem;
+  width: 52%;
+}
+
+.Card ul .Card-attr-gauge-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Card ul .Card-attr-gauge {
+  background-color: var(--sonic-eyes);
+  height: 70%;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  -webkit-transition-property: width;
+  transition-property: width;
+}
+
+.Card ul .Card-attr-value {
+  color: var(--sonic-yellow);
+  font-weight: 600;
+  padding: 0 0.5rem;
+}
+
+.Card-trunfo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.Card-trunfo-icon {
+  color: var(--sonic-eyes);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.Card-trunfo-text {
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+/*# sourceMappingURL=Card.css.map */

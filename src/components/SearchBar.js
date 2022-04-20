@@ -1,14 +1,23 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { BiFilter } from 'react-icons/bi';
 import { GiEmerald } from 'react-icons/gi';
-import './SearchBar.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { actionUpdateFilters } from '../redux/actions';
+import '../sass/components/SearchBar.css';
 
-class SearchBar extends Component {
-  render() {
-    const { onInputChange, hideOrDisplay } = this.props;
+function SearchBar({ hideOrDisplay }) {
+  const { regExp, rarity, trunfo } = useSelector((state) => state.cardFilters);
 
-    return (
+  const dispatch = useDispatch();
+
+  const handleFilterCards = ({ target }) => {
+    const value = target.name === 'trunfo' ? target.checked : target.value;
+    dispatch(actionUpdateFilters(target.name, value));
+  };
+
+  return (
+    <section>
       <section className={ hideOrDisplay }>
         <div className="SearchBar-name-container">
           <div className="SearchBar-filter-icon">
@@ -16,21 +25,22 @@ class SearchBar extends Component {
           </div>
           <input
             id="name-filter"
-            name="nameSearch"
+            name="regExp"
             className="SearchBar-name"
             type="text"
             data-testid="name-filter"
             placeholder="Nome da carta"
-            onChange={ ({ target }) => onInputChange(target.value, 'name') }
+            value={ regExp }
+            onChange={ handleFilterCards }
           />
         </div>
         <select
           id="rarity-filter"
-          name="raritySearch"
+          name="rarity"
           className="SearchBar-rarity"
           data-testid="rare-filter"
-          onChange={ ({ target }) => onInputChange(target.value, 'rarity') }
-          defaultValue="todas"
+          onChange={ handleFilterCards }
+          value={ rarity }
         >
           <option value="todas">todas</option>
           <option value="normal">normal</option>
@@ -44,20 +54,20 @@ class SearchBar extends Component {
           <span>Super Trunfo</span>
           <input
             id="trunfo-filter"
-            name="trunfoSearch"
+            name="trunfo"
             className="SearchBar-trunfo"
             type="checkbox"
             data-testid="trunfo-filter"
-            onChange={ ({ target }) => onInputChange(target.checked, 'trunfo') }
+            checked={ trunfo }
+            onChange={ handleFilterCards }
           />
         </label>
       </section>
-    );
-  }
+    </section>
+  );
 }
 
 SearchBar.propTypes = {
-  onInputChange: PropTypes.func.isRequired,
   hideOrDisplay: PropTypes.string.isRequired,
 };
 

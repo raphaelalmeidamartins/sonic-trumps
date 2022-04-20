@@ -1,0 +1,225 @@
+.CreateCardForm {
+  color: var(--sonic-fur);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  max-width: 430px;
+  padding: 2.2rem 1.9rem;
+  width: 100%;
+}
+
+.CreateCardForm label {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.CreateCardForm input:not(.image),
+.CreateCardForm textarea,
+.CreateCardForm select {
+  font-family: Lato, sans-serif;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+.CreateCardForm .name,
+.CreateCardForm .desc,
+.CreateCardForm .image,
+.CreateCardForm .rare {
+  border: 1px solid var(--sonic-fur);
+  margin-top: 0.5rem;
+}
+
+.CreateCardForm .name,
+.CreateCardForm .desc {
+  background-color: var(--sonic-light-blue);
+  border-radius: 0.3rem;
+  width: 100%;
+}
+
+.CreateCardForm .desc {
+  resize: none;
+}
+
+.CreateCardForm .label-attr {
+  background-color: var(--sonic-fur);
+  border-radius: 0.3rem;
+  color: white;
+  height: 30px;
+  padding-left: 3.5rem;
+  position: relative;
+  -webkit-transform: skew(-15deg);
+          transform: skew(-15deg);
+}
+
+.CreateCardForm .attr-icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border: 3px solid var(--sonic-fur);
+  border-radius: 0.3rem;
+  color: var(--sonic-shoes);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.7rem;
+  height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  position: absolute;
+  width: 40px;
+}
+
+.CreateCardForm .attr {
+  background-color: var(--sonic-eyes);
+  border-left: 1px solid white;
+  border-radius: 0 0.3rem 0.3rem 0;
+  color: white;
+  height: 100%;
+  padding-left: 1rem;
+  width: 100px;
+}
+
+.CreateCardForm .attr:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.CreateCardForm .attr-total-left {
+  color: var(--sonic-fur);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 1rem;
+  text-align: right;
+  -webkit-transform: skew(-15deg);
+          transform: skew(-15deg);
+}
+
+.CreateCardForm .attr-total-left span {
+  margin-left: 0.5rem;
+}
+
+.CreateCardForm .image {
+  padding: 0.5rem;
+  padding-left: 2.2rem;
+}
+
+.CreateCardForm .image-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.CreateCardForm .image-link-icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.3rem 0 0 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.3rem;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 30px;
+  z-index: 1;
+}
+
+.CreateCardForm .image,
+.CreateCardForm .rare {
+  background-color: var(--sonic-light-blue);
+  border-radius: 0.3rem;
+  margin: 0;
+  width: 200px;
+}
+
+.CreateCardForm .label-trunfo {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 4rem;
+  width: 100%;
+}
+
+.CreateCardForm .label-trunfo-icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--sonic-eyes);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  height: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 0.5rem;
+  width: 30px;
+}
+
+.CreateCardForm .trunfo {
+  margin-right: 0.8rem;
+}
+
+.CreateCardForm .trunfo-msg {
+  font-style: italic;
+  padding: 1.2rem 0;
+  text-align: center;
+}
+
+.CreateCardForm .save-button {
+  background-color: var(--sonic-fur);
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+.CreateCardForm .save-button:disabled {
+  background-color: var(--sonic-light-blue);
+}
+
+.CreateCardForm .save-button:hover:not(:disabled) {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+@media screen and (max-width: 430px) {
+  .CreateCardForm .label-trunfo {
+    padding: 1rem;
+  }
+}
+/*# sourceMappingURL=CreateCardForm.css.map */

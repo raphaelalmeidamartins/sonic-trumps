@@ -1,0 +1,33 @@
+.Deck {
+  background-attachment: fixed;
+  background-image: url("../../assets/background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  padding-bottom: 6rem;
+  width: 100%;
+}
+
+.Deck-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.Deck {
+  .Card {
+    filter: drop-shadow(0 0 15px rgb(46, 79, 117));
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Deck {
+    .Card {
+      margin: 2rem 0;
+    }
+  }
+}

@@ -1,55 +1,58 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { GiCardPick, GiCardRandom } from 'react-icons/gi';
+import React, { useState } from 'react';
 import { BiArrowToTop } from 'react-icons/bi';
-import SearchBar from './SearchBar';
-import './NavBar.css';
+import { GiCardPick, GiCardRandom } from 'react-icons/gi';
+import { useNavigate } from 'react-router-dom';
 import alrightSoundEffect from '../assets/sound-effects/alright.mp3';
+import SearchBar from './SearchBar';
+import '../sass/components/NavBar.css';
 
-const hidden = 'SearchBar SearchBar-hidden';
+function NavBar() {
+  const alrightSound = new Audio(alrightSoundEffect);
 
-class NavBar extends Component {
-  constructor() {
-    super();
+  const hidden = 'SearchBar SearchBar-hidden';
 
-    this.handleSearchButtonClick = this.handleSearchButtonClick.bind(this);
+  const [hideOrDisplay, setHideOrDisplay] = useState(hidden);
 
-    this.state = {
-      hideOrDisplay: hidden,
-    };
-  }
+  const navigate = useNavigate();
 
-  handleSearchButtonClick() {
-    const { hideOrDisplay } = this.state;
-
+  const handleSearchButtonClick = () => {
     if (hideOrDisplay === 'SearchBar') {
-      this.setState({ hideOrDisplay: hidden });
+      setHideOrDisplay(hidden);
     }
     if (hideOrDisplay === hidden) {
-      this.setState({ hideOrDisplay: 'SearchBar' });
+      setHideOrDisplay('SearchBar');
     }
-  }
+  };
 
-  render() {
-    const { onInputChange, startGame } = this.props;
-    const { hideOrDisplay } = this.state;
-    const ringSound = new Audio(alrightSoundEffect);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
-    return (
+  return (
+    <div className="NavBar-container">
       <nav className="NavBar">
         <div className="NavBar-nav">
-          <a href="#root" className="NavBar-button ToTop">
+          <button
+            type="button"
+            onClick={ scrollToTop }
+            className="NavBar-button ToTop"
+          >
             <div className="NavBar-button-icon">
+              {/* eslint-disable-next-line react/jsx-max-depth */}
               <BiArrowToTop />
             </div>
             <span>Voltar</span>
-          </a>
+          </button>
           <button
             type="button"
             className="NavBar-button Search"
-            onClick={ this.handleSearchButtonClick }
+            onClick={ handleSearchButtonClick }
           >
             <div className="NavBar-button-icon">
+              {/* eslint-disable-next-line react/jsx-max-depth */}
               <GiCardPick />
             </div>
             <span>Pesquisar</span>
@@ -58,28 +61,23 @@ class NavBar extends Component {
             type="button"
             className="NavBar-button Play"
             onClick={ () => {
-              ringSound.play();
-              startGame();
+              alrightSound.play();
+              navigate('/game');
             } }
           >
             <div className="NavBar-button-icon">
+              {/* eslint-disable-next-line react/jsx-max-depth */}
               <GiCardRandom />
             </div>
             <span>Jogar</span>
           </button>
         </div>
         <SearchBar
-          onInputChange={ onInputChange }
           hideOrDisplay={ hideOrDisplay }
         />
       </nav>
-    );
-  }
+    </div>
+  );
 }
-
-NavBar.propTypes = {
-  onInputChange: PropTypes.func.isRequired,
-  startGame: PropTypes.func.isRequired,
-};
 
 export default NavBar;

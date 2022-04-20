@@ -1,0 +1,93 @@
+.PlayerHand {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--sonic-fur-light);
+  border-radius: 1rem 1rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-filter: drop-shadow(0 0 15px gray);
+          filter: drop-shadow(0 0 15px gray);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  left: 50%;
+  max-width: 730px;
+  padding: 1rem;
+  position: fixed;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  width: 100vw;
+  z-index: 8;
+}
+
+.PlayerHand-close-button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  color: var(--sonic-fur);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 3rem;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 1rem;
+  top: -3.5rem;
+  width: 50px;
+}
+
+.PlayerHand-close-button:hover {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+}
+
+.PlayerHand-close-button .CardMini {
+  margin: 0.5rem;
+}
+
+.PlayerHand-hidden {
+  bottom: -150vh;
+}
+
+.PlayerHand-display {
+  bottom: 0;
+}
+
+.PlayerHand-header p {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.PlayerHand-cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 362px;
+}
+
+@media screen and (max-height: 600px) {
+  .PlayerHand-cards-container {
+    max-height: 250px;
+    overflow-y: scroll;
+  }
+}
+/*# sourceMappingURL=PlayerHand.css.map */

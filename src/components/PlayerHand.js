@@ -1,52 +1,42 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import CardMini from './CardMini';
-import './PlayerHand.css';
+import { actionHidePlayerHand } from '../redux/actions';
+import '../sass/components/PlayerHand.css';
 
-class PlayerHand extends Component {
-  render() {
-    const { playerHand, selectCard, displayHand, hideHand } = this.props;
-    const display = 'PlayerHand PlayerHand-display';
-    const hide = 'PlayerHand PlayerHand-hidden';
+function PlayerHand() {
+  const playerHand = useSelector((state) => state.deck.playerHand);
+  const displayHand = useSelector((state) => state.game.displayHand);
 
-    return (
-      <section className={ displayHand ? display : hide }>
-        <button
-          className="PlayerHand-close-button"
-          type="button"
-          onClick={ hideHand }
-        >
-          <AiFillCloseCircle />
-        </button>
-        <header className="PlayerHand-header">
-          <p className="PlayerHand-header-text">Escolha uma carta</p>
-        </header>
-        <div className="PlayerHand-cards-container">
-          {playerHand.map((card, index) => (
-            <CardMini
-              key={ `${card.cardName}-${index}` }
-              index={ index }
-              { ...card }
-              cardPosition={ `CardPosition-${index + 1}` }
-              selectCard={ selectCard }
-            />
-          ))}
-        </div>
-      </section>
-    );
-  }
+  const display = 'PlayerHand PlayerHand-display';
+  const hide = 'PlayerHand PlayerHand-hidden';
+
+  const dispatch = useDispatch();
+
+  return (
+    <section className={ displayHand ? display : hide }>
+      <button
+        className="PlayerHand-close-button"
+        type="button"
+        onClick={ () => dispatch(actionHidePlayerHand()) }
+      >
+        <AiFillCloseCircle />
+      </button>
+      <header className="PlayerHand-header">
+        <p>Escolha uma carta</p>
+      </header>
+      <div className="PlayerHand-cards-container">
+        {playerHand.map((card, index) => (
+          <CardMini
+            key={ `${card.cardName}-${index}` }
+            index={ index }
+            { ...card }
+          />
+        ))}
+      </div>
+    </section>
+  );
 }
-
-PlayerHand.defaultProps = {
-  playerHand: null,
-};
-
-PlayerHand.propTypes = {
-  playerHand: PropTypes.arrayOf(PropTypes.object),
-  selectCard: PropTypes.func.isRequired,
-  displayHand: PropTypes.bool.isRequired,
-  hideHand: PropTypes.func.isRequired,
-};
 
 export default PlayerHand;

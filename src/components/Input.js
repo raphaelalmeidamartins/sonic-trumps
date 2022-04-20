@@ -1,31 +1,34 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { GiSonicShoes, GiFoxTail, GiBoxingGlove, GiEmerald } from 'react-icons/gi';
+import React from 'react';
 import { BiLink } from 'react-icons/bi';
+import { GiBoxingGlove, GiEmerald, GiFoxTail, GiSonicShoes } from 'react-icons/gi';
 
-class Input extends Component {
-  constructor() {
-    super();
+function Input(props) {
+  const {
+    id,
+    name,
+    className,
+    type,
+    dataTestId,
+    labelText,
+    labelClassName,
+    placeholder,
+    required,
+    propsForm,
+    onInputChange,
+  } = props;
+  const { cardTrunfo } = propsForm;
 
-    this.returnInputValue = this.returnInputValue.bind(this);
-    this.returnInputElement = this.returnInputElement.bind(this);
-    this.returnAttrTotalPoints = this.returnAttrTotalPoints.bind(this);
-  }
+  const returnInputValue = () => (propsForm[name] ? propsForm[name] : '');
 
-  returnInputValue(name) {
-    const { propsForm } = this.props;
-    return propsForm[name] ? propsForm[name] : '';
-  }
-
-  returnAttrIcon(name) {
+  const returnAttrIcon = () => {
     if (name === 'cardAttr1') return (<div className="attr-icon"><GiSonicShoes /></div>);
     if (name === 'cardAttr2') return (<div className="attr-icon"><GiFoxTail /></div>);
     if (name === 'cardAttr3') return (<div className="attr-icon"><GiBoxingGlove /></div>);
-  }
+  };
 
-  returnAttrTotalPoints(name) {
+  const returnAttrTotalPoints = () => {
     if (name === 'cardAttr3') {
-      const { propsForm } = this.props;
       const { cardAttr1, cardAttr2, cardAttr3 } = propsForm;
       const totalAllowed = 210;
       const totalLeft = totalAllowed - +cardAttr1 - +cardAttr2 - +cardAttr3;
@@ -37,23 +40,9 @@ class Input extends Component {
         </p>
       );
     }
-  }
+  };
 
-  returnInputElement() {
-    const {
-      id,
-      name,
-      className,
-      type,
-      dataTestId,
-      labelText,
-      labelClassName,
-      placeholder,
-      required,
-      propsForm,
-    } = this.props;
-    const { cardTrunfo, onInputChange } = propsForm;
-
+  const returnInputElement = () => {
     if (type === 'checkbox') {
       return (
         <label className={ labelClassName } htmlFor={ id }>
@@ -78,7 +67,7 @@ class Input extends Component {
       return (
         <div>
           <label className={ labelClassName } htmlFor={ id }>
-            { this.returnAttrIcon(name) }
+            { returnAttrIcon() }
             { labelText }
             <div className={ name === 'cardImage' ? 'image-input-container' : null }>
               { name === 'cardImage'
@@ -91,7 +80,7 @@ class Input extends Component {
                 type={ type }
                 data-testid={ dataTestId }
                 required={ required }
-                value={ this.returnInputValue(name) }
+                value={ returnInputValue() }
                 placeholder={ placeholder }
                 onChange={ onInputChange }
                 maxLength={ name === 'cardName' ? '36' : null }
@@ -100,7 +89,7 @@ class Input extends Component {
               />
             </div>
           </label>
-          { this.returnAttrTotalPoints(name) }
+          { returnAttrTotalPoints() }
         </div>
       );
     }
@@ -114,7 +103,7 @@ class Input extends Component {
             className={ className }
             data-testid={ dataTestId }
             required={ required }
-            value={ this.returnInputValue(name) }
+            value={ returnInputValue() }
             placeholder={ placeholder }
             onChange={ onInputChange }
             maxLength="81"
@@ -132,7 +121,7 @@ class Input extends Component {
             className={ className }
             data-testid={ dataTestId }
             required={ required }
-            value={ this.returnInputValue(name) }
+            value={ returnInputValue() }
             placeholder={ placeholder }
             onChange={ onInputChange }
           >
@@ -143,11 +132,9 @@ class Input extends Component {
         </label>
       );
     }
-  }
+  };
 
-  render() {
-    return this.returnInputElement();
-  }
+  return returnInputElement();
 }
 
 Input.defaultProps = {
@@ -160,7 +147,6 @@ Input.defaultProps = {
     hasTrunfo: false,
     isSaveButtonDisabled: true,
     onInputChange: () => {},
-    onSaveButtonClick: () => {},
   },
 };
 
@@ -186,7 +172,6 @@ Input.propTypes = {
     hasTrunfo: PropTypes.bool,
     isSaveButtonDisabled: PropTypes.bool,
     onInputChange: PropTypes.func,
-    onSaveButtonClick: PropTypes.func,
   }),
 };
 
