@@ -55,6 +55,7 @@ This project is still under development, I'm implementing integration tests.
 
 ![Desktop preview](./imgs/screenshot-desktop1.png)
 ![Desktop preview](./imgs/screenshot-desktop2.png)
+![Not found screen](./imgs/not-found-screen.png)
 
 ## :trophy: Grade
 
