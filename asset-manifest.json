@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/sonic-trumps/static/css/main.104671e2.css",
-    "main.js": "/sonic-trumps/static/js/main.f1bcb2e5.js",
+    "main.css": "/sonic-trumps/static/css/main.c0f923b1.css",
+    "main.js": "/sonic-trumps/static/js/main.482df9c7.js",
+    "static/js/787.653d6fb2.chunk.js": "/sonic-trumps/static/js/787.653d6fb2.chunk.js",
     "static/media/game-over.mp3": "/sonic-trumps/static/media/game-over.e65e28ace04dcb11b95e.mp3",
     "static/media/victory.mp3": "/sonic-trumps/static/media/victory.d751a457f79f1dc80c19.mp3",
     "static/media/sir-gawain.png": "/sonic-trumps/static/media/sir-gawain.7f5d6743a747f38bb48e.png",
     "static/media/background.jpg": "/sonic-trumps/static/media/background.e317e87321a126d5b9ce.jpg",
+    "static/media/404.png": "/sonic-trumps/static/media/404.7f3fd553ed447beda969.png",
     "static/media/black-doom.png": "/sonic-trumps/static/media/black-doom.b88364c87258d55cb55d.png",
     "static/media/king-arthur.png": "/sonic-trumps/static/media/king-arthur.5abf9d4e9696df173403.png",
     "static/media/tails-doll.png": "/sonic-trumps/static/media/tails-doll.9c8c60e4c6942972fa8d.png",
@@ -112,6 +114,7 @@
     "static/media/solaris-final-phase.png": "/sonic-trumps/static/media/solaris-final-phase.ad9c87811d5fbef3d9d9.png",
     "static/media/eggman-nega.png": "/sonic-trumps/static/media/eggman-nega.bb638dc9c11cc8a8ec14.png",
     "static/media/classic-sonic.png": "/sonic-trumps/static/media/classic-sonic.f0ce5ad2b9ef55b346a4.png",
+    "static/media/round-lose.mp3": "/sonic-trumps/static/media/round-lose.e198d1710f1e4b9ec7ce.mp3",
     "static/media/zazz.png": "/sonic-trumps/static/media/zazz.6c9fc1a95bd26daed3f2.png",
     "static/media/zeena.png": "/sonic-trumps/static/media/zeena.19b3d135ae68de1ea798.png",
     "static/media/draw.gif": "/sonic-trumps/static/media/draw.2b6a2dd4bbddf0f39106.gif",
@@ -124,13 +127,17 @@
     "static/media/maria-robotinik.png": "/sonic-trumps/static/media/maria-robotinik.3a622c8383f3008a2040.png",
     "static/media/alright.mp3": "/sonic-trumps/static/media/alright.9eea87b9929696ba3705.mp3",
     "static/media/pink-spikes.png": "/sonic-trumps/static/media/pink-spikes.bbbc7ad033e01272a22f.png",
+    "static/media/ring.mp3": "/sonic-trumps/static/media/ring.ac0c09fc38abb392a284.mp3",
     "static/media/sonic_checkpoint_sound-effect.mp3": "/sonic-trumps/static/media/sonic_checkpoint_sound-effect.62c97e56b101e9d39f49.mp3",
+    "static/media/wintery-sunburst.svg": "/sonic-trumps/static/media/wintery-sunburst.6336ae2dc30f57d0213b.svg",
+    "static/media/rose-petals.svg": "/sonic-trumps/static/media/rose-petals.ef34d6da52d01914853a.svg",
     "index.html": "/sonic-trumps/index.html",
-    "main.104671e2.css.map": "/sonic-trumps/static/css/main.104671e2.css.map",
-    "main.f1bcb2e5.js.map": "/sonic-trumps/static/js/main.f1bcb2e5.js.map"
+    "main.c0f923b1.css.map": "/sonic-trumps/static/css/main.c0f923b1.css.map",
+    "main.482df9c7.js.map": "/sonic-trumps/static/js/main.482df9c7.js.map",
+    "787.653d6fb2.chunk.js.map": "/sonic-trumps/static/js/787.653d6fb2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.104671e2.css",
-    "static/js/main.f1bcb2e5.js"
+    "static/css/main.c0f923b1.css",
+    "static/js/main.482df9c7.js"
   ]
 }
