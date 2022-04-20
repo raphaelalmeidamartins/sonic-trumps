@@ -1,15 +1,12 @@
 import React from 'react';
 import Header from '../components/Header';
-import useReturnToLogin from '../hooks/useReturnToLogin';
-import useSessionStorage from '../hooks/useSessionStorage';
 
 function CardPage() {
-  useSessionStorage('player profile');
-  useReturnToLogin();
-
   return (
     <div>
       <Header />
+      <p>Esta página está em desenvolvimento</p>
+      <p>This page is under development</p>
     </div>
   );
 }

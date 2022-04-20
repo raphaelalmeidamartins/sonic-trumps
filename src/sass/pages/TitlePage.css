@@ -1,0 +1,86 @@
+.TitlePage {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-attachment: fixed;
+  background-image: url("../../assets/background-title.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.TitlePage main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.TitlePage img {
+  -webkit-filter: drop-shadow(0 0 15px #1f135a);
+          filter: drop-shadow(0 0 15px #1f135a);
+  width: 600px;
+  max-width: 80vw;
+  margin-bottom: 6rem;
+}
+
+.TitlePage button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--sonic-fur-light);
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.8rem;
+  width: 165px;
+}
+
+.TitlePage button:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.TitlePage button span {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.TitlePage button .TitlePage-button-icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  height: 38px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0.5rem;
+  width: 38px;
+}
+/*# sourceMappingURL=TitlePage.css.map */

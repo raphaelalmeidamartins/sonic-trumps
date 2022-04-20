@@ -36,6 +36,7 @@
       span {
         font-size: 1.3rem;
         font-weight: 300;
+        margin-left: 0.5rem;
       }
 
       .NavBar-button-icon {
@@ -44,7 +45,6 @@
         font-size: 2rem;
         height: 38px;
         justify-content: center;
-        margin-right: 0.5rem;
         width: 38px;
       }
     }
@@ -52,6 +52,7 @@
     .ToTop {
       background-color: var(--sonic-fur-light);
       color: white;
+      margin-left: 0;
     }
 
     .Search {
@@ -83,10 +84,6 @@
     .NavBar-button {
       flex-grow: 1;
     }
-
-    .ToTop {
-      margin-left: 0;
-    }
   }
 }
 
@@ -97,18 +94,14 @@
     .NavBar-button {
       align-items: center;
       flex-flow: column nowrap;
-    }
 
-    .NavBar-button-icon {
-      margin-right: 0;
-    }
+      span {
+        display: none;
+      }
 
-    .NavBar-button span {
-      display: none;
-    }
-
-    .ToTop {
-      margin-left: 0;
+      .NavBar-button-icon {
+        margin-right: 0;
+      }
     }
   }
 }

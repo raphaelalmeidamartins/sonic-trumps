@@ -7,7 +7,7 @@ import SearchBar from './SearchBar';
 import '../sass/components/NavBar.css';
 
 function NavBar() {
-  const ringSound = new Audio(alrightSoundEffect);
+  const alrightSound = new Audio(alrightSoundEffect);
 
   const hidden = 'SearchBar SearchBar-hidden';
 
@@ -61,7 +61,7 @@ function NavBar() {
             type="button"
             className="NavBar-button Play"
             onClick={ () => {
-              ringSound.play();
+              alrightSound.play();
               navigate('/game');
             } }
           >

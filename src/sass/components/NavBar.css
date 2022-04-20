@@ -59,6 +59,7 @@
 .NavBar-container .NavBar .NavBar-button span {
   font-size: 1.3rem;
   font-weight: 300;
+  margin-left: 0.5rem;
 }
 
 .NavBar-container .NavBar .NavBar-button .NavBar-button-icon {
@@ -73,13 +74,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 0.5rem;
   width: 38px;
 }
 
 .NavBar-container .NavBar .ToTop {
   background-color: var(--sonic-fur-light);
   color: white;
+  margin-left: 0;
 }
 
 .NavBar-container .NavBar .Search {
@@ -113,9 +114,6 @@
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
-  .NavBar .ToTop {
-    margin-left: 0;
-  }
 }
 
 @media screen and (max-width: 475px) {
@@ -131,14 +129,11 @@
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
   }
-  .NavBar-nav .NavBar-button-icon {
-    margin-right: 0;
-  }
   .NavBar-nav .NavBar-button span {
     display: none;
   }
-  .NavBar-nav .ToTop {
-    margin-left: 0;
+  .NavBar-nav .NavBar-button .NavBar-button-icon {
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=NavBar.css.map */
