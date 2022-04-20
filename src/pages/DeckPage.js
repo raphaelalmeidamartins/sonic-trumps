@@ -6,6 +6,7 @@ import NavBar from '../components/NavBar';
 import useReturnToLogin from '../hooks/useReturnToLogin';
 import useSessionStorage from '../hooks/useSessionStorage';
 import useStartGame from '../hooks/useStartGame';
+import FormContainer from '../components/FormContainer';
 
 function DeckPage() {
   useSessionStorage('player profile');
@@ -20,6 +21,7 @@ function DeckPage() {
     <>
       <Header />
       <NavBar />
+      <FormContainer />
       <Deck />
       <Footer />
     </>

@@ -1,11 +1,10 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import checkpoint from '../assets/sound-effects/sonic_checkpoint_sound-effect.mp3';
 import inputsDataArray from '../data/inputs-data';
-import Input from './Input';
-import '../sass/components/CreateCardForm.css';
 import { actionSaveCustonCard, actionUpdateCustomCardForm } from '../redux/actions';
+import '../sass/components/CreateCardForm.css';
+import Input from './Input';
 
 function CreateCardForm() {
   const {
@@ -117,27 +116,5 @@ function CreateCardForm() {
     </form>
   );
 }
-
-CreateCardForm.defaultProps = {
-  cardName: '',
-  cardDescription: '',
-  cardAttr1: '0',
-  cardAttr2: '0',
-  cardAttr3: '0',
-  cardImage: '',
-  cardRare: '',
-};
-
-CreateCardForm.propTypes = {
-  cardName: PropTypes.string,
-  cardDescription: PropTypes.string,
-  cardAttr1: PropTypes.string,
-  cardAttr2: PropTypes.string,
-  cardAttr3: PropTypes.string,
-  cardImage: PropTypes.string,
-  cardRare: PropTypes.string,
-  cardTrunfo: PropTypes.bool.isRequired,
-  hasTrunfo: PropTypes.bool.isRequired,
-};
 
 export default CreateCardForm;

@@ -6,6 +6,11 @@ const returnSavedCustomCards = () => {
   return savedCustomCards;
 };
 
+const saveCards = (cards) => {
+  localStorage.setItem('Custom Cards', JSON.stringify(cards));
+  return cards;
+};
+
 const INITIAL_STATE = {
   form: {
     cardName: '',
@@ -35,7 +40,7 @@ const customCard = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       form: { ...INITIAL_STATE.form },
-      customCards: [...state.customCards, action.card],
+      customCards: saveCards([...state.customCards, action.card]),
     };
   default:
     return state;

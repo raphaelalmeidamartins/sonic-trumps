@@ -15,8 +15,9 @@ function Input(props) {
     placeholder,
     required,
     propsForm,
+    onInputChange,
   } = props;
-  const { cardTrunfo, onInputChange } = propsForm;
+  const { cardTrunfo } = propsForm;
 
   const returnInputValue = () => (propsForm[name] ? propsForm[name] : '');
 
