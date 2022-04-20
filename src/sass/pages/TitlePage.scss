@@ -20,22 +20,22 @@
   }
 
   img {
-    filter: drop-shadow(0 0 30px rgba(31, 19, 90, 0.687));
-    width: 600px;
+    filter: drop-shadow(0 0 20px rgba(31, 19, 90, 0.327));
+    width: 500px;
     max-width: 80vw;
-    margin-bottom: 6rem;
   }
 
   button {
     align-items: center;
     background-color: var(--sonic-fur);
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
     padding: 0.8rem 1.5rem;
+    width: 150px;
 
     &:hover {
       filter: brightness(120%);

@@ -36,11 +36,10 @@
 }
 
 .TitlePage img {
-  -webkit-filter: drop-shadow(0 0 30px rgba(31, 19, 90, 0.687));
-          filter: drop-shadow(0 0 30px rgba(31, 19, 90, 0.687));
-  width: 600px;
+  -webkit-filter: drop-shadow(0 0 20px rgba(31, 19, 90, 0.327));
+          filter: drop-shadow(0 0 20px rgba(31, 19, 90, 0.327));
+  width: 500px;
   max-width: 80vw;
-  margin-bottom: 6rem;
 }
 
 .TitlePage button {
@@ -48,7 +47,7 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: var(--sonic-fur);
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   color: white;
   cursor: pointer;
   display: -webkit-box;
@@ -59,6 +58,7 @@
           justify-content: center;
   margin-bottom: 1rem;
   padding: 0.8rem 1.5rem;
+  width: 150px;
 }
 
 .TitlePage button:hover {

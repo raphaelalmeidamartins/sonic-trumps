@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { GiCardPick, GiCardRandom } from 'react-icons/gi';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-title.png';
 import alrightSoundEffect from '../assets/sound-effects/alright.mp3';
 import ringSoundEffect from '../assets/sound-effects/ring.mp3';
 import useStartGame from '../hooks/useStartGame';
@@ -28,9 +28,6 @@ function TitlePage() {
             navigate('/deck');
           } }
         >
-          <div className="TitlePage-button-icon">
-            <GiCardPick />
-          </div>
           <span>Ver cartas</span>
         </button>
         <button
@@ -40,20 +37,9 @@ function TitlePage() {
             navigate('/game');
           } }
         >
-          <div className="TitlePage-button-icon">
-            <GiCardRandom />
-          </div>
           <span>Jogar</span>
         </button>
       </main>
-      <footer>
-        <p>
-          Desenvolvido em React
-          <br />
-          por
-          <a href="https://www.linkedin.com/in/raphaelameidamartins/"> Raphael Martins</a>
-        </p>
-      </footer>
     </div>
   );
 }
