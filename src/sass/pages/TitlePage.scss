@@ -1,9 +1,10 @@
 .TitlePage {
   align-items: center;
-  background-color: #1611FF;
-  background-image: url("../../assets/quantum-gradient.svg");
+  background-color: #050933;
+  background-image: url("../../assets/rose-petals.svg");
   /* background by SVGBackgrounds.com */
   background-attachment: fixed;
+  background-position: center;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -19,7 +20,7 @@
   }
 
   img {
-    filter: drop-shadow(0 0 15px rgb(31, 19, 90));
+    filter: drop-shadow(0 0 30px rgba(31, 19, 90, 0.687));
     width: 600px;
     max-width: 80vw;
     margin-bottom: 6rem;
@@ -53,6 +54,16 @@
       justify-content: center;
       margin-right: 0.5rem;
       width: 30px;
+    }
+  }
+
+  footer {
+    bottom: 0;
+    padding: 2.5rem;
+    position: fixed;
+
+    p {
+      text-align: center;
     }
   }
 }

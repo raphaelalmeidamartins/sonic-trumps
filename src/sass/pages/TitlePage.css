@@ -2,10 +2,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #1611FF;
-  background-image: url("../../assets/quantum-gradient.svg");
+  background-color: #050933;
+  background-image: url("../../assets/rose-petals.svg");
   /* background by SVGBackgrounds.com */
   background-attachment: fixed;
+  background-position: center;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,8 +36,8 @@
 }
 
 .TitlePage img {
-  -webkit-filter: drop-shadow(0 0 15px #1f135a);
-          filter: drop-shadow(0 0 15px #1f135a);
+  -webkit-filter: drop-shadow(0 0 30px rgba(31, 19, 90, 0.687));
+          filter: drop-shadow(0 0 30px rgba(31, 19, 90, 0.687));
   width: 600px;
   max-width: 80vw;
   margin-bottom: 6rem;
@@ -84,5 +85,15 @@
           justify-content: center;
   margin-right: 0.5rem;
   width: 30px;
+}
+
+.TitlePage footer {
+  bottom: 0;
+  padding: 2.5rem;
+  position: fixed;
+}
+
+.TitlePage footer p {
+  text-align: center;
 }
 /*# sourceMappingURL=TitlePage.css.map */

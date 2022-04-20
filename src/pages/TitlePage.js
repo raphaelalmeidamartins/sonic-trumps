@@ -40,6 +40,14 @@ function TitlePage() {
           <span>Jogar</span>
         </button>
       </main>
+      <footer>
+        <p>
+          Desenvolvido em React
+          <br />
+          por
+          <a href="https://www.linkedin.com/in/raphaelameidamartins/"> Raphael Martins</a>
+        </p>
+      </footer>
     </div>
   );
 }
