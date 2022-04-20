@@ -25,18 +25,18 @@
 
   .Game-button {
     background-color: var(--sonic-fur);
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
     color: white;
     cursor: pointer;
     font-size: 1.1rem;
     padding: 1rem;
-  }
 
-  .Game-button:disabled {
-    background-color: var(--sonic-light-blue);
-  }
+    &:disabled {
+      background-color: var(--sonic-light-blue);
+    }
 
-  .Game-button:hover:not(:disabled) {
-    filter: brightness(120%);
+    &:hover:not(:disabled) {
+      filter: brightness(120%);
+    }
   }
 }

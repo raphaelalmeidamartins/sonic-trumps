@@ -33,7 +33,7 @@
 
 .SelectAttribute .Game-button {
   background-color: var(--sonic-fur);
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   color: white;
   cursor: pointer;
   font-size: 1.1rem;

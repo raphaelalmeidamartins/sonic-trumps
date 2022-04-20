@@ -28,4 +28,23 @@
   font-size: 2rem;
   text-align: center;
 }
+
+.ResultsMessage button {
+  background-color: var(--sonic-fur);
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.ResultsMessage button:disabled {
+  background-color: var(--sonic-light-blue);
+}
+
+.ResultsMessage button:hover:not(:disabled) {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
 /*# sourceMappingURL=ResultsMessage.css.map */
