@@ -1,13 +1,15 @@
 import React from 'react';
-import { GiCardRandom } from 'react-icons/gi';
+import { GiCardPick, GiCardRandom } from 'react-icons/gi';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import alrightSoundEffect from '../assets/sound-effects/alright.mp3';
+import ringSoundEffect from '../assets/sound-effects/ring.mp3';
 import '../sass/pages/TitlePage.css';
 
 function TitlePage() {
   const navigate = useNavigate();
   const alrightSound = new Audio(alrightSoundEffect);
+  const ringSound = new Audio(ringSoundEffect);
 
   return (
     <div className="TitlePage">
@@ -16,12 +18,12 @@ function TitlePage() {
         <button
           type="button"
           onClick={ () => {
-            alrightSound.play();
+            ringSound.play();
             navigate('/deck');
           } }
         >
           <div className="TitlePage-button-icon">
-            <GiCardRandom />
+            <GiCardPick />
           </div>
           <span>Ver cartas</span>
         </button>

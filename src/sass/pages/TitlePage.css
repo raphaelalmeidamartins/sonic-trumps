@@ -2,10 +2,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #1611FF;
+  background-image: url("../../assets/quantum-gradient.svg");
+  /* background by SVGBackgrounds.com */
   background-attachment: fixed;
-  background-image: url("../../assets/background-title.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,16 +46,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--sonic-fur-light);
-  border-radius: 0.5rem;
+  background-color: var(--sonic-fur);
+  border-radius: 2rem;
   color: white;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 1rem;
-  padding: 0.3rem 0.8rem;
-  width: 165px;
+  padding: 0.8rem 1.5rem;
 }
 
 .TitlePage button:hover {
@@ -76,11 +78,11 @@
   display: -ms-flexbox;
   display: flex;
   font-size: 2rem;
-  height: 38px;
+  height: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-right: 0.5rem;
-  width: 38px;
+  width: 30px;
 }
 /*# sourceMappingURL=TitlePage.css.map */

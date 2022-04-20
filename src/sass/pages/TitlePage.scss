@@ -1,9 +1,9 @@
 .TitlePage {
   align-items: center;
+  background-color: #1611FF;
+  background-image: url("../../assets/quantum-gradient.svg");
+  /* background by SVGBackgrounds.com */
   background-attachment: fixed;
-  background-image: url("../../assets/background-title.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -27,14 +27,14 @@
 
   button {
     align-items: center;
-    background-color: var(--sonic-fur-light);
-    border-radius: 0.5rem;
+    background-color: var(--sonic-fur);
+    border-radius: 2rem;
     color: white;
     cursor: pointer;
     display: flex;
+    justify-content: center;
     margin-bottom: 1rem;
-    padding: 0.3rem 0.8rem;
-    width: 165px;
+    padding: 0.8rem 1.5rem;
 
     &:hover {
       filter: brightness(120%);
@@ -49,10 +49,10 @@
       align-items: center;
       display: flex;
       font-size: 2rem;
-      height: 38px;
+      height: 30px;
       justify-content: center;
       margin-right: 0.5rem;
-      width: 38px;
+      width: 30px;
     }
   }
 }
