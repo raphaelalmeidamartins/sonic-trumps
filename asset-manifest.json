@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/sonic-trumps/static/css/main.c0f923b1.css",
-    "main.js": "/sonic-trumps/static/js/main.482df9c7.js",
+    "main.css": "/sonic-trumps/static/css/main.ad73f41b.css",
+    "main.js": "/sonic-trumps/static/js/main.992a2e57.js",
     "static/js/787.653d6fb2.chunk.js": "/sonic-trumps/static/js/787.653d6fb2.chunk.js",
     "static/media/game-over.mp3": "/sonic-trumps/static/media/game-over.e65e28ace04dcb11b95e.mp3",
     "static/media/victory.mp3": "/sonic-trumps/static/media/victory.d751a457f79f1dc80c19.mp3",
     "static/media/sir-gawain.png": "/sonic-trumps/static/media/sir-gawain.7f5d6743a747f38bb48e.png",
     "static/media/background.jpg": "/sonic-trumps/static/media/background.e317e87321a126d5b9ce.jpg",
     "static/media/404.png": "/sonic-trumps/static/media/404.7f3fd553ed447beda969.png",
+    "static/media/logo-title.png": "/sonic-trumps/static/media/logo-title.a06e64fb2aeca1eefa94.png",
     "static/media/black-doom.png": "/sonic-trumps/static/media/black-doom.b88364c87258d55cb55d.png",
     "static/media/king-arthur.png": "/sonic-trumps/static/media/king-arthur.5abf9d4e9696df173403.png",
     "static/media/tails-doll.png": "/sonic-trumps/static/media/tails-doll.9c8c60e4c6942972fa8d.png",
@@ -132,12 +133,12 @@
     "static/media/wintery-sunburst.svg": "/sonic-trumps/static/media/wintery-sunburst.6336ae2dc30f57d0213b.svg",
     "static/media/rose-petals.svg": "/sonic-trumps/static/media/rose-petals.ef34d6da52d01914853a.svg",
     "index.html": "/sonic-trumps/index.html",
-    "main.c0f923b1.css.map": "/sonic-trumps/static/css/main.c0f923b1.css.map",
-    "main.482df9c7.js.map": "/sonic-trumps/static/js/main.482df9c7.js.map",
+    "main.ad73f41b.css.map": "/sonic-trumps/static/css/main.ad73f41b.css.map",
+    "main.992a2e57.js.map": "/sonic-trumps/static/js/main.992a2e57.js.map",
     "787.653d6fb2.chunk.js.map": "/sonic-trumps/static/js/787.653d6fb2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0f923b1.css",
-    "static/js/main.482df9c7.js"
+    "static/css/main.ad73f41b.css",
+    "static/js/main.992a2e57.js"
   ]
 }
