@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sonic-trumps/static/css/main.ad73f41b.css",
+    "main.css": "/sonic-trumps/static/css/main.0d7694a2.css",
     "main.js": "/sonic-trumps/static/js/main.992a2e57.js",
     "static/js/787.653d6fb2.chunk.js": "/sonic-trumps/static/js/787.653d6fb2.chunk.js",
     "static/media/game-over.mp3": "/sonic-trumps/static/media/game-over.e65e28ace04dcb11b95e.mp3",
@@ -133,12 +133,12 @@
     "static/media/wintery-sunburst.svg": "/sonic-trumps/static/media/wintery-sunburst.6336ae2dc30f57d0213b.svg",
     "static/media/rose-petals.svg": "/sonic-trumps/static/media/rose-petals.ef34d6da52d01914853a.svg",
     "index.html": "/sonic-trumps/index.html",
-    "main.ad73f41b.css.map": "/sonic-trumps/static/css/main.ad73f41b.css.map",
+    "main.0d7694a2.css.map": "/sonic-trumps/static/css/main.0d7694a2.css.map",
     "main.992a2e57.js.map": "/sonic-trumps/static/js/main.992a2e57.js.map",
     "787.653d6fb2.chunk.js.map": "/sonic-trumps/static/js/787.653d6fb2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad73f41b.css",
+    "static/css/main.0d7694a2.css",
     "static/js/main.992a2e57.js"
   ]
 }
