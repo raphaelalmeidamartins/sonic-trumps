@@ -9,8 +9,7 @@ function useReturnToLogin() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (playerName === '' && gravatarEmail === '')
-    navigate('/', { replace: true });
+    if (playerName === '' && gravatarEmail === '') { navigate('/', { replace: true }); }
   }, [navigate, playerName, gravatarEmail]);
 }
 

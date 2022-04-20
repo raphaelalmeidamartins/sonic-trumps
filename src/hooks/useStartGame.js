@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { actionShuffleCards, actionResetGame } from '../redux/actions';
+import { actionResetGame, actionShuffleCards } from '../redux/actions';
 
 function useStartGame() {
   const dispatch = useDispatch();
