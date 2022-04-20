@@ -11,6 +11,7 @@ const DISPLAY_DUEL = 'DISPLAY_DUEL';
 const NEXT_ROUND = 'NEXT_ROUND';
 const UPDATE_CUSTOM_CARD_FORM = 'UPDATE_CUSTOM_CARD_FORM';
 const SAVE_CUSTOM_CARD = 'SAVE_CUSTOM_CARD';
+const REMOVE_CARD = 'REMOVE_CARD';
 
 const actionUpdatePlayerData = (name, value) => ({
   type: UPDATE_PLAYER_DATA,
@@ -73,6 +74,11 @@ const actionSaveCustonCard = (card) => ({
   card,
 });
 
+const actionRemoveCard = (index) => ({
+  type: REMOVE_CARD,
+  index,
+});
+
 export {
   UPDATE_PLAYER_DATA,
   actionUpdatePlayerData,
@@ -98,4 +104,6 @@ export {
   actionUpdateCustomCardForm,
   SAVE_CUSTOM_CARD,
   actionSaveCustonCard,
+  REMOVE_CARD,
+  actionRemoveCard,
 };

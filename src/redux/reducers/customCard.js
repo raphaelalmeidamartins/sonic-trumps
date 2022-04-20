@@ -1,4 +1,4 @@
-import { UPDATE_CUSTOM_CARD_FORM, SAVE_CUSTOM_CARD } from '../actions';
+import { UPDATE_CUSTOM_CARD_FORM, SAVE_CUSTOM_CARD, REMOVE_CARD } from '../actions';
 
 const returnSavedCustomCards = () => {
   let savedCustomCards = JSON.parse(localStorage.getItem('Custom Cards'));
@@ -9,6 +9,14 @@ const returnSavedCustomCards = () => {
 const saveCards = (cards) => {
   localStorage.setItem('Custom Cards', JSON.stringify(cards));
   return cards;
+};
+
+const removeCard = (index, cards) => {
+  if (index === null) return cards;
+  const updatedCards = [...cards];
+  updatedCards.splice(index, 1);
+  saveCards(updatedCards);
+  return updatedCards;
 };
 
 const INITIAL_STATE = {
@@ -40,7 +48,14 @@ const customCard = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       form: { ...INITIAL_STATE.form },
+      hasTrunfo: [...state.customCards, action.card].some((card) => card.cardTrunfo),
       customCards: saveCards([...state.customCards, action.card]),
+    };
+  case REMOVE_CARD:
+    return {
+      ...state,
+      hasTrunfo: Boolean(!state.customCards[action.index].cardTrunfo),
+      customCards: removeCard(action.index, state.customCards),
     };
   default:
     return state;

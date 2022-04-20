@@ -12,6 +12,7 @@ import '../sass/components/Card.css';
 
 function Card(props) {
   const {
+    index,
     cardName,
     cardDescription,
     cardAttr1,
@@ -119,12 +120,13 @@ function Card(props) {
           </div>
         ) }
       </ul>
-      { (custom && !preview) && <DeleteCardButton /> }
+      { (custom && !preview) && <DeleteCardButton index={ index } /> }
     </section>
   );
 }
 
 Card.defaultProps = {
+  index: null,
   cardName: '',
   cardDescription: '',
   cardAttr1: '0',
@@ -138,6 +140,7 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
+  index: PropTypes.number,
   cardName: PropTypes.string,
   cardDescription: PropTypes.string,
   cardAttr1: PropTypes.string,

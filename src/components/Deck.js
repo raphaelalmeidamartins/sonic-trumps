@@ -10,11 +10,11 @@ function Deck() {
   return (
     <main className="Deck">
       <div className="Deck-container">
-        {customCards.map((cCard, index) => (
-          <Card key={ index } { ...cCard } custom />
+        {customCards.map((cCard, cIndex) => (
+          <Card key={ cIndex } { ...cCard } index={ cIndex } custom />
         ))}
-        {deckArray.map((card) => (
-          <Card key={ card.cardName } { ...card } />
+        {deckArray.map((card, index) => (
+          <Card key={ card.cardName } { ...card } index={ index } />
         ))}
       </div>
     </main>
