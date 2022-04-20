@@ -18,6 +18,7 @@
 
 .ResultsMessage img {
   height: 200px;
+  margin-bottom: 2rem;
   -o-object-fit: contain;
      object-fit: contain;
   width: 200px;

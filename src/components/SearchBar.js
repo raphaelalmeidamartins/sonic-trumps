@@ -1,10 +1,21 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { BiFilter } from 'react-icons/bi';
 import { GiEmerald } from 'react-icons/gi';
+import { useDispatch, useSelector } from 'react-redux';
+import { actionUpdateFilters } from '../redux/actions';
 import '../sass/components/SearchBar.css';
 
 function SearchBar({ hideOrDisplay }) {
+  const { regExp, rarity, trunfo } = useSelector((state) => state.cardFilters);
+
+  const dispatch = useDispatch();
+
+  const handleFilterCards = ({ target }) => {
+    const value = target.name === 'trunfo' ? target.checked : target.value;
+    dispatch(actionUpdateFilters(target.name, value));
+  };
+
   return (
     <section>
       <section className={ hideOrDisplay }>
@@ -14,21 +25,22 @@ function SearchBar({ hideOrDisplay }) {
           </div>
           <input
             id="name-filter"
-            name="nameSearch"
+            name="regExp"
             className="SearchBar-name"
             type="text"
             data-testid="name-filter"
             placeholder="Nome da carta"
-            onChange={ () => {} }
+            value={ regExp }
+            onChange={ handleFilterCards }
           />
         </div>
         <select
           id="rarity-filter"
-          name="raritySearch"
+          name="rarity"
           className="SearchBar-rarity"
           data-testid="rare-filter"
-          onChange={ () => {} }
-          defaultValue="todas"
+          onChange={ handleFilterCards }
+          value={ rarity }
         >
           <option value="todas">todas</option>
           <option value="normal">normal</option>
@@ -42,11 +54,12 @@ function SearchBar({ hideOrDisplay }) {
           <span>Super Trunfo</span>
           <input
             id="trunfo-filter"
-            name="trunfoSearch"
+            name="trunfo"
             className="SearchBar-trunfo"
             type="checkbox"
             data-testid="trunfo-filter"
-            onChange={ () => {} }
+            checked={ trunfo }
+            onChange={ handleFilterCards }
           />
         </label>
       </section>

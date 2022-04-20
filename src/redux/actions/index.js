@@ -10,6 +10,7 @@ const NEXT_ROUND = 'NEXT_ROUND';
 const UPDATE_CUSTOM_CARD_FORM = 'UPDATE_CUSTOM_CARD_FORM';
 const SAVE_CUSTOM_CARD = 'SAVE_CUSTOM_CARD';
 const REMOVE_CARD = 'REMOVE_CARD';
+const UPDATE_FILTERS = 'UPDATE_FILTERS';
 
 const actionShuffleCards = () => ({
   type: SHUFFLE_CARDS,
@@ -66,6 +67,12 @@ const actionRemoveCard = (index) => ({
   index,
 });
 
+const actionUpdateFilters = (name, value) => ({
+  type: UPDATE_FILTERS,
+  name,
+  value,
+});
+
 export {
   SHUFFLE_CARDS,
   actionShuffleCards,
@@ -89,4 +96,6 @@ export {
   actionSaveCustonCard,
   REMOVE_CARD,
   actionRemoveCard,
+  UPDATE_FILTERS,
+  actionUpdateFilters,
 };
