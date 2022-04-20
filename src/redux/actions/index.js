@@ -9,6 +9,8 @@ const HIDE_PLAYER_HAND = 'HIDE_PLAYER_HAND';
 const DISPLAY_PLAYER_HAND = 'DISPLAY_PLAYER_HAND';
 const DISPLAY_DUEL = 'DISPLAY_DUEL';
 const NEXT_ROUND = 'NEXT_ROUND';
+const UPDATE_CUSTOM_CARD_FORM = 'UPDATE_CUSTOM_CARD_FORM';
+const SAVE_CUSTOM_CARD = 'SAVE_CUSTOM_CARD';
 
 const actionUpdatePlayerData = (name, value) => ({
   type: UPDATE_PLAYER_DATA,
@@ -61,6 +63,16 @@ const actionNextRound = () => ({
   type: NEXT_ROUND,
 });
 
+const actionUpdateCustomCardForm = (valueObj) => ({
+  type: UPDATE_CUSTOM_CARD_FORM,
+  valueObj,
+});
+
+const actionSaveCustonCard = (card) => ({
+  type: SAVE_CUSTOM_CARD,
+  card,
+});
+
 export {
   UPDATE_PLAYER_DATA,
   actionUpdatePlayerData,
@@ -82,4 +94,8 @@ export {
   actionDisplayDuel,
   NEXT_ROUND,
   actionNextRound,
+  UPDATE_CUSTOM_CARD_FORM,
+  actionUpdateCustomCardForm,
+  SAVE_CUSTOM_CARD,
+  actionSaveCustonCard,
 };
