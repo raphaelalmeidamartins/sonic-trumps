@@ -30,7 +30,7 @@
     align-items: center;
     color: white;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
   }
 
@@ -110,8 +110,8 @@
   .SearchBar-trunfo-label {
     align-self: center;
     margin-bottom: 0.8rem;
-    margin-left: 0;
-    padding: 0 1.8rem;
+    margin-left: 0 !important;
+    padding: 0;
     transition: 400ms;
     transition-property: height;
     width: 300px;

@@ -51,8 +51,8 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -158,8 +158,8 @@
         -ms-grid-row-align: center;
         align-self: center;
     margin-bottom: 0.8rem;
-    margin-left: 0;
-    padding: 0 1.8rem;
+    margin-left: 0 !important;
+    padding: 0;
     -webkit-transition: 400ms;
     transition: 400ms;
     -webkit-transition-property: height;
