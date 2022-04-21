@@ -1,9 +1,10 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import React from 'react';
-import App from '../App';
+import DeckPage from '../../pages/DeckPage';
+import renderWithRedux from '../helpers/renderWithRedux';
 
 describe('Check if the form inputs are in the document', () => {
-  beforeEach(() => render(<App />));
+  beforeEach(() => renderWithRedux(<DeckPage />));
 
   it('The name input should be in the document', () => {
     expect(screen.getByLabelText(/nome/i)).toBeInTheDocument();

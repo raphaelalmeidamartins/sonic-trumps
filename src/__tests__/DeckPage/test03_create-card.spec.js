@@ -1,7 +1,10 @@
-import { render, screen } from '@testing-library/react';
+/* These tests broke when I installed React Router v6. I'm still working on them */
+
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import App from '../App';
+import DeckPage from '../../pages/DeckPage';
+import renderWithRedux from '../helpers/renderWithRedux';
 
 const cards = [
   {
@@ -50,7 +53,7 @@ const customCards = () => screen.queryAllByTestId(/^custom-card$/);
 const deleteButtons = () => screen.queryAllByRole('button', { name: /excluir/i });
 
 describe('Check if the card is created with the forms data', () => {
-  beforeEach(() => render(<App />));
+  beforeEach(() => renderWithRedux(<DeckPage />));
 
   it('The inputs should be clean when the user first enters the page', () => {
     expect(nameInput().value).toBe('');
@@ -122,7 +125,7 @@ const deleteCards = (cardsArray) => {
 describe(
   'The custom card should be added to the deck once the user clicks the save button',
   () => {
-    beforeEach(() => render(<App />));
+    beforeEach(() => renderWithRedux(<DeckPage />));
     afterEach(() => deleteCards(customCards()));
 
     it('The custom cards should have a button to delete the card', () => {
@@ -197,7 +200,7 @@ describe(
 describe(
   'The custom cards created by the user should still be in the page once it\'s reloaded',
   () => {
-    beforeEach(() => render(<App />));
+    beforeEach(() => renderWithRedux(<DeckPage />));
 
     it('First three cards are created', () => {
       cards.forEach((card) => createCard(card));

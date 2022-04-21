@@ -1,10 +1,13 @@
-import { render, screen } from '@testing-library/react';
+/* These tests broke when I installed React Router v6. I'm still working on them */
+
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import App from '../App';
+import DeckPage from '../../pages/DeckPage';
+import renderWithRedux from '../helpers/renderWithRedux';
 
 describe('Check the input name\'s behavior', () => {
-  beforeEach(() => render(<App />));
+  beforeEach(() => renderWithRedux(<DeckPage />));
 
   const nameInput = () => screen.getByLabelText(/nome/i);
 
@@ -22,7 +25,7 @@ describe('Check the input name\'s behavior', () => {
 });
 
 describe('Check the description input\'s behavior', () => {
-  beforeEach(() => render(<App />));
+  beforeEach(() => renderWithRedux(<DeckPage />));
 
   const descInput = () => screen.getByPlaceholderText(/insira descrição/i);
 
@@ -46,7 +49,7 @@ describe('Check the description input\'s behavior', () => {
 });
 
 describe('Check the attribute inputs\' behavior ', () => {
-  beforeEach(() => render(<App />));
+  beforeEach(() => renderWithRedux(<DeckPage />));
 
   const speedInput = () => screen.getByLabelText(/speed/i);
   const skillInput = () => screen.getByLabelText(/skill/i);
@@ -136,7 +139,7 @@ describe('Check the attribute inputs\' behavior ', () => {
 });
 
 describe('There should be an element displaying how many points are left', () => {
-  beforeEach(() => render(<App />));
+  beforeEach(() => renderWithRedux(<DeckPage />));
 
   const pointsLeft = () => screen.getByTestId(/attr-total-left/i);
 
@@ -165,7 +168,7 @@ describe('There should be an element displaying how many points are left', () =>
 });
 
 describe('Check the image input\'s behavior', () => {
-  beforeEach(() => render(<App />));
+  beforeEach(() => renderWithRedux(<DeckPage />));
 
   it(
     'The link inserted by the user should be the src of the img in the card preview',
@@ -178,7 +181,7 @@ describe('Check the image input\'s behavior', () => {
 });
 
 describe('Check the rarity input select\'s behavior', () => {
-  beforeEach(() => render(<App />));
+  beforeEach(() => renderWithRedux(<DeckPage />));
 
   it(
     'The rarity selected by the user should appear in the preview card',
@@ -199,7 +202,7 @@ describe('Check the rarity input select\'s behavior', () => {
 });
 
 describe('Check the top trumps\' checkbox behavior', () => {
-  beforeEach(() => render(<App />));
+  beforeEach(() => renderWithRedux(<DeckPage />));
 
   const topTrumpCheckbox = () => screen.getByTestId(/trunfo-input/i);
 
