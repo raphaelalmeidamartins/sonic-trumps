@@ -49,7 +49,7 @@ This project is still under development, I'm implementing integration tests.
 
 ## :iphone: Mobile version
 
-![Mobile](./imgs/Mobile-preview.png)
+![Mobile](./imgs/mobile-preview.png)
 
 ## :camera: Screenshots
 
