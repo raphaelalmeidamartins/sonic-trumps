@@ -21,6 +21,7 @@ This project is still under development, I'm implementing integration tests.
 - [ ] Implementing integration tests with React Testing Library
 - [ ] Adding English translation (the project is currently only available in Brazilian Portuguese)
 - [ ] I still need to implement how the Top Trump/Super Trunfo attribute influences the game.
+- [ ] Reducing the complexity of the CreateCardForm and Input components
 
 ## :man_technologist: Developed Skills
 
