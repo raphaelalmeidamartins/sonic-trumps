@@ -3,7 +3,7 @@ import React from 'react';
 import { GiBoxingGlove, GiEmerald, GiFoxTail, GiSonicShoes } from 'react-icons/gi';
 import { useDispatch } from 'react-redux';
 import useSelectCard from '../hooks/useSelectCard';
-import { actionDisplayDuel } from '../redux/actions';
+import { actionDisplayDuel, actionHidePlayerHand } from '../redux/actions';
 import '../sass/components/CardMini.css';
 
 function CardMini(props) {
@@ -23,6 +23,7 @@ function CardMini(props) {
   const handleClick = () => {
     selectCard();
     dispatch(actionDisplayDuel());
+    dispatch(actionHidePlayerHand());
   };
 
   return (
