@@ -4,7 +4,7 @@
 
 ## :page_with_curl: About/Sobre
 
-:us:
+_:us: English_
 
 React project developed by [Raphael Martins](https://www.linkedin.com/in/raphaelameidamartins/) at the end of Unit 11 ([Front-end Development Module](https://github.com/raphaelalmeidamartins/trybe_exercicios/tree/main/2_Desenvolvimento-Front-end)) of Trybe's Web Development course. I was approved with 100% of the mandatory and optional requirements met.
 
@@ -14,7 +14,7 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 
 [Click here](https://raphaelalmeidamartins.github.io/sonic-trumps) to check out the final version of the project on your browser.
 
-:brazil:
+_:brazil: Português_
 
 Projeto React desenvolvido por [Raphael Martins](https://www.linkedin.com/in/raphaelameidamartins/) ao fim do bloco 11 ([Módulo Desenvolvimento Front-end](https://github.com/raphaelalmeidamartins/trybe_exercicios/tree/main/2_Desenvolvimento-Front-end)) do curso de Desenvolvimento Web da Trybe. Fui aprovado com 100% dos requisitos obrigatórios e opcionais atingidos.
 
@@ -26,11 +26,11 @@ Agradecimento especial a [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) q
 
 ### Note/Observação
 
-:us:
+_:us: English_
 
 This project is still under development, I'm implementing integration tests.
 
-:brazil:
+_:brazil: Português_
 
 Este projeto ainda está em desenvolvimento, estou implementando testes automatizados de integração
 
