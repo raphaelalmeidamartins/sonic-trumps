@@ -17,9 +17,9 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 
 ### Note
 
-Este projeto ainda está em desenvolvimento, estou implementando testes automatizados de integração
+This project is still under development, I'm implementing integration tests.
 
-### In progress/Em andamento
+### In progress
 
 * Implementing integration tests with React Testing Library
 * Adding English translation (the project is currently only available in Brazilian Portuguese)
