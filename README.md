@@ -5,7 +5,7 @@
 ## :page_with_curl: About/Sobre
 
 <details>
-  <summary markdown="span">:us: English</summary>
+  <summary markdown="span"><h3>:us: English</h3></summary>
 
 React project developed by [Raphael Martins](https://www.linkedin.com/in/raphaelameidamartins/) at the end of Unit 11 ([Front-end Development Module](https://github.com/raphaelalmeidamartins/trybe_exercicios/tree/main/2_Desenvolvimento-Front-end)) of Trybe's Web Development course. I was approved with 100% of the mandatory and optional requirements met.
 
@@ -15,11 +15,11 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 
 [Click here](https://raphaelalmeidamartins.github.io/sonic-trumps) to check out the final version of the project on your browser.
 
-### Note
+#### Note
 
 Este projeto ainda está em desenvolvimento, estou implementando testes automatizados de integração
 
-### In progress/Em andamento
+#### In progress/Em andamento
 
 * Implementing integration tests with React Testing Library
 * Adding English translation (the project is currently only available in Brazilian Portuguese)
@@ -28,7 +28,7 @@ Este projeto ainda está em desenvolvimento, estou implementando testes automati
 </details>
 
 <details>
-  <summary markdown="span">:brazil: Português</summary>
+  <summary markdown="span"><h3>:brazil: Português</h3></summary>
 
 Projeto React desenvolvido por [Raphael Martins](https://www.linkedin.com/in/raphaelameidamartins/) ao fim do bloco 11 ([Módulo Desenvolvimento Front-end](https://github.com/raphaelalmeidamartins/trybe_exercicios/tree/main/2_Desenvolvimento-Front-end)) do curso de Desenvolvimento Web da Trybe. Fui aprovado com 100% dos requisitos obrigatórios e opcionais atingidos.
 
@@ -38,11 +38,11 @@ Agradecimento especial a [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) q
 
 [Clique aqui](https://raphaelalmeidamartins.github.io/sonic-trumps) para conferir a versão final do projeto no seu navegador.
 
-### Observação
+#### Observação
 
 Este projeto ainda está em desenvolvimento, estou implementando testes automatizados de integração
 
-### Em andamento
+#### Em andamento
 
 * Implementando testes automatizados de integração com a React Testing Library
 * Adicionando tradução para o inglês (atualmente o projeto está disponível apenas em português brasileiro)
