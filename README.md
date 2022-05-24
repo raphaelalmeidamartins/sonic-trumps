@@ -5,7 +5,7 @@
 ## :page_with_curl: About/Sobre
 
 <details>
-  <summary markdown="span"><strong>:us: English</strong></summary>
+  <summary markdown="span"><h3>:us: English</h3></summary>
 
 React project developed by [Raphael Martins](https://www.linkedin.com/in/raphaelameidamartins/) at the end of Unit 11 ([Front-end Development Module](https://github.com/raphaelalmeidamartins/trybe_exercicios/tree/main/2_Desenvolvimento-Front-end)) of Trybe's Web Development course. I was approved with 100% of the mandatory and optional requirements met.
 
@@ -28,7 +28,7 @@ Este projeto ainda está em desenvolvimento, estou implementando testes automati
 </details>
 
 <details>
-  <summary markdown="span"><strong>:brazil: Português</strong></summary>
+  <summary markdown="span"><h3>:brazil: Português</h3></summary>
 
 Projeto React desenvolvido por [Raphael Martins](https://www.linkedin.com/in/raphaelameidamartins/) ao fim do bloco 11 ([Módulo Desenvolvimento Front-end](https://github.com/raphaelalmeidamartins/trybe_exercicios/tree/main/2_Desenvolvimento-Front-end)) do curso de Desenvolvimento Web da Trybe. Fui aprovado com 100% dos requisitos obrigatórios e opcionais atingidos.
 
