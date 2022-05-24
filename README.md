@@ -15,11 +15,11 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 
 [Click here](https://raphaelalmeidamartins.github.io/sonic-trumps) to check out the final version of the project on your browser.
 
-#### Note
+### Note
 
 Este projeto ainda está em desenvolvimento, estou implementando testes automatizados de integração
 
-#### In progress/Em andamento
+### In progress/Em andamento
 
 * Implementing integration tests with React Testing Library
 * Adding English translation (the project is currently only available in Brazilian Portuguese)
@@ -38,11 +38,11 @@ Agradecimento especial a [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) q
 
 [Clique aqui](https://raphaelalmeidamartins.github.io/sonic-trumps) para conferir a versão final do projeto no seu navegador.
 
-#### Observação
+### Observação
 
 Este projeto ainda está em desenvolvimento, estou implementando testes automatizados de integração
 
-#### Em andamento
+### Em andamento
 
 * Implementando testes automatizados de integração com a React Testing Library
 * Adicionando tradução para o inglês (atualmente o projeto está disponível apenas em português brasileiro)
