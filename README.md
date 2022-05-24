@@ -4,7 +4,8 @@
 
 ## :page_with_curl: About/Sobre
 
-_:us: English_
+<details>
+  <summary markdown="span">:us: English</summary>
 
 React project developed by [Raphael Martins](https://www.linkedin.com/in/raphaelameidamartins/) at the end of Unit 11 ([Front-end Development Module](https://github.com/raphaelalmeidamartins/trybe_exercicios/tree/main/2_Desenvolvimento-Front-end)) of Trybe's Web Development course. I was approved with 100% of the mandatory and optional requirements met.
 
@@ -14,7 +15,20 @@ Special thanks to [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) who allo
 
 [Click here](https://raphaelalmeidamartins.github.io/sonic-trumps) to check out the final version of the project on your browser.
 
-_:brazil: Português_
+### Note
+
+Este projeto ainda está em desenvolvimento, estou implementando testes automatizados de integração
+
+### In progress/Em andamento
+
+* Implementing integration tests with React Testing Library
+* Adding English translation (the project is currently only available in Brazilian Portuguese)
+* I still need to implement how the Top Trump/Super Trunfo attribute influences the game
+* Reducing the complexity of the CreateCardForm and Input components
+</details>
+
+<details>
+  <summary markdown="span">:brazil: Português</summary>
 
 Projeto React desenvolvido por [Raphael Martins](https://www.linkedin.com/in/raphaelameidamartins/) ao fim do bloco 11 ([Módulo Desenvolvimento Front-end](https://github.com/raphaelalmeidamartins/trybe_exercicios/tree/main/2_Desenvolvimento-Front-end)) do curso de Desenvolvimento Web da Trybe. Fui aprovado com 100% dos requisitos obrigatórios e opcionais atingidos.
 
@@ -24,22 +38,17 @@ Agradecimento especial a [Nibroc-Rock](https://www.deviantart.com/nibroc-rock) q
 
 [Clique aqui](https://raphaelalmeidamartins.github.io/sonic-trumps) para conferir a versão final do projeto no seu navegador.
 
-### Note/Observação
-
-_:us: English_
-
-This project is still under development, I'm implementing integration tests.
-
-_:brazil: Português_
+### Observação
 
 Este projeto ainda está em desenvolvimento, estou implementando testes automatizados de integração
 
-### In progress/Em andamento
+### Em andamento
 
-* Implementing integration tests with React Testing Library
-* Adding English translation (the project is currently only available in Brazilian Portuguese)
-* I still need to implement how the Top Trump/Super Trunfo attribute influences the game.
-* Reducing the complexity of the CreateCardForm and Input components
+* Implementando testes automatizados de integração com a React Testing Library
+* Adicionando tradução para o inglês (atualmente o projeto está disponível apenas em português brasileiro)
+* Ainda preciso implementar como o atributo Super Trunfo influencia no jogo
+* Reduzir a complexidade dos componentes CreateCardForm e Input
+</details>
 
 ## :man_technologist: Developed Skills/Habilidades Desenvolvidas
 
