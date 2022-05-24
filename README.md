@@ -52,11 +52,25 @@ Este projeto ainda está em desenvolvimento, estou implementando testes automati
 
 ## :man_technologist: Developed Skills/Habilidades Desenvolvidas
 
+<details>
+  <summary markdown="span"><strong>:us: English</strong></summary>
+
 * Develop a React application
 * Create and reuse React components
 * React to user interactions by manipulating the components' states and props according to user events
 * Use the React Router library to handle page navigation
 * Use the Redux library for state management
+</details>
+
+<details>
+  <summary markdown="span"><strong>:brazil: Português</strong></summary>
+
+* Desenvolver uma aplicação React
+* Criar e reutilizar componentes
+* Reagir a interações do usuário manipulando estados e propriedades de acordo com eventos
+* Usar a biblioteca React Router para lidar com navegação entre páginas
+* Usar a biblioteca Redux para gerenciamento de estado
+</details>
 
 ## :memo: Methodologies/Metodologias
 
@@ -91,4 +105,14 @@ Este projeto ainda está em desenvolvimento, estou implementando testes automati
 
 ### :copyright: Copyright disclaimer/Aviso de direitos autorais
 
+<details>
+  <summary markdown="span"><strong>:us: English</strong></summary>
+
 The Sonic the Hedgehog franchise and characters belong to Sega, all rights reserved. I developed this project for learning purposes, it's not related to the company. Most of the 3D renders artwork in the cards were designed by [Nibroc-Rock](https://www.deviantart.com/nibroc-rock), some of them are official artwork from the games, though.
+</details>
+
+<details>
+  <summary markdown="span"><strong>:brazil: Português</strong></summary>
+
+A franquia Sonic the Hedgehog e seus personagens pertencem a Sega, todos os direitos reservados. Eu desenvolvi este projeto para propósitos de aprendizagem, não possui relação com a companhia. A maioria das artes 3D nas cartas foi criada por [Nibroc-Rock](https://www.deviantart.com/nibroc-rock), contudo, algumas são artes oficiais extraídas dos jogos.
+</details>
