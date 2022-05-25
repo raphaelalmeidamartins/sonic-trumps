@@ -5,7 +5,7 @@
 ## :page_with_curl: About/Sobre
 
 <details>
-  <summary markdown="span"><strong>:us: English</strong></summary>
+  <summary markdown="span"><strong>:us: English</strong></summary><br />
 
 React project developed by [Raphael Martins](https://www.linkedin.com/in/raphaelameidamartins/) at the end of Unit 11 ([Front-end Development Module](https://github.com/raphaelalmeidamartins/trybe_exercicios/tree/main/2_Desenvolvimento-Front-end)) of Trybe's Web Development course. I was approved with 100% of the mandatory and optional requirements met.
 
@@ -28,7 +28,7 @@ This project is still under development, I'm implementing integration tests.
 </details>
 
 <details>
-  <summary markdown="span"><strong>:brazil: Português</strong></summary>
+  <summary markdown="span"><strong>:brazil: Português</strong></summary><br />
 
 Projeto React desenvolvido por [Raphael Martins](https://www.linkedin.com/in/raphaelameidamartins/) ao final do bloco 11 ([Módulo Desenvolvimento Front-end](https://github.com/raphaelalmeidamartins/trybe_exercicios/tree/main/2_Desenvolvimento-Front-end)) do curso de Desenvolvimento Web da Trybe. Fui aprovado com 100% dos requisitos obrigatórios e opcionais atingidos.
 
@@ -53,7 +53,7 @@ Este projeto ainda está em desenvolvimento, estou implementando testes automati
 ## :man_technologist: Developed Skills/Habilidades Desenvolvidas
 
 <details>
-  <summary markdown="span"><strong>:us: English</strong></summary>
+  <summary markdown="span"><strong>:us: English</strong></summary><br />
 
 * Develop a React application
 * Create and reuse React components
@@ -63,7 +63,7 @@ Este projeto ainda está em desenvolvimento, estou implementando testes automati
 </details>
 
 <details>
-  <summary markdown="span"><strong>:brazil: Português</strong></summary>
+  <summary markdown="span"><strong>:brazil: Português</strong></summary><br />
 
 * Desenvolver uma aplicação React
 * Criar e reutilizar componentes
@@ -106,13 +106,13 @@ Este projeto ainda está em desenvolvimento, estou implementando testes automati
 ### :copyright: Copyright disclaimer/Aviso de direitos autorais
 
 <details>
-  <summary markdown="span"><strong>:us: English</strong></summary>
+  <summary markdown="span"><strong>:us: English</strong></summary><br />
 
 The Sonic the Hedgehog franchise and characters belong to Sega, all rights reserved. I developed this project for learning purposes, it's not related to the company. Most of the 3D renders artwork in the cards were designed by [Nibroc-Rock](https://www.deviantart.com/nibroc-rock), some of them are official artwork from the games, though.
 </details>
 
 <details>
-  <summary markdown="span"><strong>:brazil: Português</strong></summary>
+  <summary markdown="span"><strong>:brazil: Português</strong></summary><br />
 
 A franquia Sonic the Hedgehog e seus personagens pertencem a Sega, todos os direitos reservados. Eu desenvolvi este projeto para propósitos de aprendizagem, não possui relação com a companhia. A maioria das artes 3D nas cartas foi criada por [Nibroc-Rock](https://www.deviantart.com/nibroc-rock), contudo, algumas são artes oficiais extraídas dos jogos.
 </details>
