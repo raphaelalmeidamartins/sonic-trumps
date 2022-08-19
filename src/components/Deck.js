@@ -12,8 +12,9 @@ function Deck() {
     let filteredCards = arrayCards
       .filter((card) => card.cardName.match(new RegExp(cardFilters.regExp, 'i')));
     if (cardFilters.rarity) {
-      filteredCards = filteredCards
-        .filter((card) => card.cardRare === cardFilters.rarity);
+      filteredCards = filteredCards.filter(
+        (card) => card.cardRare === cardFilters.rarity || cardFilters.rarity === 'todas',
+      );
     }
     if (cardFilters.trunfo) {
       filteredCards = filteredCards.filter((card) => card.cardTrunfo === true);
