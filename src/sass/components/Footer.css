@@ -1,25 +1,15 @@
 .Footer {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-color: var(--blue-black);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: column nowrap;
+  justify-content: center;
   overflow: hidden;
   padding: 2rem;
   padding-bottom: 8rem;
   padding-top: 3rem;
   width: 100%;
 }
-
 .Footer p {
   color: white;
   font-weight: 300;
@@ -27,17 +17,13 @@
   max-width: 800px;
   width: 90%;
 }
-
 .Footer p:not(:last-child) {
   margin-bottom: 1.5rem;
 }
-
 .Footer a {
   color: var(--sonic-yellow);
   text-decoration: none;
 }
-
 .Footer a:hover {
   text-decoration: underline;
-}
-/*# sourceMappingURL=Footer.css.map */
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,6 +1,5 @@
 .DeleteCardButton {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   background-color: red;
   border-radius: 1rem;
   bottom: 1rem;
@@ -11,9 +10,6 @@
   position: absolute;
   right: 1rem;
 }
-
 .DeleteCardButton:hover {
-  -webkit-filter: brightness(70%);
-          filter: brightness(70%);
-}
-/*# sourceMappingURL=DeleteCardButton.css.map */
+  filter: brightness(70%);
+}/*# sourceMappingURL=DeleteCardButton.css.map */

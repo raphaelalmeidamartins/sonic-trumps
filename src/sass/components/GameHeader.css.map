@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,KAAK,EAAE,gBAAgB;EACvB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,aAAa,EAAE,MAAM;EACrB,KAAK,EAAE,IAAI;CAWZ;;AAhBD,AAOE,WAPS,CAOT,0BAA0B,CAAC;EACzB,WAAW,EAAE,QAAQ;EACrB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;CACzB;;AAXH,AAaE,WAbS,CAaT,iBAAiB,CAAC;EAChB,aAAa,EAAE,IAAI;CACpB",
-    "sources": [
-        "GameHeader.scss"
-    ],
-    "names": [],
-    "file": "GameHeader.css"
-}
+{"version":3,"sources":["GameHeader.scss","GameHeader.css"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,aAAA;EACA,8BAAA;EACA,qBAAA;EACA,WAAA;ACCF;ADCE;EACE,qBAAA;EACA,aAAA;EACA,wBAAA;ACCJ;ADEE;EACE,mBAAA;ACAJ","file":"GameHeader.css"}

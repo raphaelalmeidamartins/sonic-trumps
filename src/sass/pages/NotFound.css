@@ -1,95 +1,59 @@
 .NotFound {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-color: #ffffff;
   background-image: url("../../assets/wintery-sunburst.svg");
   /* background by SVGBackgrounds.com */
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   min-height: 100vh;
   overflow: hidden;
   width: 100%;
 }
-
 .NotFound main {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: column nowrap;
+  justify-content: center;
   max-width: 80vw;
   width: 600px;
 }
-
 .NotFound h1,
 .NotFound p {
   text-align: center;
   color: var(--sonic-fur);
 }
-
 .NotFound img {
   width: 400px;
   margin-bottom: 1rem;
   max-width: 80vw;
 }
-
 .NotFound button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-color: var(--sonic-fur);
   border-radius: 2rem;
   color: white;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 2rem;
   padding: 0.8rem 1.5rem;
 }
-
 .NotFound button:hover {
-  -webkit-filter: brightness(120%);
-          filter: brightness(120%);
+  filter: brightness(120%);
 }
-
 .NotFound button span {
   font-size: 1.3rem;
   font-weight: 300;
 }
-
 .NotFound button .NotFound-button-icon {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
   font-size: 2rem;
   height: 30px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-right: 0.5rem;
   width: 30px;
-}
-/*# sourceMappingURL=NotFound.css.map */
+}/*# sourceMappingURL=NotFound.css.map */
