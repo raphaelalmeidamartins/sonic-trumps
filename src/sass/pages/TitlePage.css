@@ -1,104 +1,65 @@
 .TitlePage {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-color: #078A00;
   background-image: url("../../assets/rose-petals.svg");
   /* background by SVGBackgrounds.com */
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   min-height: 100vh;
   overflow: hidden;
   width: 100%;
 }
-
 .TitlePage main {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
-
 .TitlePage img {
   width: 600px;
   max-width: 80vw;
 }
-
 .TitlePage button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-color: var(--sonic-fur);
   border-radius: 0;
-  -webkit-box-shadow: 8px 8px 0 var(--sonic-shoes);
-          box-shadow: 8px 8px 0 var(--sonic-shoes);
+  box-shadow: 8px 8px 0 var(--sonic-shoes);
   color: white;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-bottom: 1rem;
   padding: 0.8rem 1.5rem;
-  -webkit-transform: skewX(-12deg);
-          transform: skewX(-12deg);
-  -webkit-transition: 400ms;
+  transform: skewX(-12deg);
   transition: 400ms;
   width: 150px;
 }
-
 .TitlePage button:hover {
-  -webkit-transform: scale(0.9) skewX(-12deg);
-          transform: scale(0.9) skewX(-12deg);
+  transform: scale(0.9) skewX(-12deg);
   width: 140px;
 }
-
 .TitlePage button span {
+  font-family: Lato, sans-serif;
   font-size: 1.3rem;
   font-weight: 300;
 }
-
 .TitlePage button .TitlePage-button-icon {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
   font-size: 2rem;
   height: 30px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-right: 0.5rem;
   width: 30px;
 }
-
 .TitlePage footer {
   bottom: 0;
   padding: 2.5rem;
   position: fixed;
 }
-
 .TitlePage footer p {
   text-align: center;
-}
-/*# sourceMappingURL=TitlePage.css.map */
+}/*# sourceMappingURL=TitlePage.css.map */
